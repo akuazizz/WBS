@@ -1,20 +1,41 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\DashboardController; // <-- Tambahkan ini
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Di sini Anda bisa mendaftarkan rute web untuk aplikasi Anda. Rute-rute
+| ini dimuat oleh RouteServiceProvider dan semuanya akan
+| ditugaskan ke grup middleware "web".
+|
+*/
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// --- Rute Publik (Bisa diakses tanpa login) ---
+// Mengarahkan URL utama '/' ke method 'index' di dalam HomeController
+Route::get('/', [DashboardController::class, 'index'])->name('home');
 
-Route::middleware('auth')->group(function () {
+
+// --- Rute Privat (Hanya bisa diakses setelah login) ---
+Route::middleware(['auth', 'verified'])->group(function () {
+    
+    // Rute untuk halaman dashboard setelah login
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+
+    // Rute untuk manajemen profil pengguna (bawaan Breeze)
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    
+    // Anda bisa menambahkan rute-rute privat lainnya di sini,
+    // seperti rute untuk form pengaduan, melihat detail, dll.
 });
 
+
+// Memuat rute-rute untuk autentikasi (login, register, logout, dll.)
 require __DIR__.'/auth.php';
