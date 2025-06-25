@@ -69,7 +69,7 @@
                             <a href="#" class="hover:underline">Beranda</a>
                             <a href="#alur" class="hover:underline">Alur</a>
                             <a href="#unsur" class="hover:underline">Unsur</a>
-                            <a href="#" class="hover:underline">Kerahasiaan Pelapor</a>
+                            <a href="#kerahasiaan" class="hover:underline">Kerahasiaan Pelapor</a>
                             <a href="#" class="hover:underline">Cara Melapor</a>
                             <a href="#" class="hover:underline">FAQ</a>
                             <a href="#" class="hover:underline">Kontak Kami</a>
@@ -149,14 +149,12 @@
                     <div class="flex justify-center p-1 bg-gray-200 rounded-xl max-w-sm mx-auto">
                         <button @click="activeTab = 'singkat'"
                             :class="{ 'bg-gray-200 text-gray-700': activeTab !== 'singkat', 'bg-white text-bappenas-darkblue shadow': activeTab === 'singkat' }"
-                            class="w-1/2 py-2 px-4 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2">
-                            Alur Singkat
-                        </button>
+                            class="w-1/2 py-2 px-4 rounded-lg font-semibold transition-colors duration-300">Alur
+                            Singkat</button>
                         <button @click="activeTab = 'detail'"
                             :class="{ 'bg-gray-200 text-gray-700': activeTab !== 'detail', 'bg-bappenas-darkblue text-white shadow': activeTab === 'detail' }"
-                            class="w-1/2 py-2 px-4 rounded-lg font-semibold transition-colors duration-300 flex items-center justify-center gap-2">
-                            Alur Detail
-                        </button>
+                            class="w-1/2 py-2 px-4 rounded-lg font-semibold transition-colors duration-300">Alur
+                            Detail</button>
                     </div>
                     <div class="mt-8 relative">
                         <div x-show="activeTab === 'singkat'" x-transition:enter="transition ease-out duration-300"
@@ -283,7 +281,147 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 5] FOOTER -->
+        <!-- [BAGIAN 5] KERAHASIAAN PELAPOR SECTION (DARI SEBELUMNYA) -->
+        <section id="kerahasiaan" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <!-- Judul Section -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Kerahasiaan
+                        Pelapor</h2>
+                </div>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                    <!-- Kolom Kiri: Gambar Ilustrasi -->
+                    <div class="w-full md:w-5/12">
+                        <img src="https://wbs.bappenas.go.id/img/rahasia1.png" alt="Ilustrasi Kerahasiaan Data"
+                            class="w-full h-auto">
+                    </div>
+
+                    <!-- Kolom Kanan: Teks Penjelasan (WARNA DIPERBAIKI) -->
+                    <div class="w-full md:w-6/12">
+                        <h3 class="text-xl font-bold text-bappenas-darkblue mb-4 leading-relaxed">
+                            Kementerian PPN/Bappenas akan merahasiakan identitas pribadi Anda sebagai whistleblower
+                            karena Kementerian PPN/Bappenas hanya fokus pada informasi yang Anda laporkan. Agar
+                            Kerahasiaan lebih terjaga, perhatikan hal-hal berikut ini:
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-800">Jika ingin identitas Anda tetap rahasia, jangan
+                                    memberitahukan/mengisikan data-data pribadi, seperti nama Anda, atau hubungan Anda
+                                    dengan pelaku-pelaku.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-800">Jangan memberitahukan/mengisikan data-data/informasi yang
+                                    memungkinkan bagi orang lain untuk melakukan pelacakan siapa Anda.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                                <span class="text-gray-800">Hindari orang lain mengetahui nama samaran (username), kata
+                                    sandi (password) serta nomor registrasi Anda.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [BAGIAN 6] CARA MELAPOR SECTION (BARU) -->
+        <section id="cara-melapor" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Judul Section dengan garis bawah -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Cara Melapor
+                    </h2>
+                    <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <!-- Daftar Langkah-langkah dengan gaya custom -->
+                    <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
+                        <div class="flex">
+                            <span class="mr-3">1.</span>
+                            <p>Klik Tombol “BUAT PENGADUAN" untuk merekam pengaduan baru.</p>
+                        </div>
+                        <div class="flex">
+                            <span class="mr-3">2.</span>
+                            <p>Isi form pengaduan sesuai informasi yang anda ketahui.</p>
+                        </div>
+                        <div class="flex">
+                            <span class="mr-3">3.</span>
+                            <div>
+                                <p>Perhatikan baik-baik beberapa hal di bawah ini:</p>
+                                <div class="mt-2 ml-6 text-gray-600 space-y-2">
+                                    <div class="flex">
+                                        <span class="mr-2">a.</span>
+                                        <p>Semua kotak yang diberi tanda (*) wajib diisi.</p>
+                                    </div>
+                                    <div class="flex">
+                                        <span class="mr-2">b.</span>
+                                        <p>Pastikan informasi yang diberikan sedapat mungkin memenuhi unsur 4W + 1H.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <span class="mr-3">4.</span>
+                            <p>Jika anda memiliki bukti dalam bentuk file seperti foto atau dokumen lain dalam jumlah
+                                banyak, silahkan diinputkan satu persatu.</p>
+                        </div>
+                        <div class="flex">
+                            <span class="mr-3">5.</span>
+                            <p>Setelah selesai mengisi, silahkan klik tombol "Kirim" untuk melanjutkan atau klik tombol
+                                “Cancel" untuk membatalkan proses pelaporan anda.</p>
+                        </div>
+                        <div class="flex">
+                            <span class="mr-3">6.</span>
+                            <div>
+                                <p>Simpan dan ingat baik-baik Kode pengaduan anda</p>
+                                <div class="mt-2 ml-6 text-gray-600 space-y-2">
+                                    <div class="flex">
+                                        <span class="mr-2">a.</span>
+                                        <p>Kode pengaduan dibutuhkan untuk membuat akun yang berfungsi untuk mengecek
+                                            perkembangan status aduan Anda atau membuat pengaduan baru.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Tutorial dengan layout 2 kolom -->
+                    <div class="mt-16 flex flex-col md:flex-row items-center gap-8">
+                        <div class="w-full md:w-1/2 text-center md:text-left">
+                            <h3 class="text-4xl font-extrabold text-gray-800 leading-tight">
+                                Tutorial Lengkap<br>WBS Bappenas
+                            </h3>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="rounded-lg shadow-xl" src="https://www.youtube.com/embed/3QyQrLMMbMw"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- [BAGIAN 6] FOOTER -->
         <footer class="bg-gray-800 text-white text-xs">
             <div class="container mx-auto px-6 py-4 flex justify-between items-center">
                 <span>HOME</span>
