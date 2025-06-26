@@ -66,13 +66,13 @@
                             class="h-8"></a>
                     <div class="hidden md:flex items-center space-x-8">
                         <nav class="flex items-center space-x-6 text-white font-semibold">
-                            <a href="#" class="hover:underline">Beranda</a>
+                            <a href="#beranda" class="hover:underline">Beranda</a>
                             <a href="#alur" class="hover:underline">Alur</a>
                             <a href="#unsur" class="hover:underline">Unsur</a>
                             <a href="#kerahasiaan" class="hover:underline">Kerahasiaan Pelapor</a>
-                            <a href="#" class="hover:underline">Cara Melapor</a>
-                            <a href="#" class="hover:underline">FAQ</a>
-                            <a href="#" class="hover:underline">Kontak Kami</a>
+                            <a href="#cara-melapor" class="hover:underline">Cara Melapor</a>
+                            <a href="#faq" class="hover:underline">FAQ</a>
+                            <a href="#kontak" class="hover:underline">Kontak Kami</a>
                         </nav>
                         <div>
                             <a href="#"
@@ -421,11 +421,301 @@
             </div>
         </section>
 
+        <!-- [BAGIAN 7] FAQ SECTION (BARU) -->
+        <section id="faq" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <!-- Judul Section -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Frequently Asked
+                        Questions</h2>
+                    <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
+                </div>
+
+                <!-- Accordion Container -->
+                <div class="max-w-4xl mx-auto space-y-4" x-data="{ openFaq: 1 }">
+
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <button @click="openFaq = openFaq === 1 ? null : 1"
+                            class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
+                            <span class="text-lg font-semibold text-gray-800">Apa itu aplikasi Whistleblowing System
+                                (WBS) Kementerian PPN/Bappenas?</span>
+                            <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
+                                :class="{ 'rotate-180': openFaq === 1 }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="openFaq === 1" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
+                            <p class="pt-4">Aplikasi Whistleblowing System (WBS) Kementerian PPN/Bappenas adalah
+                                aplikasi pengelolaan dan tindak lanjut pengaduan serta pelaporan hasil pengelolaan
+                                pengaduan yang disediakan oleh Kementerian PPN/Bappenas sebagai salah satu sarana bagi
+                                setiap pejabat/pegawai Kementerian PPN/Bappenas sebagai pihak internal maupun masyarakat
+                                luas pengguna layanan Kementerian PPN/Bappenas sebagai pihak eksternal untuk melaporkan
+                                dugaan adanya pelanggaran dan/atau ketidakpuasan terhadap pelayanan yang
+                                dilakukan/diberikan oleh pejabat/pegawai Kementerian PPN/Bappenas.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <button @click="openFaq = openFaq === 2 ? null : 2"
+                            class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
+                            <span class="text-lg font-semibold text-gray-800">Apakah kode pengaduan itu dan apa yang
+                                harus saya lakukan terhadap kode pengaduan ini?</span>
+                            <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
+                                :class="{ 'rotate-180': openFaq === 2 }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="openFaq === 2" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
+                            <p class="pt-4">Kode pengaduan adalah kode yang digunakan sebagai identitas pelapor dalam
+                                melakukan pembuatan user untuk melihat track record pengaduan.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <button @click="openFaq = openFaq === 3 ? null : 3"
+                            class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
+                            <span class="text-lg font-semibold text-gray-800">Apakah bentuk respon yang diberikan kepada
+                                pelapor atas pengaduan yang disampaikan?</span>
+                            <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
+                                :class="{ 'rotate-180': openFaq === 3 }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="openFaq === 3" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
+                            <p class="pt-4">Respon yang diberikan kepada pelapor berupa status/tindak lanjut pengaduan
+                                yang ada dalam halaman user sesuai dengan respon yang telah diberikan oleh pihak
+                                penerima pengaduan. Respon terkait dengan status/tindak lanjut pengaduan dapat dilihat
+                                dalam halaman user pengaduan aplikasi WBS.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <button @click="openFaq = openFaq === 4 ? null : 4"
+                            class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
+                            <span class="text-lg font-semibold text-gray-800">Berapa lama respon atas pengaduan yang
+                                disampaikan diberikan kepada pelapor?</span>
+                            <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
+                                :class="{ 'rotate-180': openFaq === 4 }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="openFaq === 4" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
+                            <p class="pt-4">Sesuai dengan KMK 149 tahun 2011 jawaban/respon atas pengaduan yang
+                                disampaikan wajib diberikan dalam kurun waktu paling lambat 30 (tiga puluh) hari
+                                terhitung sejak pengaduan diterima. Untuk respon yang disampaikan tertulis melalui surat
+                                dapat diberikan apabila pelapor mencantumkan identitas secara jelas (nama dan alamat
+                                koresponden). Untuk respon dari media pengaduan lainnya akan disampaikan dan diberikan
+                                sesuai identitas pelapor yang dicantumkan dalam media pengaduan tersebut.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <button @click="openFaq = openFaq === 5 ? null : 5"
+                            class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
+                            <span class="text-lg font-semibold text-gray-800">Apakah pengaduan yang saya berikan akan
+                                selalu mendapatkan respon?</span>
+                            <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
+                                :class="{ 'rotate-180': openFaq === 5 }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="openFaq === 5" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
+                            <p class="pt-4">Pengaduan yang anda berikan akan direspon dan tercantum dalam aplikasi WBS
+                                ini dan akan terupdate secara otomatis sesuai dengan respon yang telah diberikan oleh
+                                pihak penerima pengaduan. Untuk dapat melihat respon yang diberikan, anda harus login
+                                terlebih dahulu dengan username yang telah anda registrasikan di aplikasi ini dan anda
+                                dapat melihat status pengaduan dalam halaman user pengaduan sesuai dengan kode pengaduan
+                                yang didapatkan. Sebagai catatan, pengaduan anda akan lebih mudah ditindaklanjuti
+                                apabila memenuhi unsur pengaduan.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 6 -->
+                    <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <button @click="openFaq = openFaq === 6 ? null : 6"
+                            class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
+                            <span class="text-lg font-semibold text-gray-800">Apakah kerahasiaan identitas saya sebagai
+                                pengadu/pelapor terjaga?</span>
+                            <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
+                                :class="{ 'rotate-180': openFaq === 6 }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="openFaq === 6" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
+                            <p class="pt-4">Kerahasiaan identitas anda sebagai pelapor akan terjaga seperti yang telah
+                                disebutkan dalam KMK 149 tahun 2011. Namun agar kerahasiaan identitas anda dapat lebih
+                                terjaga sebaiknya anda memperhatikan hal-hal sebagaimana disebutkan disini.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 7 -->
+                    <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <button @click="openFaq = openFaq === 7 ? null : 7"
+                            class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
+                            <span class="text-lg font-semibold text-gray-800">Apakah setiap melakukan pengaduan harus
+                                membuat dan register username baru?</span>
+                            <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
+                                :class="{ 'rotate-180': openFaq === 7 }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="openFaq === 7" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
+                            <p class="pt-4">Hal tersebut tidak perlu dilakukan. Satu username dapat melakukan pengaduan
+                                lebih dari satu. Ketika setelah selesai membuat satu pengaduan, anda dapat membuat
+                                pengaduan terkait dengan dugaan pelanggaran dan/atau ketidakpuasan terhadap pelayanan
+                                yang diberikan lainnya dengan memilih “tambah pengaduan”. Masing-masing pengaduan akan
+                                mendapatkan kode pengaduan yang berbeda.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 8 -->
+                    <div class="border border-gray-200 rounded-lg bg-white shadow-sm">
+                        <button @click="openFaq = openFaq === 8 ? null : 8"
+                            class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
+                            <span class="text-lg font-semibold text-gray-800">Saya sudah mengirimkan pengaduan namun di
+                                kemudian hari saya ingin merubah/menambahkan data terkait pengaduan yang saya lakukan,
+                                apa yang harus saya lakukan? Apakah harus membuat pengaduan baru?</span>
+                            <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
+                                :class="{ 'rotate-180': openFaq === 8 }" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div x-show="openFaq === 8" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
+                            <p class="pt-4">Data yang sudah dilaporkan sebelumnya tidak dapat dilakukan perubahan namun
+                                anda bisa membuat pengaduan baru dilakukan dengan login username yang telah
+                                diregistrasikan sebelumnya di aplikasi ini lalu masuk ke halaman pengaduan. Dalam
+                                halaman pengaduan, lalu pilih menu buat pengaduan baru.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- [BAGIAN 8] KONTAK KAMI SECTION (BARU) -->
+        <section id="kontak" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Judul Section -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Alamat dan
+                        Kontak Kami</h2>
+                    <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Hubungi kami untuk informasi lebih lanjut terkait layanan dan pengaduan di Inspektorat Utama
+                        Bappenas
+                    </p>
+                </div>
+
+                <!-- Konten Utama: Peta dan Detail Kontak -->
+                <div class="flex flex-col lg:flex-row gap-8 items-start">
+                    <!-- Kolom Kiri: Peta -->
+                    <div class="w-full lg:w-7/12">
+                        <div class="aspect-ratio aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-xl border">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.52985858493!2d106.83445631476902!3d-6.193694995516368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4234563f463%3A0x6c6e014b62a63261!2sKementerian%20Perencanaan%20Pembangunan%20Nasional%20(PPN)%2FBappenas!5e0!3m2!1sid!2sid!4v1656234567890!5m2!1sid!2sid"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Kanan: Detail Kontak & QR -->
+                    <div class="w-full lg:w-5/12 flex flex-col">
+                        <!-- Detail Kontak -->
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 text-center"><svg
+                                        class="w-7 h-7 mx-auto text-bappenas-darkblue" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                        </path>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                    </svg></div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Alamat</h4>
+                                    <p class="text-gray-600">Gedung Saleh Afif Lt.6, Kementerian PPN/Bappenas,
+                                        Jakarta.<br>Jl. Taman Suropati No. 2, Jakarta Pusat, Indonesia 10310</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 text-center"><svg
+                                        class="w-7 h-7 mx-auto text-bappenas-darkblue" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                        </path>
+                                    </svg></div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Telepon</h4>
+                                    <p class="text-gray-600">(021) 31906288</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 text-center"><svg
+                                        class="w-7 h-7 mx-auto text-bappenas-darkblue" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                        </path>
+                                    </svg></div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Email</h4>
+                                    <p class="text-gray-600">sekretariat.irtama@bappenas.go.id</p>
+                                    <p class="text-gray-600">inspektorat.utama.bappenas@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 w-8 text-center"><svg
+                                        class="w-7 h-7 mx-auto text-bappenas-darkblue"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor">
+                                        <path
+                                            d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m-3-1l-3 1m3-1v-2.25M5.25 6.25v-1.5a2.25 2.25 0 012.25-2.25h3.75a2.25 2.25 0 012.25 2.25v1.5m-1.5-1.5a.75.75 0 00-1.5 0v1.5m-5.25 0L3 8.25" />
+                                    </svg></div>
+                                <div class="ml-4">
+                                    <h4 class="text-lg font-bold text-gray-800">Instagram</h4>
+                                    <a href="https://www.instagram.com/iubappenas/" target="_blank"
+                                        class="text-gray-600 hover:text-bappenas-darkblue hover:underline">@iubappenas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- QR Code -->
+                        <div class="mt-8 text-center lg:text-right">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.google.com/maps/place/Kementerian+Perencanaan+Pembangunan+Nasional+(PPN)%2FBappenas"
+                                alt="QR Code Lokasi" class="inline-block border p-1">
+                            <p class="text-sm text-gray-500 mt-2">Scan disini untuk melihat lokasi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- [BAGIAN 6] FOOTER -->
         <footer class="bg-gray-800 text-white text-xs">
-            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-                <span>HOME</span>
-                <span class="text-center">© 2024 Inspektorat Utama Bappenas</span>
+            <div class="container mx-auto px-6 py-4 flex justify-center items-center">
+                <span class="text-center">© 2025 Dinkominfo Banjarnegara</span>
             </div>
         </footer>
     </div>
