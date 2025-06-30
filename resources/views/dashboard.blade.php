@@ -665,95 +665,92 @@
                 </div>
             </section>
 
-          <!-- [BAGIAN 8] KONTAK KAMI SECTION (FINAL) -->
-<section id="kontak" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-        <!-- Judul Section -->
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">
-                Alamat dan Kontak Kami
-            </h2>
-            <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
-            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                Hubungi kami untuk informasi lebih lanjut terkait layanan dan pengaduan di Inspektorat Utama Bappenas
-            </p>
-        </div>
+            <!-- [BAGIAN 8] KONTAK KAMI SECTION (FINAL) -->
+            <section id="kontak" class="py-20 bg-gray-50">
+                <div class="container mx-auto px-6">
+                    <!-- Judul Section -->
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">
+                            Alamat dan Kontak Kami
+                        </h2>
+                        <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
+                        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                            Hubungi kami untuk informasi lebih lanjut terkait layanan dan pengaduan di Inspektorat Utama
+                            Bappenas
+                        </p>
+                    </div>
 
-        <!-- Peta Google -->
-        <div class="w-full rounded-lg overflow-hidden shadow-lg border">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63339.18601754096!2d109.66023591452464!3d-7.369392792701998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6542c5633a5f07%3A0x4027a76e352fe30!2sBanjarnegara%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1719740600000!5m2!1sid!2sid"
-                class="w-full h-[450px]" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-<!-- KONTAK KAMI -->
-<section class="bg-gray-50 py-10">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                    <!-- Peta Google -->
+                    <div class="w-full rounded-lg overflow-hidden shadow-lg border mb-12">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63339.18601754096!2d109.66023591452464!3d-7.369392792701998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6542c5633a5f07%3A0x4027a76e352fe30!2sBanjarnegara%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1719740600000!5m2!1sid!2sid"
+                            class="w-full h-[450px]" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
 
-      <!-- Alamat -->
-      <div class="flex items-start gap-2 text-sm md:text-base text-center md:text-left">
-        <svg class="w-6 h-6 text-bappenas-darkblue mt-1" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        <p>
-          Jl. Dipayuda No.16, Krandegan, Kec. Banjarnegara,<br>
-          Kab. Banjarnegara, Jawa Tengah 53418
-        </p>
-      </div>
+                    <!-- KONTAK KAMI -->
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+                        <!-- Alamat -->
+                        <div class="flex items-start gap-2 text-sm md:text-base text-center md:text-left">
+                            <svg class="w-6 h-6 text-bappenas-darkblue mt-1" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            <p>
+                                Jl. Dipayuda No.16, Krandegan, Kec. Banjarnegara,<br>
+                                Kab. Banjarnegara, Jawa Tengah 53418
+                            </p>
+                        </div>
 
-      <!-- Email -->
-      <div class="flex items-start gap-2 text-sm md:text-base text-center md:text-left">
-        <svg class="w-6 h-6 text-bappenas-darkblue mt-1" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-        <p>
-          sekretariat.irtama@bappenas.go.id<br>
-          inspektorat.utama.bappenas@gmail.com
-        </p>
-      </div>
+                        <!-- Email -->
+                        <div class="flex items-start gap-2 text-sm md:text-base text-center md:text-left">
+                            <svg class="w-6 h-6 text-bappenas-darkblue mt-1" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                            <p>
+                                sekretariat.irtama@bappenas.go.id<br>
+                                inspektorat.utama.bappenas@gmail.com
+                            </p>
+                        </div>
 
-      <!-- Telepon -->
-      <div class="flex items-center gap-2 text-sm md:text-base">
-        <svg class="w-6 h-6 text-bappenas-darkblue" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-        </svg>
-        <p>(021) 31906288</p>
-      </div>
+                        <!-- Telepon -->
+                        <div class="flex items-center gap-2 text-sm md:text-base">
+                            <svg class="w-6 h-6 text-bappenas-darkblue" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                            </svg>
+                            <p>(021) 31906288</p>
+                        </div>
 
-      <!-- Instagram -->
-      <div class="flex items-center gap-2 text-sm md:text-base">
-        <svg class="w-6 h-6 text-bappenas-darkblue" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round"
-            d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2z" />
-          <circle cx="12" cy="12" r="3.5" />
-          <circle cx="17" cy="7" r="1" />
-        </svg>
-        <p>@iubappenas</p>
-      </div>
-
-    </div>
-  </div>
-</section>
+                        <!-- Instagram -->
+                        <div class="flex items-center gap-2 text-sm md:text-base">
+                            <svg class="w-6 h-6 text-bappenas-darkblue" fill="none" stroke="currentColor"
+                                stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2z" />
+                                <circle cx="12" cy="12" r="3.5" />
+                                <circle cx="17" cy="7" r="1" />
+                            </svg>
+                            <p>@iubappenas</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
-
-            <!-- FOOTER -->
-  <footer class="bg-gray-800 text-white text-xs">
-    <div class="container mx-auto px-6 py-4 flex justify-center items-center">
-      <span class="text-center">© 2025 Dinkominfo Banjarnegara</span>
-    </div>
-  </footer>
+            <!-- [BAGIAN 6] FOOTER -->
+            <footer class="bg-gray-800 text-white text-xs">
+                <div class="container mx-auto px-6 py-4 flex justify-center items-center">
+                    <span class="text-center">© 2025 Dinkominfo Banjarnegara</span>
+                </div>
+            </footer>
 
             <!-- Tombol Scroll to Top (WARNA DIUBAH MENJADI BIRU) -->
             <button x-show="showScrollTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
@@ -767,10 +764,10 @@
                 style="display: none;">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7">
+                    </path>
                 </svg>
             </button>
-
         </div>
 </body>
 
