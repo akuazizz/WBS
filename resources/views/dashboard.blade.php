@@ -683,7 +683,7 @@
                     <!-- Peta Google -->
                     <div class="w-full rounded-lg overflow-hidden shadow-lg border mb-12">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63339.18601754096!2d109.66023591452464!3d-7.369392792701998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6542c5633a5f07%3A0x4027a76e352fe30!2sBanjarnegara%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1719740600000!5m2!1sid!2sid"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.278035605351!2d109.64193217499102!3d-7.430195973012407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6543dfaacd43d9%3A0xa1a645c15f45629b!2sDinas%20Komunikasi%20dan%20Informatika%20Kabupaten%20Banjarnegara!5e0!3m2!1sid!2sid!4v1719743547226!5m2!1sid!2sid"
                             class="w-full h-[450px]" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade">
                         </iframe>
