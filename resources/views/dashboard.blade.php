@@ -665,112 +665,95 @@
                 </div>
             </section>
 
-            <!-- [BAGIAN 8] KONTAK KAMI SECTION (BARU) -->
-            <section id="kontak" class="py-20 bg-white">
-                <div class="container mx-auto px-6">
-                    <!-- Judul Section -->
-                    <div class="text-center mb-12">
-                        <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Alamat dan
-                            Kontak Kami</h2>
-                        <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
-                        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                            Hubungi kami untuk informasi lebih lanjut terkait layanan dan pengaduan di Inspektorat Utama
-                            Bappenas
-                        </p>
-                    </div>
+          <!-- [BAGIAN 8] KONTAK KAMI SECTION (FINAL) -->
+<section id="kontak" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <!-- Judul Section -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">
+                Alamat dan Kontak Kami
+            </h2>
+            <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
+            <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                Hubungi kami untuk informasi lebih lanjut terkait layanan dan pengaduan di Inspektorat Utama Bappenas
+            </p>
+        </div>
 
-                    <!-- Konten Utama: Peta dan Detail Kontak -->
-                    <div class="flex flex-col lg:flex-row gap-8 items-start">
-                        <!-- Kolom Kiri: Peta -->
-                        <div class="w-full lg:w-7/12">
-                            <div
-                                class="aspect-ratio aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-xl border">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.52985858493!2d106.83445631476902!3d-6.193694995516368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f4234563f463%3A0x6c6e014b62a63261!2sKementerian%20Perencanaan%20Pembangunan%20Nasional%20(PPN)%2FBappenas!5e0!3m2!1sid!2sid!4v1656234567890!5m2!1sid!2sid"
-                                    style="border:0;" allowfullscreen="" loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-                            </div>
-                        </div>
+        <!-- Peta Google -->
+        <div class="w-full rounded-lg overflow-hidden shadow-lg border">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63339.18601754096!2d109.66023591452464!3d-7.369392792701998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6542c5633a5f07%3A0x4027a76e352fe30!2sBanjarnegara%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1719740600000!5m2!1sid!2sid"
+                class="w-full h-[450px]" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+<!-- KONTAK KAMI -->
+<section class="bg-gray-50 py-10">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
 
-                        <!-- Kolom Kanan: Detail Kontak & QR -->
-                        <div class="w-full lg:w-5/12 flex flex-col">
-                            <!-- Detail Kontak -->
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 w-8 text-center"><svg
-                                            class="w-7 h-7 mx-auto text-bappenas-darkblue" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                            </path>
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                                        </svg></div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-bold text-gray-800">Alamat</h4>
-                                        <p class="text-gray-600">Gedung Saleh Afif Lt.6, Kementerian PPN/Bappenas,
-                                            Jakarta.<br>Jl. Taman Suropati No. 2, Jakarta Pusat, Indonesia 10310</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 w-8 text-center"><svg
-                                            class="w-7 h-7 mx-auto text-bappenas-darkblue" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                            </path>
-                                        </svg></div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-bold text-gray-800">Telepon</h4>
-                                        <p class="text-gray-600">(021) 31906288</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 w-8 text-center"><svg
-                                            class="w-7 h-7 mx-auto text-bappenas-darkblue" fill="none"
-                                            stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                            </path>
-                                        </svg></div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-bold text-gray-800">Email</h4>
-                                        <p class="text-gray-600">sekretariat.irtama@bappenas.go.id</p>
-                                        <p class="text-gray-600">inspektorat.utama.bappenas@gmail.com</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="flex-shrink-0 w-8 text-center"><svg
-                                            class="w-7 h-7 mx-auto text-bappenas-darkblue"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor">
-                                            <path
-                                                d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m-3-1l-3 1m3-1v-2.25M5.25 6.25v-1.5a2.25 2.25 0 012.25-2.25h3.75a2.25 2.25 0 012.25 2.25v1.5m-1.5-1.5a.75.75 0 00-1.5 0v1.5m-5.25 0L3 8.25" />
-                                        </svg></div>
-                                    <div class="ml-4">
-                                        <h4 class="text-lg font-bold text-gray-800">Instagram</h4>
-                                        <a href="https://www.instagram.com/iubappenas/" target="_blank"
-                                            class="text-gray-600 hover:text-bappenas-darkblue hover:underline">@iubappenas</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- QR Code -->
-                            <div class="mt-8 text-center lg:text-right">
-                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://www.google.com/maps/place/Kementerian+Perencanaan+Pembangunan+Nasional+(PPN)%2FBappenas"
-                                    alt="QR Code Lokasi" class="inline-block border p-1">
-                                <p class="text-sm text-gray-500 mt-2">Scan disini untuk melihat lokasi</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+      <!-- Alamat -->
+      <div class="flex items-start gap-2 text-sm md:text-base text-center md:text-left">
+        <svg class="w-6 h-6 text-bappenas-darkblue mt-1" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+        </svg>
+        <p>
+          Jl. Dipayuda No.16, Krandegan, Kec. Banjarnegara,<br>
+          Kab. Banjarnegara, Jawa Tengah 53418
+        </p>
+      </div>
 
-            <!-- [BAGIAN 6] FOOTER -->
-            <footer class="bg-gray-800 text-white text-xs">
-                <div class="container mx-auto px-6 py-4 flex justify-center items-center">
-                    <span class="text-center">© 2025 Dinkominfo Banjarnegara</span>
-                </div>
-            </footer>
+      <!-- Email -->
+      <div class="flex items-start gap-2 text-sm md:text-base text-center md:text-left">
+        <svg class="w-6 h-6 text-bappenas-darkblue mt-1" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+        <p>
+          sekretariat.irtama@bappenas.go.id<br>
+          inspektorat.utama.bappenas@gmail.com
+        </p>
+      </div>
+
+      <!-- Telepon -->
+      <div class="flex items-center gap-2 text-sm md:text-base">
+        <svg class="w-6 h-6 text-bappenas-darkblue" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+        </svg>
+        <p>(021) 31906288</p>
+      </div>
+
+      <!-- Instagram -->
+      <div class="flex items-center gap-2 text-sm md:text-base">
+        <svg class="w-6 h-6 text-bappenas-darkblue" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2z" />
+          <circle cx="12" cy="12" r="3.5" />
+          <circle cx="17" cy="7" r="1" />
+        </svg>
+        <p>@iubappenas</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+            <!-- FOOTER -->
+  <footer class="bg-gray-800 text-white text-xs">
+    <div class="container mx-auto px-6 py-4 flex justify-center items-center">
+      <span class="text-center">© 2025 Dinkominfo Banjarnegara</span>
+    </div>
+  </footer>
 
             <!-- Tombol Scroll to Top (WARNA DIUBAH MENJADI BIRU) -->
             <button x-show="showScrollTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
@@ -789,7 +772,6 @@
             </button>
 
         </div>
-
 </body>
 
 </html>
