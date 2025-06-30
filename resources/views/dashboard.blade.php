@@ -99,7 +99,7 @@
                                 bersih, laporkan setiap pelanggaran yang terjadi di lingkungan kerja Anda.</p>
                             <div
                                 class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                                <a href="#"
+                                <a href="{{ route('pengaduan.create') }}"                
                                     class="px-8 py-3 bg-bappenas-darkblue font-bold rounded-md hover:bg-bappenas-darkerblue transition-colors text-center shadow-lg">Buat
                                     Pengaduan</a>
                                 <a href="#"

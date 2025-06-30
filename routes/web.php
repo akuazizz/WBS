@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+use App\Http\Controllers\PengaduanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +36,13 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // Anda bisa menambahkan rute-rute privat lainnya di sini,
     // seperti rute untuk form pengaduan, melihat detail, dll.
 });
+Route::middleware('auth')->group(function () {
+    // ... rute dashboard dan profile
 
+    // RUTE BARU UNTUK PENGADUAN
+    Route::get('/pengaduan/create', [PengaduanController::class, 'create'])->name('pengaduan.create');
+    Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
+});
 
 // Memuat rute-rute untuk autentikasi (login, register, logout, dll.)
 require __DIR__.'/auth.php';
