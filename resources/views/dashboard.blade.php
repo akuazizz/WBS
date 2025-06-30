@@ -96,7 +96,7 @@
             <div class="container mx-auto px-6">
                 <div class="py-4 flex justify-between items-center">
                     <a href="#beranda"><img src="https://wbs.bappenas.go.id/img/logo_wbs4.png" alt="Logo WBS Bappenas"
-                            class="h-8"></a>
+                            class="h-12"></a>
                     <div class="hidden md:flex items-center space-x-8">
                         <nav class="flex items-center space-x-6 text-white font-semibold">
                             <a href="#beranda" class="hover:underline">Beranda</a>
