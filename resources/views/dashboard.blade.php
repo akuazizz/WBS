@@ -91,7 +91,7 @@
             </div>
         </div>
 
-        <!-- [BAGIAN 2] NAVBAR (SEKARANG MENJADI STICKY DAN BIRU) -->
+        <!-- [BAGIAN 2] NAVBAR -->
         <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
             <div class="container mx-auto px-6">
                 <div class="py-4 flex justify-between items-center">
@@ -322,7 +322,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 5] KERAHASIAAN PELAPOR SECTION (DARI SEBELUMNYA) -->
+        <!-- [BAGIAN 5] KERAHASIAAN PELAPOR SECTION -->
         <section id="kerahasiaan" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
@@ -338,7 +338,7 @@
                             class="w-full h-auto">
                     </div>
 
-                    <!-- Kolom Kanan: Teks Penjelasan (WARNA DIPERBAIKI) -->
+                    <!-- Kolom Kanan: Teks Penjelasan -->
                     <div class="w-full md:w-6/12">
                         <h3 class="text-xl font-bold text-bappenas-darkblue mb-4 leading-relaxed">
                             Kementerian PPN/Bappenas akan merahasiakan identitas pribadi Anda sebagai whistleblower
@@ -383,7 +383,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 6] CARA MELAPOR SECTION (BARU) -->
+        <!-- [BAGIAN 6] CARA MELAPOR SECTION -->
         <section id="cara-melapor" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <!-- Judul Section dengan garis bawah -->
@@ -469,7 +469,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 7] FAQ SECTION (BARU) -->
+        <!-- [BAGIAN 7] FAQ SECTION -->
         <section id="faq" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
@@ -687,7 +687,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 8] KONTAK KAMI SECTION (FINAL) -->
+        <!-- [BAGIAN 8] KONTAK KAMI SECTION -->
         <section id="kontak" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
@@ -765,13 +765,13 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 9] FOOTER (WARNA DIPERBAIKI KE BIRU MUDA) -->
+        <!-- [BAGIAN 9] FOOTER -->
         <footer class="text-white text-center py-5" style="background-color: #0892D0;">
             <p class="text-sm">© 2024 Inspektorat Utama Bappenas</p>
             <p class="text-xs text-gray-100 mt-1">Designed by Magang 2025</p>
         </footer>
 
-        <!-- Tombol Scroll to Top (WARNA DIUBAH MENJADI BIRU) -->
+        <!-- Tombol Scroll to Top -->
         <button x-show="showScrollTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
             x-transition:enter="transition ease-out duration-300"
             x-transition:enter-start="opacity-0 transform translate-y-2"
