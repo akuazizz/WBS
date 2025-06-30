@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\PengaduanController;
+use App\Http\Controllers\TrackingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,9 @@ Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.
 Route::get('/pengaduan/create', [PengaduanController::class, 'create'])->name('pengaduan.create');
 Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
 
+// RUTE BARU UNTUK HALAMAN TRACKING
+Route::get('/tracking', [TrackingController::class, 'index'])->name('tracking.index');
+Route::post('/tracking', [TrackingController::class, 'search'])->name('tracking.search');
 
 // Memuat rute-rute untuk autentikasi (login, register, logout, dll.)
 require __DIR__ . '/auth.php';

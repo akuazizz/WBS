@@ -106,7 +106,7 @@
                                     <a href="{{ route('pengaduan.create') }}"
                                         class="px-8 py-3 bg-bappenas-darkblue font-bold rounded-md hover:bg-bappenas-darkerblue transition-colors text-center shadow-lg">Buat
                                         Pengaduan</a>
-                                    <a href="#"
+                                    <a href="{{ route('tracking.index') }}"
                                         class="px-8 py-3 border-2 border-white font-bold rounded-md hover:bg-white hover:text-blue-700 transition-colors text-center shadow-lg">Cek
                                         Tracking Pengaduan</a>
                                 </div>

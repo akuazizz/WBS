@@ -62,7 +62,7 @@
             <a href="#"><img src="https://wbs.bappenas.go.id/img/logo_wbs4.png" alt="Logo WBS Bappenas" class="h-8"></a>
             <nav class="flex items-center space-x-6 text-bappenas-title font-semibold">
                 <a href="{{ url('/') }}" class="hover:underline">Menu Utama</a>
-                <a href="#" class="hover:underline">Cek Tracking</a>
+                <a href="{{ route('tracking.index') }}" class="hover:underline">Cek Tracking</a>
                 <a href="#"
                     class="px-5 py-2 text-sm bg-bappenas-button text-white rounded hover:bg-bappenas-button-hover flex items-center space-x-2 transition-colors">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
