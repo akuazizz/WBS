@@ -22,27 +22,18 @@ use App\Http\Controllers\PengaduanController;
 Route::get('/', [DashboardController::class, 'index'])->name('home');
 
 
-// --- Rute Privat (Hanya bisa diakses setelah login) ---
-Route::middleware(['auth', 'verified'])->group(function () {
-    
-    // Rute untuk halaman dashboard setelah login
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+// Rute untuk halaman dashboard
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    // Rute untuk manajemen profil pengguna (bawaan Breeze)
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    
-    // Anda bisa menambahkan rute-rute privat lainnya di sini,
-    // seperti rute untuk form pengaduan, melihat detail, dll.
-});
-Route::middleware('auth')->group(function () {
-    // ... rute dashboard dan profile
+// Rute untuk manajemen profil
+Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    // RUTE BARU UNTUK PENGADUAN
-    Route::get('/pengaduan/create', [PengaduanController::class, 'create'])->name('pengaduan.create');
-    Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
-});
+// Rute untuk Pengaduan
+Route::get('/pengaduan/create', [PengaduanController::class, 'create'])->name('pengaduan.create');
+Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
+
 
 // Memuat rute-rute untuk autentikasi (login, register, logout, dll.)
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
