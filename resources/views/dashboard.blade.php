@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>WBS Bappenas</title>
+    <title>WBS Pemkab Banjarnegara</title>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -194,8 +194,7 @@
                         Pengaduan
                     </h2>
                     <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Rangkaian tahapan sistematis yang
-                        dilalui
-                        dalam menangani dan menyelesaikan Pengaduan yang diajukan oleh Pelapor</p>
+                        dilalui dalam menangani dan menyelesaikan Pengaduan yang diajukan oleh Pelapor</p>
                 </div>
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
                     <a href="https://youtu.be/3QyQrLMMbMw?feature=shared" target="_blank"
@@ -377,8 +376,10 @@
                     <!-- Kolom Kanan: Teks Penjelasan -->
                     <div class="w-full md:w-6/12">
                         <h3 class="text-xl font-bold text-bappenas-darkblue mb-4 leading-relaxed">
-                            Kementerian PPN/Bappenas akan merahasiakan identitas pribadi Anda sebagai whistleblower
-                            karena Kementerian PPN/Bappenas hanya fokus pada informasi yang Anda laporkan. Agar
+                            Pemerintahan Kabupaten Banjarnegara akan merahasiakan identitas pribadi Anda sebagai
+                            whistleblower
+                            karena Pemerintahan Kabupaten Banjarnegara hanya fokus pada informasi yang Anda laporkan.
+                            Agar
                             Kerahasiaan lebih terjaga, perhatikan hal-hal berikut ini:
                         </h3>
                         <ul class="space-y-4">
@@ -390,8 +391,7 @@
                                 </svg>
                                 <span class="text-gray-800">Jika ingin identitas Anda tetap rahasia, jangan
                                     memberitahukan/mengisikan data-data pribadi, seperti nama Anda, atau hubungan
-                                    Anda
-                                    dengan pelaku-pelaku.</span>
+                                    Anda dengan pelaku-pelaku.</span>
                             </li>
                             <li class="flex items-start">
                                 <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
@@ -489,7 +489,7 @@
                     <div class="mt-16 flex flex-col md:flex-row items-center gap-8">
                         <div class="w-full md:w-1/2 text-center md:text-left">
                             <h3 class="text-4xl font-extrabold text-gray-800 leading-tight">
-                                Tutorial Lengkap<br>WBS Bappenas
+                                Tutorial Lengkap<br>WBS Pemkab Banjarnegara
                             </h3>
                         </div>
                         <div class="w-full md:w-1/2">
@@ -524,7 +524,7 @@
                         <button @click="openFaq = openFaq === 1 ? null : 1"
                             class="w-full flex justify-between items-center text-left p-5 hover:bg-gray-50 transition-colors">
                             <span class="text-lg font-semibold text-gray-800">Apa itu aplikasi Whistleblowing System
-                                (WBS) Kementerian PPN/Bappenas?</span>
+                                (WBS) Inspektorat Kabupaten Banjarnegara?</span>
                             <svg class="w-6 h-6 transform transition-transform text-gray-500 flex-shrink-0"
                                 :class="{ 'rotate-180': openFaq === 1 }" fill="none" stroke="currentColor"
                                 viewBox="0 0 24 24">
@@ -533,16 +533,17 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 1" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Aplikasi Whistleblowing System (WBS) Kementerian PPN/Bappenas adalah
+                            <p class="pt-4">Aplikasi Whistleblowing System (WBS) Inspektorat Banjarnegara adalah
                                 aplikasi pengelolaan dan tindak lanjut pengaduan serta pelaporan hasil pengelolaan
-                                pengaduan yang disediakan oleh Kementerian PPN/Bappenas sebagai salah satu sarana
+                                pengaduan yang disediakan oleh Pemerintah Kabupaten Banjarnegara sebagai salah satu
+                                sarana
                                 bagi
-                                setiap pejabat/pegawai Kementerian PPN/Bappenas sebagai pihak internal maupun
+                                setiap pejabat/pegawai Pemerintah Kabupaten Banjarnegara sebagai pihak internal maupun
                                 masyarakat
-                                luas pengguna layanan Kementerian PPN/Bappenas sebagai pihak eksternal untuk
+                                luas pengguna layanan Pemerintah Kabupaten Banjarnegara sebagai pihak eksternal untuk
                                 melaporkan
                                 dugaan adanya pelanggaran dan/atau ketidakpuasan terhadap pelayanan yang
-                                dilakukan/diberikan oleh pejabat/pegawai Kementerian PPN/Bappenas.</p>
+                                dilakukan/diberikan oleh pejabat/pegawai Pemerintah Kabupaten Banjarnegara.</p>
                         </div>
                     </div>
 
@@ -724,7 +725,7 @@
         </section>
 
         <!-- [BAGIAN 8] KONTAK KAMI SECTION -->
-        <section id="kontak" class="py-20 bg-gray-50">
+        <section id="kontak" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
                 <div class="text-center mb-12">
@@ -733,18 +734,19 @@
                     </h2>
                     <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
                     <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
-                        Hubungi kami untuk informasi lebih lanjut terkait layanan dan pengaduan di Inspektorat Utama
-                        Bappenas
+                        Hubungi kami untuk informasi lebih lanjut terkait layanan dan pengaduan di Inspektorat Kabupaten
+                        Banjarnegara
                     </p>
                 </div>
 
                 <!-- Peta Google -->
                 <div class="w-full rounded-lg overflow-hidden shadow-lg border mb-12">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.278035605351!2d109.64193217499102!3d-7.430195973012407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6543dfaacd43d9%3A0xa1a645c15f45629b!2sDinas%20Komunikasi%20dan%20Informatika%20Kabupaten%20Banjarnegara!5e0!3m2!1sid!2sid!4v1719743547226!5m2!1sid!2sid"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.6315604566303!2d109.6928989747618!3d-7.395115992614738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aa9166ae4ad25%3A0x5f07dbc8912a2978!2sInspektorat%20Kabupaten%20Banjarnegara!5e0!3m2!1sid!2sid!4v1751352313918!5m2!1sid!2sid"
                         class="w-full h-[450px]" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
+
                 </div>
 
                 <!-- KONTAK KAMI -->
@@ -758,8 +760,8 @@
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                         <p>
-                            Jl. Dipayuda No.16, Krandegan, Kec. Banjarnegara,<br>
-                            Kab. Banjarnegara, Jawa Tengah 53418
+                            Jl. Dipayuda No.10, Kutabanjarnegara, Kec. Banjarnegara,<br>
+                            Kab. Banjarnegara, Jawa Tengah 53415
                         </p>
                     </div>
 
@@ -771,8 +773,8 @@
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <p>
-                            sekretariat.irtama@bappenas.go.id<br>
-                            inspektorat.utama.bappenas@gmail.com
+                            wbs@banjarnegara.go.id<br>
+                            inspektorat@banjarnegarakab.go.id
                         </p>
                     </div>
 
@@ -783,7 +785,7 @@
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
-                        <p>(021) 31906288</p>
+                        <p>(0286) 591459, 591084</p>
                     </div>
 
                 </div>
