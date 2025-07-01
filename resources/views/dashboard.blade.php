@@ -27,23 +27,49 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* GANTI DARI BIRU MUDA KE BIRU TUA */
         .bg-bappenas-blue {
-            background-color: #0892D0;
-        }
-
-        .bg-bappenas-darkblue {
-            background-color: #005a9e;
+            background-color: #005A9E;
+            /* Biru Tua */
         }
 
         .text-bappenas-darkblue {
-            color: #005a9e;
+            color: #005A9E;
         }
 
         .hover\:bg-bappenas-darkerblue:hover {
-            background-color: #004b85;
+            background-color: #004B85;
         }
 
-        /* Plugin Aspect Ratio untuk iframe responsif */
+        /* Tombol bulat custom */
+        .btn-rounded {
+            padding: 0.75rem 2rem;
+            font-weight: bold;
+            border-radius: 9999px;
+            transition: all 0.3s ease;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-buat {
+            background-color: #009FE3;
+            color: white;
+        }
+
+        .btn-buat:hover {
+            background-color: #009FE3;
+        }
+
+        .btn-tracking {
+            background-color: #009FE3;
+            color: white;
+        }
+
+        .btn-tracking:hover {
+            background-color: #009FE3;
+        }
+
+        /* Responsive Aspect Ratio (Opsional) */
         @layer utilities {
             @variants responsive {
                 .aspect-w-16 {
@@ -71,6 +97,8 @@
             }
         }
     </style>
+
+
 </head>
 
 <body class="antialiased bg-gray-50">
@@ -124,24 +152,32 @@
         </header>
 
         <!-- [BAGIAN 3] HERO SECTION -->
+        <!-- [BAGIAN 3] HERO SECTION -->
         <main id="beranda" class="bg-bappenas-blue">
-            <div class="container mx-auto px-6 pt-12 pb-24 text-white">
+            <div class="container mx-auto px-6 pt-20 pb-24 text-white">
                 <div class="flex flex-col md:flex-row items-center">
+                    <!-- Teks Sambutan -->
                     <div class="w-full md:w-1/2 text-center md:text-left">
-                        <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-4">Selamat Datang di Aplikasi
-                            Whistleblowing System Bappenas</h1>
-                        <p class="mb-8 text-lg opacity-90">Mari bersama-sama menciptakan pemerintahan yang jujur dan
-                            bersih, laporkan setiap pelanggaran yang terjadi di lingkungan kerja Anda.</p>
+                        <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+                            Selamat Datang di Aplikasi Whistleblowing System Kabupaten Banjarnegara
+                        </h1>
+                        <p class="mb-8 text-lg opacity-90">
+                            Mari bersama-sama menciptakan pemerintahan yang jujur dan bersih,
+                            laporkan setiap pelanggaran yang terjadi di lingkungan kerja Anda.
+                        </p>
+                        <!-- Tombol -->
                         <div
-                            class="flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                            <a href="{{ route('pengaduan.create') }}"
-                                class="px-8 py-3 bg-bappenas-darkblue font-bold rounded-md hover:bg-bappenas-darkerblue transition-colors text-center shadow-lg">Buat
-                                Pengaduan</a>
-                            <a href="{{ route('tracking.index') }}"
-                                class="px-8 py-3 border-2 border-white font-bold rounded-md hover:bg-white hover:text-blue-700 transition-colors text-center shadow-lg">Cek
-                                Tracking Pengaduan</a>
+                            class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                            <a href="{{ route('pengaduan.create') }}" class="btn-rounded btn-buat">
+                                Buat Pengaduan
+                            </a>
+                            <a href="{{ route('tracking.index') }}" class="btn-rounded btn-tracking">
+                                Cek Tracking Pengaduan
+                            </a>
                         </div>
                     </div>
+
+                    <!-- Gambar Logo -->
                     <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center">
                         <img src="https://wbs.bappenas.go.id/img/logo_wbs3.png" alt="Logo WBS Graphic"
                             class="max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-2xl">
@@ -149,6 +185,8 @@
                 </div>
             </div>
         </main>
+
+
 
         <!-- [BAGIAN 3] ALUR PENGADUAN SECTION -->
         <section id="alur" class="py-20 bg-gray-50">
