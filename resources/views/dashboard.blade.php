@@ -106,24 +106,23 @@
     <!-- Wrapper Utama dengan Alpine.js untuk Scroll to Top -->
     <div x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.pageYOffset > 300) ? true : false"
         class="flex flex-col min-h-screen">
+        
+<!-- [BAGIAN 1] TOP LOGO BAR -->
+<div class="bg-white py-2 border-b border-gray-200">
+    <div class="container mx-auto px-6 flex justify-start items-center space-x-4">
+        <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png" alt="Logo Inspektorat Utama Kabupaten Banjarnegara"
+            class="h-10 md:h-12">
+        <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo Inspektorat Utama Kabupaten Banjarnegara"
+            class="h-10 md:h-12">
+    </div>
+</div>
 
-        <!-- [BAGIAN 1] TOP LOGO BAR -->
-        <div class="bg-white py-2 border-b border-gray-200">
-            <div class="container mx-auto px-6 flex justify-center items-center space-x-4">
-                <img src="https://wbs.bappenas.go.id/img/header_logo_IU1.png" alt="Logo Inspektorat Utama"
-                    class="h-10 md:h-12">
-                <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo Berakhlak"
-                    class="h-10 md:h-12">
-                <img src="https://wbs.bappenas.go.id/img/header_bangga.png" alt="Logo Bangga Melayani Bangsa"
-                    class="h-10 md:h-12">
-            </div>
-        </div>
 
         <!-- [BAGIAN 2] NAVBAR -->
         <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
             <div class="container mx-auto px-6">
                 <div class="py-4 flex justify-between items-center">
-                    <a href="#beranda"><img src="https://wbs.bappenas.go.id/img/logo_wbs4.png" alt="Logo WBS Bappenas"
+                    <a href="#beranda"><img src="{{ asset('images/logo-wbs.jpg') }}" alt="Logo WBS Kabupaten Banjarnegara"
                             class="h-12"></a>
                     <div class="hidden md:flex items-center space-x-8">
                         <nav class="flex items-center space-x-6 text-white font-semibold">
@@ -152,7 +151,6 @@
         </header>
 
         <!-- [BAGIAN 3] HERO SECTION -->
-        <!-- [BAGIAN 3] HERO SECTION -->
         <main id="beranda" class="bg-bappenas-blue">
             <div class="container mx-auto px-6 pt-20 pb-24 text-white">
                 <div class="flex flex-col md:flex-row items-center">
@@ -179,7 +177,7 @@
 
                     <!-- Gambar Logo -->
                     <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                        <img src="https://wbs.bappenas.go.id/img/logo_wbs3.png" alt="Logo WBS Graphic"
+                      <img src="{{ asset('images/logo-wbs.jpg') }}" alt="Logo WBS Kabupaten Banjarnegara"
                             class="max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-2xl">
                     </div>
                 </div>
@@ -788,24 +786,13 @@
                         <p>(021) 31906288</p>
                     </div>
 
-                    <!-- Instagram -->
-                    <div class="flex items-center gap-2 text-sm md:text-base">
-                        <svg class="w-6 h-6 text-bappenas-darkblue" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M7.75 2h8.5A5.75 5.75 0 0122 7.75v8.5A5.75 5.75 0 0116.25 22h-8.5A5.75 5.75 0 012 16.25v-8.5A5.75 5.75 0 017.75 2z" />
-                            <circle cx="12" cy="12" r="3.5" />
-                            <circle cx="17" cy="7" r="1" />
-                        </svg>
-                        <p>@iubappenas</p>
-                    </div>
                 </div>
             </div>
         </section>
 
         <!-- [BAGIAN 9] FOOTER -->
         <footer class="text-white text-center py-5" style="background-color: #0892D0;">
-            <p class="text-sm">© 2024 Inspektorat Utama Bappenas</p>
+            <p class="text-sm">© 2025 Inspektorat Kabupaten Banjarnegara</p>
             <p class="text-xs text-gray-100 mt-1">Designed by Magang 2025</p>
         </footer>
 
