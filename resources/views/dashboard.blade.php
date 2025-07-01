@@ -122,7 +122,7 @@
         <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
             <div class="container mx-auto px-6">
                 <div class="py-4 flex justify-between items-center">
-                    <a href="#beranda"><img src="{{ asset('images/logo-wbs.jpg') }}"
+                    <a href="#beranda"><img src="{{ asset('images/logo-wbs.png') }}"
                             alt="Logo WBS Kabupaten Banjarnegara" class="h-12"></a>
                     <div class="hidden md:flex items-center space-x-8">
                         <nav class="flex items-center space-x-6 text-white font-semibold">
@@ -176,8 +176,8 @@
                     </div>
 
                     <!-- Gambar Logo -->
-                    <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                        <img src="{{ asset('images/logo-wbs.jpg') }}" alt="Logo WBS Kabupaten Banjarnegara"
+                    <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center ">
+                        <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS Kabupaten Banjarnegara"
                             class="max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-2xl">
                     </div>
                 </div>
