@@ -106,24 +106,24 @@
     <!-- Wrapper Utama dengan Alpine.js untuk Scroll to Top -->
     <div x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.pageYOffset > 300) ? true : false"
         class="flex flex-col min-h-screen">
-        
-<!-- [BAGIAN 1] TOP LOGO BAR -->
-<div class="bg-white py-2 border-b border-gray-200">
-    <div class="container mx-auto px-6 flex justify-start items-center space-x-4">
-        <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png" alt="Logo Inspektorat Utama Kabupaten Banjarnegara"
-            class="h-10 md:h-12">
-        <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo Inspektorat Utama Kabupaten Banjarnegara"
-            class="h-10 md:h-12">
-    </div>
-</div>
+
+        <!-- [BAGIAN 1] TOP LOGO BAR -->
+        <div class="bg-white py-2 border-b border-gray-200">
+            <div class="container mx-auto px-6 flex justify-start items-center space-x-4">
+                <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
+                    alt="Logo Inspektorat Utama Kabupaten Banjarnegara" class="h-10 md:h-12">
+                <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png"
+                    alt="Logo Inspektorat Utama Kabupaten Banjarnegara" class="h-10 md:h-12">
+            </div>
+        </div>
 
 
         <!-- [BAGIAN 2] NAVBAR -->
         <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
             <div class="container mx-auto px-6">
                 <div class="py-4 flex justify-between items-center">
-                    <a href="#beranda"><img src="{{ asset('images/logo-wbs.jpg') }}" alt="Logo WBS Kabupaten Banjarnegara"
-                            class="h-12"></a>
+                    <a href="#beranda"><img src="{{ asset('images/logo-wbs.jpg') }}"
+                            alt="Logo WBS Kabupaten Banjarnegara" class="h-12"></a>
                     <div class="hidden md:flex items-center space-x-8">
                         <nav class="flex items-center space-x-6 text-white font-semibold">
                             <a href="#beranda" class="hover:underline">Beranda</a>
@@ -177,7 +177,7 @@
 
                     <!-- Gambar Logo -->
                     <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                      <img src="{{ asset('images/logo-wbs.jpg') }}" alt="Logo WBS Kabupaten Banjarnegara"
+                        <img src="{{ asset('images/logo-wbs.jpg') }}" alt="Logo WBS Kabupaten Banjarnegara"
                             class="max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-2xl">
                     </div>
                 </div>
@@ -804,7 +804,7 @@
             x-transition:leave="transition ease-in duration-200"
             x-transition:leave-start="opacity-100 transform translate-y-0"
             x-transition:leave-end="opacity-0 transform translate-y-2"
-            class="fixed bottom-8 right-8 bg-bappenas-darkblue text-white p-4 rounded-full shadow-lg hover:bg-bappenas-darkerblue focus:outline-none"
+            class="fixed bottom-8 right-8 bg-blue-800 text-white p-4 rounded-full shadow-lg hover:bg-blue-900 focus:outline-none"
             style="display: none;">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
