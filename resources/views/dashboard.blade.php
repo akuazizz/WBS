@@ -29,16 +29,16 @@
 
         /* GANTI DARI BIRU MUDA KE BIRU TUA */
         .bg-bappenas-blue {
-            background-color: #005A9E;
+            background-color: #004F98;
             /* Biru Tua */
         }
 
         .text-bappenas-darkblue {
-            color: #005A9E;
+            color: #004F98;
         }
 
         .hover\:bg-bappenas-darkerblue:hover {
-            background-color: #004B85;
+            background-color: #004F98;
         }
 
         /* Tombol bulat custom */
