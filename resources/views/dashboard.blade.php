@@ -796,7 +796,7 @@
         </section>
 
         <!-- [BAGIAN 9] FOOTER -->
-        <footer class="text-white text-center py-5" style="background-color: #0892D0;">
+        <footer class="text-white text-center py-5" style="background-color: #004F98;">
             <p class="text-sm">© 2025 Inspektorat Kabupaten Banjarnegara</p>
             <p class="text-xs text-gray-100 mt-1">Designed by Magang 2025</p>
         </footer>
