@@ -369,7 +369,7 @@
                 <div class="flex flex-col md:flex-row items-center justify-center gap-12">
                     <!-- Kolom Kiri: Gambar Ilustrasi -->
                     <div class="w-full md:w-5/12">
-                        <img src="https://wbs.bappenas.go.id/img/rahasia1.png" alt="Ilustrasi Kerahasiaan Data"
+                        <img src="{{ asset('images/kerahasiaan.png') }}" alt="Ilustrasi Kerahasiaan Data"
                             class="w-full h-auto">
                     </div>
 
