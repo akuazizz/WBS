@@ -118,37 +118,40 @@
         </div>
 
 
-        <!-- [BAGIAN 2] NAVBAR -->
-        <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
-            <div class="container mx-auto px-6">
-                <div class="py-4 flex justify-between items-center">
-                    <a href="#beranda"><img src="{{ asset('images/logo-wbs.png') }}"
-                            alt="Logo WBS Kabupaten Banjarnegara" class="h-12"></a>
-                    <div class="hidden md:flex items-center space-x-8">
-                        <nav class="flex items-center space-x-6 text-white font-semibold">
-                            <a href="#beranda" class="hover:underline">Beranda</a>
-                            <a href="#alur" class="hover:underline">Alur</a>
-                            <a href="#unsur" class="hover:underline">Unsur</a>
-                            <a href="#kerahasiaan" class="hover:underline">Kerahasiaan Pelapor</a>
-                            <a href="#cara-melapor" class="hover:underline">Cara Melapor</a>
-                            <a href="#faq" class="hover:underline">FAQ</a>
-                            <a href="#kontak" class="hover:underline">Kontak Kami</a>
-                        </nav>
-                        <div>
-                            <a href="{{ route('login') }}"
-                                class="px-5 py-2 text-sm bg-bappenas-darkblue text-white font-semibold rounded hover:bg-bappenas-darkerblue flex items-center space-x-2 transition-colors">
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
-                                    </path>
-                                </svg>
-                                <span>Masuk</span>
-                            </a>
-                        </div>
-                    </div>
+       <!-- [BAGIAN 2] NAVBAR -->
+<header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-6">
+        <div class="py-4 flex justify-between items-center">
+            <a href="#beranda">
+                <img src="{{ asset('images/logo-wbs.png') }}"
+                    alt="Logo WBS Kabupaten Banjarnegara" class="h-12">
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <nav class="flex items-center space-x-6 text-white font-semibold">
+                    <a href="#beranda" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Beranda</a>
+                    <a href="#alur" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Alur</a>
+                    <a href="#unsur" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Unsur</a>
+                    <a href="#kerahasiaan" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kerahasiaan Pelapor</a>
+                    <a href="#cara-melapor" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Cara Melapor</a>
+                    <a href="#faq" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">FAQ</a>
+                    <a href="#kontak" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kontak Kami</a>
+                </nav>
+                <div>
+                    <a href="{{ route('login') }}"
+                        class="px-5 py-2 text-sm bg-bappenas-darkblue text-white font-semibold rounded hover:bg-bappenas-darkerblue flex items-center space-x-2 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
+                            </path>
+                        </svg>
+                        <span>Masuk</span>
+                    </a>
                 </div>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
+
 
         <!-- [BAGIAN 3] HERO SECTION -->
         <main id="beranda" class="bg-bappenas-blue">
