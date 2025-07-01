@@ -98,7 +98,6 @@
         }
     </style>
 
-
 </head>
 
 <body class="antialiased bg-gray-50">
@@ -107,15 +106,15 @@
     <div x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.pageYOffset > 300) ? true : false"
         class="flex flex-col min-h-screen">
 
-        <!-- [BAGIAN 1] TOP LOGO BAR -->
-        <div class="bg-white py-2 border-b border-gray-200">
-            <div class="container mx-auto px-6 flex justify-start items-center space-x-4">
-                <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
-                    alt="Logo Inspektorat Utama Kabupaten Banjarnegara" class="h-10 md:h-12">
-                <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png"
-                    alt="Logo Inspektorat Utama Kabupaten Banjarnegara" class="h-10 md:h-12">
-            </div>
-        </div>
+       <!-- [BAGIAN 1] TOP LOGO BAR -->
+<div class="bg-white py-2 border-b border-gray-200">
+    <div class="w-full px-2 flex justify-start items-center space-x-4">
+        <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
+            alt="Logo Inspektorat Utama Kabupaten Banjarnegara" class="h-10 md:h-12">
+        <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png"
+            alt="Logo BerAKHLAK" class="h-10 md:h-12">
+    </div>
+</div>
 
 
        <!-- [BAGIAN 2] NAVBAR -->
@@ -136,17 +135,18 @@
                     <a href="#faq" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">FAQ</a>
                     <a href="#kontak" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kontak Kami</a>
                 </nav>
-                <div>
-                    <a href="{{ route('login') }}"
-                        class="px-5 py-2 text-sm bg-bappenas-darkblue text-white font-semibold rounded hover:bg-bappenas-darkerblue flex items-center space-x-2 transition-colors">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
-                            </path>
-                        </svg>
-                        <span>Masuk</span>
-                    </a>
-                </div>
+               <div>
+    <a href="{{ route('login') }}"
+        class="px-5 py-2 text-sm bg-white text-bappenas-darkblue font-semibold rounded shadow hover:bg-gray-100 flex items-center space-x-2 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
+            </path>
+        </svg>
+        <span>Masuk</span>
+    </a>
+</div>
+
             </div>
         </div>
     </div>
