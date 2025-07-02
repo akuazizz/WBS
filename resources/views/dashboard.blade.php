@@ -116,7 +116,6 @@
             </div>
         </div>
 
-
         <!-- [BAGIAN 2] NAVBAR -->
         <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
             <div class="container mx-auto px-6">
@@ -160,7 +159,6 @@
             </div>
         </header>
 
-
         <!-- [BAGIAN 3] HERO SECTION -->
         <section id="beranda" class="min-h-screen bg-bappenas-blue">
             <div class="container mx-auto px-6 pt-20 pb-24 text-white">
@@ -194,8 +192,6 @@
                 </div>
             </div>
         </section>
-
-
 
         <!-- [BAGIAN 3] ALUR PENGADUAN SECTION -->
         <section id="alur" class="py-20 bg-gray-50">
@@ -265,7 +261,6 @@
                 </div>
             </div>
         </section>
-
 
         <!-- [BAGIAN 4] UNSUR PENGADUAN SECTION -->
         <section id="unsur" class="py-20 bg-white">
