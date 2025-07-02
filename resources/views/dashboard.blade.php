@@ -126,25 +126,24 @@
                             class="h-12">
                     </a>
                     <div class="hidden md:flex items-center space-x-8">
-                        <nav class="flex items-center space-x-6 text-white font-semibold">
-                            <a href="#beranda"
-                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Beranda</a>
-                            <a href="#alur"
-                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Alur</a>
-                            <a href="#unsur"
-                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Unsur</a>
-                            <a href="#kerahasiaan"
-                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kerahasiaan
-                                Pelapor</a>
-                            <a href="#cara-melapor"
-                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Cara
-                                Melapor</a>
-                            <a href="#faq"
-                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">FAQ</a>
-                            <a href="#kontak"
-                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kontak
-                                Kami</a>
+                        <nav class="flex items-center space-x-6 text-white font-semibold" id="navbar">
+                            <a href="#beranda" data-section="beranda"
+                                class="hover:underline hover:text-blue-300 transition-colors">Beranda</a>
+                            <a href="#alur" data-section="alur"
+                                class="hover:underline hover:text-blue-300 transition-colors">Alur</a>
+                            <a href="#unsur" data-section="unsur"
+                                class="hover:underline hover:text-blue-300 transition-colors">Unsur</a>
+                            <a href="#kerahasiaan" data-section="kerahasiaan"
+                                class="hover:underline hover:text-blue-300 transition-colors">Kerahasiaan Pelapor</a>
+                            <a href="#cara-melapor" data-section="cara-melapor"
+                                class="hover:underline hover:text-blue-300 transition-colors">Cara Melapor</a>
+                            <a href="#faq" data-section="faq"
+                                class="hover:underline hover:text-blue-300 transition-colors">FAQ</a>
+                            <a href="#kontak" data-section="kontak"
+                                class="hover:underline hover:text-blue-300 transition-colors">Kontak Kami</a>
                         </nav>
+
+                        <!-- Tombol Masuk -->
                         <div>
                             <a href="{{ route('login') }}"
                                 class="px-5 py-2 text-sm bg-white text-bappenas-darkblue font-semibold rounded shadow hover:bg-gray-100 flex items-center space-x-2 transition-colors">
@@ -156,7 +155,6 @@
                                 <span>Masuk</span>
                             </a>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -164,7 +162,7 @@
 
 
         <!-- [BAGIAN 3] HERO SECTION -->
-        <main id="beranda" class="bg-bappenas-blue">
+        <section id="beranda" class="min-h-screen bg-bappenas-blue">
             <div class="container mx-auto px-6 pt-20 pb-24 text-white">
                 <div class="flex flex-col md:flex-row items-center">
                     <!-- Teks Sambutan -->
@@ -195,7 +193,7 @@
                     </div>
                 </div>
             </div>
-        </main>
+        </section>
 
 
 
@@ -840,6 +838,39 @@
             </svg>
         </button>
     </div>
+
+    <!-- SCROLL SPY SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sections = document.querySelectorAll("section[id]");
+            const navLinks = document.querySelectorAll("nav a[data-section]");
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute("id");
+                    const link = document.querySelector(`nav a[data-section="${id}"]`);
+
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(l => l.classList.remove("text-blue-300", "underline"));
+                        if (link) {
+                            link.classList.add("text-blue-300", "underline");
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.5
+            });
+
+            sections.forEach(section => observer.observe(section));
+
+            if (window.scrollY === 0) {
+                const link = document.querySelector('nav a[data-section="beranda"]');
+                navLinks.forEach(l => l.classList.remove("text-blue-300", "underline"));
+                if (link) link.classList.add("text-blue-300", "underline");
+            }
+        });
+    </script>
+
 </body>
 
 </html>
