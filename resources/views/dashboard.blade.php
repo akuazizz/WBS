@@ -106,51 +106,61 @@
     <div x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.pageYOffset > 300) ? true : false"
         class="flex flex-col min-h-screen">
 
-       <!-- [BAGIAN 1] TOP LOGO BAR -->
-<div class="bg-white py-2 border-b border-gray-200">
-    <div class="w-full px-2 flex justify-start items-center space-x-4">
-        <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
-            alt="Logo Inspektorat Utama Kabupaten Banjarnegara" class="h-10 md:h-12">
-        <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png"
-            alt="Logo BerAKHLAK" class="h-10 md:h-12">
-    </div>
-</div>
-
-
-       <!-- [BAGIAN 2] NAVBAR -->
-<header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-6">
-        <div class="py-4 flex justify-between items-center">
-            <a href="#beranda">
-                <img src="{{ asset('images/logo-wbs.png') }}"
-                    alt="Logo WBS Kabupaten Banjarnegara" class="h-12">
-            </a>
-            <div class="hidden md:flex items-center space-x-8">
-                <nav class="flex items-center space-x-6 text-white font-semibold">
-                    <a href="#beranda" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Beranda</a>
-                    <a href="#alur" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Alur</a>
-                    <a href="#unsur" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Unsur</a>
-                    <a href="#kerahasiaan" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kerahasiaan Pelapor</a>
-                    <a href="#cara-melapor" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Cara Melapor</a>
-                    <a href="#faq" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">FAQ</a>
-                    <a href="#kontak" class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kontak Kami</a>
-                </nav>
-               <div>
-    <a href="{{ route('login') }}"
-        class="px-5 py-2 text-sm bg-white text-bappenas-darkblue font-semibold rounded shadow hover:bg-gray-100 flex items-center space-x-2 transition-colors">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
-            </path>
-        </svg>
-        <span>Masuk</span>
-    </a>
-</div>
-
+        <!-- [BAGIAN 1] TOP LOGO BAR -->
+        <div class="bg-white py-2 border-b border-gray-200">
+            <div class="w-full px-2 flex justify-start items-center space-x-4">
+                <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
+                    alt="Logo Inspektorat Utama Kabupaten Banjarnegara" class="h-10 md:h-12">
+                <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo BerAKHLAK"
+                    class="h-10 md:h-12">
             </div>
         </div>
-    </div>
-</header>
+
+
+        <!-- [BAGIAN 2] NAVBAR -->
+        <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
+            <div class="container mx-auto px-6">
+                <div class="py-4 flex justify-between items-center">
+                    <a href="#beranda">
+                        <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS Kabupaten Banjarnegara"
+                            class="h-12">
+                    </a>
+                    <div class="hidden md:flex items-center space-x-8">
+                        <nav class="flex items-center space-x-6 text-white font-semibold">
+                            <a href="#beranda"
+                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Beranda</a>
+                            <a href="#alur"
+                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Alur</a>
+                            <a href="#unsur"
+                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Unsur</a>
+                            <a href="#kerahasiaan"
+                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kerahasiaan
+                                Pelapor</a>
+                            <a href="#cara-melapor"
+                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Cara
+                                Melapor</a>
+                            <a href="#faq"
+                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">FAQ</a>
+                            <a href="#kontak"
+                                class="hover:underline hover:text-blue-300 focus:text-blue-300 active:text-blue-400 transition-colors">Kontak
+                                Kami</a>
+                        </nav>
+                        <div>
+                            <a href="{{ route('login') }}"
+                                class="px-5 py-2 text-sm bg-white text-bappenas-darkblue font-semibold rounded shadow hover:bg-gray-100 flex items-center space-x-2 transition-colors">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
+                                    </path>
+                                </svg>
+                                <span>Masuk</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
 
 
         <!-- [BAGIAN 3] HERO SECTION -->
@@ -192,50 +202,61 @@
         <!-- [BAGIAN 3] ALUR PENGADUAN SECTION -->
         <section id="alur" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
+                <!-- Judul Section -->
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Alur
-                        Pengaduan
+                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Alur Pengaduan
                     </h2>
-                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">Rangkaian tahapan sistematis yang
-                        dilalui dalam menangani dan menyelesaikan Pengaduan yang diajukan oleh Pelapor</p>
+                    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+                        Rangkaian tahapan sistematis yang dilalui dalam menangani dan menyelesaikan Pengaduan yang
+                        diajukan oleh Pelapor
+                    </p>
                 </div>
+
+                <!-- Tombol Panduan -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
                     <a href="https://youtu.be/3QyQrLMMbMw?feature=shared" target="_blank"
-                        class="inline-flex items-center justify-center px-6 py-3 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 font-semibold hover:bg-gray-100 transition-colors">
+                        class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 rounded-lg shadow-sm bg-bappenas-blue text-white font-semibold hover:bg-[#C0C0C0] transition-colors">
                         <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z">
-                            </path>
+                                d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
                         </svg>
                         Video Tutorial Panduan WBS
                     </a>
                     <a href="/img/Buku_Panduan_WBS_2024_Pelapor.pdf" target="_blank"
-                        class="inline-flex items-center justify-center px-6 py-3 bg-white border border-gray-300 rounded-lg shadow-sm text-gray-700 font-semibold hover:bg-gray-100 transition-colors">
+                        class="inline-flex items-center justify-center px-6 py-3 bg-bappenas-blue border border-gray-300 rounded-lg shadow-sm text-white font-semibold hover:bg-[#C0C0C0] transition-colors">
                         <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
-                            </path>
+                                d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                         Buku Panduan Pelapor
                     </a>
                 </div>
+
+                <!-- Tab Switcher -->
                 <div x-data="{ activeTab: 'singkat' }" class="max-w-5xl mx-auto">
-                    <div class="flex justify-center p-1 bg-gray-200 rounded-xl max-w-sm mx-auto">
+                    <div class="flex justify-center p-1 rounded-xl bg-white shadow max-w-sm mx-auto">
                         <button @click="activeTab = 'singkat'"
-                            :class="{ 'bg-gray-200 text-gray-700': activeTab !== 'singkat', 'bg-white text-bappenas-darkblue shadow': activeTab === 'singkat' }"
-                            class="w-1/2 py-2 px-4 rounded-lg font-semibold transition-colors duration-300">Alur
-                            Singkat</button>
+                            :class="activeTab === 'singkat' ? 'bg-[#C0C0C0] text-white' : 'bg-bappenas-blue text-white'"
+                            class="w-1/2 py-2 px-4 rounded-lg font-semibold hover:bg-[#C0C0C0] transition-colors">
+                            Alur Singkat
+                        </button>
                         <button @click="activeTab = 'detail'"
-                            :class="{ 'bg-gray-200 text-gray-700': activeTab !== 'detail', 'bg-bappenas-darkblue text-white shadow': activeTab === 'detail' }"
-                            class="w-1/2 py-2 px-4 rounded-lg font-semibold transition-colors duration-300">Alur
-                            Detail</button>
+                            :class="activeTab === 'detail' ? 'bg-[#C0C0C0] text-white' : 'bg-bappenas-blue text-white'"
+                            class="w-1/2 py-2 px-4 rounded-lg font-semibold hover:bg-[#C0C0C0] transition-colors">
+                            Alur Detail
+                        </button>
                     </div>
+
+                    <!-- Konten Tab -->
                     <div class="mt-8 relative">
+                        <!-- Alur Singkat -->
                         <div x-show="activeTab === 'singkat'" x-transition:enter="transition ease-out duration-300"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100">
                             <img src="{{ asset('images/alur-singkat.png') }}" alt="Diagram Alur Pengaduan Singkat"
                                 class="rounded-lg shadow-xl mx-auto">
                         </div>
+
+                        <!-- Alur Detail -->
                         <div x-show="activeTab === 'detail'" x-transition:enter="transition ease-out duration-300"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                             style="display: none;">
@@ -246,6 +267,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- [BAGIAN 4] UNSUR PENGADUAN SECTION -->
         <section id="unsur" class="py-20 bg-white">
