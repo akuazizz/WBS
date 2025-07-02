@@ -109,10 +109,13 @@
         <!-- [BAGIAN 1] TOP LOGO BAR -->
         <div class="bg-white py-2 border-b border-gray-200">
             <div class="w-full px-2 flex justify-start items-center space-x-4">
-                <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
-                    alt="Logo Inspektorat Utama Kabupaten Banjarnegara" class="h-10 md:h-12">
-                <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo BerAKHLAK"
-                    class="h-10 md:h-12">
+                <a href="#">
+                    <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
+                        alt="Logo Inspektorat" class="h-10">
+                </a>
+                <a href="#">
+                    <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo berAKHLAK" class="h-10">
+                </a>
             </div>
         </div>
 
@@ -120,9 +123,10 @@
         <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
             <div class="container mx-auto px-6">
                 <div class="py-4 flex justify-between items-center">
-                    <a href="#beranda">
+                    <a href="#beranda" class="flex items-center space-x-3">
                         <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS Kabupaten Banjarnegara"
                             class="h-12">
+                        <span class="text-white text-L font-bold">WBS KABUPATEN BANJARNEGARA</span>
                     </a>
                     <div class="hidden md:flex items-center space-x-8">
                         <nav class="flex items-center space-x-6 text-white font-semibold" id="navbar">
