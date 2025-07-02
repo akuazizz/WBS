@@ -270,16 +270,22 @@
         <section id="unsur" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Unsur
-                        Pengaduan
+                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">
+                        Unsur Pengaduan
                     </h2>
                 </div>
                 <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="w-full md:w-1/2 flex justify-center">
+                        <img src="{{ asset('images/unsur-pengaduan.png') }}" alt="Diagram Unsur Pengaduan"
+                            class="max-w-md w-full h-auto rounded-lg shadow-xl">
+                    </div>
+
                     <div class="w-full md:w-1/2" x-data="{ openAccordion: 1 }">
-                        <p class="text-lg text-gray-600 mb-6">Pengaduan Anda akan mudah ditindaklanjuti apabila
-                            memenuhi
-                            unsur sebagai berikut:</p>
+                        <p class="text-lg text-gray-600 mb-6">
+                            Pengaduan Anda akan mudah ditindaklanjuti apabila memenuhi unsur sebagai berikut:
+                        </p>
                         <div class="space-y-4">
+                            <!-- Item 1 -->
                             <div class="border rounded-lg overflow-hidden">
                                 <button @click="openAccordion = openAccordion === 1 ? null : 1"
                                     class="w-full flex justify-between items-center p-5 bg-gray-100 hover:bg-gray-200 transition-colors">
@@ -288,16 +294,17 @@
                                         :class="{ 'rotate-180': openAccordion === 1 }" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </button>
                                 <div x-show="openAccordion === 1" x-collapse>
                                     <div class="p-5 border-t">
-                                        <p class="text-gray-600">Perbuatan berindikasi pelanggaran yang diketahui
-                                        </p>
+                                        <p class="text-gray-600">Perbuatan berindikasi pelanggaran yang diketahui</p>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Item 2 -->
                             <div class="border rounded-lg overflow-hidden">
                                 <button @click="openAccordion = openAccordion === 2 ? null : 2"
                                     class="w-full flex justify-between items-center p-5 bg-gray-100 hover:bg-gray-200 transition-colors">
@@ -306,7 +313,7 @@
                                         :class="{ 'rotate-180': openAccordion === 2 }" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </button>
                                 <div x-show="openAccordion === 2" x-collapse>
@@ -315,6 +322,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Item 3 -->
                             <div class="border rounded-lg overflow-hidden">
                                 <button @click="openAccordion = openAccordion === 3 ? null : 3"
                                     class="w-full flex justify-between items-center p-5 bg-gray-100 hover:bg-gray-200 transition-colors">
@@ -323,7 +332,7 @@
                                         :class="{ 'rotate-180': openAccordion === 3 }" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </button>
                                 <div x-show="openAccordion === 3" x-collapse>
@@ -332,6 +341,8 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Item 4 -->
                             <div class="border rounded-lg overflow-hidden">
                                 <button @click="openAccordion = openAccordion === 4 ? null : 4"
                                     class="w-full flex justify-between items-center p-5 bg-gray-100 hover:bg-gray-200 transition-colors">
@@ -340,16 +351,17 @@
                                         :class="{ 'rotate-180': openAccordion === 4 }" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </button>
                                 <div x-show="openAccordion === 4" x-collapse>
                                     <div class="p-5 border-t">
-                                        <p class="text-gray-600">Siapa saja yang terlibat dalam perbuatan tersebut
-                                        </p>
+                                        <p class="text-gray-600">Siapa saja yang terlibat dalam perbuatan tersebut</p>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Item 5 -->
                             <div class="border rounded-lg overflow-hidden">
                                 <button @click="openAccordion = openAccordion === 5 ? null : 5"
                                     class="w-full flex justify-between items-center p-5 bg-gray-100 hover:bg-gray-200 transition-colors">
@@ -358,26 +370,22 @@
                                         :class="{ 'rotate-180': openAccordion === 5 }" fill="none" stroke="currentColor"
                                         viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M19 9l-7 7-7-7"></path>
+                                            d="M19 9l-7 7-7-7" />
                                     </svg>
                                 </button>
                                 <div x-show="openAccordion === 5" x-collapse>
                                     <div class="p-5 border-t">
-                                        <p class="text-gray-600">Bagaimana perbuatan tersebut dilakukan (modus,
-                                            cara,
+                                        <p class="text-gray-600">Bagaimana perbuatan tersebut dilakukan (modus, cara,
                                             dsb.)</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="w-full md:w-1/2 flex justify-center">
-                        <img src="{{ asset('images/unsur-pengaduan.png') }}" alt="Diagram Unsur Pengaduan"
-                            class="max-w-md w-full h-auto rounded-lg shadow-xl">
-                    </div>
                 </div>
             </div>
         </section>
+
 
         <!-- [BAGIAN 5] KERAHASIAAN PELAPOR SECTION -->
         <section id="kerahasiaan" class="py-20 bg-gray-50">
