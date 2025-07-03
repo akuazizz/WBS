@@ -89,7 +89,7 @@
             <nav class="flex items-center space-x-6 text-bappenas-title font-semibold">
                 <a href="{{ url('/') }}" class="hover:underline">Menu Utama</a>
                 <a href="{{ route('tracking.index') }}" class="hover:underline">Cek Tracking</a>
-                <a href="#"
+                <a href="{{ route('login') }}"
                     class="px-5 py-2 text-sm bg-bappenas-button text-white rounded hover:bg-bappenas-button-hover flex items-center space-x-2 transition-colors">
                     <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
