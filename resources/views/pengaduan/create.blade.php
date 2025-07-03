@@ -135,7 +135,7 @@
                     <input type="text" name="nama_terduga" id="nama_terduga" required
                         class="form-input-custom block w-full rounded-md shadow-sm sm:text-sm">
                     <p class="mt-1 text-xs text-gray-500">
-                        Nama terduga adalah nama pegawai Bappenas yang terlibat.
+                        Nama terduga adalah nama pegawai ASN yang terlibat.
                     </p>
                 </div>
 
@@ -152,14 +152,9 @@
 
                 <!-- UNIT KERJA -->
                 <div>
-                    <label for="unit_kerja" class="block text-sm font-medium text-gray-700 mb-1">Unit Kerja</label>
-                    <select name="unit_kerja" id="unit_kerja"
+                    <label for="jabatan_terduga" class="block text-sm font-medium text-gray-700 mb-1">Unit Kerja</label>
+                    <input type="text" name="jabatan_terduga" id="jabatan_terduga"
                         class="form-input-custom block w-full rounded-md shadow-sm sm:text-sm">
-                        <option>Silahkan Pilih Unit Kerja</option>
-                        <option>Deputi Bidang Ekonomi</option>
-                        <option>Inspektorat Utama</option>
-                        <option>Lain-lain</option>
-                    </select>
                 </div>
 
                 <!-- URAIAN PENGADUAN -->
