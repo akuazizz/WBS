@@ -165,40 +165,39 @@
         </header>
 
         <!-- [BAGIAN 3] HERO SECTION -->
-        <section id="beranda" class="min-h-screen bg-bappenas-blue">
-            <div class="container mx-auto px-6 pt-20 pb-24 text-white">
-                <div class="flex flex-col md:flex-row items-center">
-                    <!-- Teks Sambutan -->
-                    <div class="w-full md:w-1/2 text-center md:text-left">
-                        <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
-                            Selamat Datang di Aplikasi Whistleblowing System Kabupaten Banjarnegara
-                        </h1>
-                        <p class="mb-8 text-lg opacity-90">
-                            Mari bersama-sama menciptakan pemerintahan yang jujur dan bersih,
-                            laporkan setiap pelanggaran yang terjadi di lingkungan kerja Anda.
-                        </p>
-                        <!-- Tombol -->
-                        <div
-                            class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                            <a href="{{ route('pengaduan.create') }}" class="btn-rounded btn-buat">
-                                Buat Pengaduan
-                            </a>
-                            <a href="{{ route('tracking.index') }}" class="btn-rounded btn-tracking">
-                                Cek Tracking Pengaduan
-                            </a>
-                        </div>
-                    </div>
+        <section id="beranda" class="min-h-screen bg-bappenas-blue flex items-center">
+            <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:space-x-16 lg:space-x-20">
 
-                    <!-- Gambar Logo -->
-                    <div class="w-full md:w-1/2 mt-12 md:mt-0 flex justify-center ">
-                        <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS Kabupaten Banjarnegara"
-                            class="max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-2xl">
+                <div class="w-full md:w-1/2 flex justify-center md:justify-center mb-10 md:mb-0">
+                    <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS Kabupaten Banjarnegara"
+                        class="max-w-xs md:max-w-sm lg:max-w-md h-auto drop-shadow-2xl">
+                </div>
+
+                <div class="w-full md:w-1/2 text-center md:text-left text-white">
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug mb-6">
+                        Selamat Datang di Aplikasi<br>
+                        Whistleblowing System<br>
+                        Kabupaten Banjarnegara
+                    </h1>
+                    <p class="text-lg opacity-90 mb-8">
+                        Ayo turut berperan dalam mewujudkan pemerintahan yang bersih dan berintegritas dengan
+                        melaporkan setiap bentuk pelanggaran yang terjadi di lingkungan kerja Anda.
+                    </p>
+                    <div
+                        class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="{{ route('pengaduan.create') }}" class="btn-rounded btn-buat">
+                            Buat Pengaduan
+                        </a>
+                        <a href="{{ route('tracking.index') }}" class="btn-rounded btn-tracking">
+                            Cek Tracking Pengaduan
+                        </a>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- [BAGIAN 3] ALUR PENGADUAN SECTION -->
+        <!-- [BAGIAN 4] ALUR PENGADUAN SECTION -->
         <section id="alur" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
@@ -267,7 +266,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 4] UNSUR PENGADUAN SECTION -->
+        <!-- [BAGIAN 5] UNSUR PENGADUAN SECTION -->
         <section id="unsur" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
@@ -387,8 +386,7 @@
             </div>
         </section>
 
-
-        <!-- [BAGIAN 5] KERAHASIAAN PELAPOR SECTION -->
+        <!-- [BAGIAN 6] KERAHASIAAN PELAPOR SECTION -->
         <section id="kerahasiaan" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
@@ -450,7 +448,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 6] CARA MELAPOR SECTION -->
+        <!-- [BAGIAN 7] CARA MELAPOR SECTION -->
         <section id="cara-melapor" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <!-- Judul Section dengan garis bawah -->
@@ -536,7 +534,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 7] FAQ SECTION -->
+        <!-- [BAGIAN 8] FAQ SECTION -->
         <section id="faq" class="py-20 bg-gray-50">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
@@ -755,7 +753,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 8] KONTAK KAMI SECTION -->
+        <!-- [BAGIAN 9] KONTAK KAMI SECTION -->
         <section id="kontak" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
@@ -804,7 +802,7 @@
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
                         <p>
-                            wbs@banjarnegara.go.id<br>
+                            wbs@banjarnegarakab.go.id<br>
                             inspektorat@banjarnegarakab.go.id
                         </p>
                     </div>
@@ -823,7 +821,7 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 9] FOOTER -->
+        <!-- [BAGIAN 10] FOOTER -->
         <footer class="text-white text-center py-5" style="background-color: #004F98;">
             <p class="text-sm">© 2025 Inspektorat Kabupaten Banjarnegara</p>
             <p class="text-xs text-gray-100 mt-1">Designed by Magang 2025</p>
