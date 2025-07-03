@@ -562,17 +562,11 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 1" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Aplikasi Whistleblowing System (WBS) Inspektorat Banjarnegara adalah
-                                aplikasi pengelolaan dan tindak lanjut pengaduan serta pelaporan hasil pengelolaan
-                                pengaduan yang disediakan oleh Pemerintah Kabupaten Banjarnegara sebagai salah satu
-                                sarana
-                                bagi
-                                setiap pejabat/pegawai Pemerintah Kabupaten Banjarnegara sebagai pihak internal maupun
-                                masyarakat
-                                luas pengguna layanan Pemerintah Kabupaten Banjarnegara sebagai pihak eksternal untuk
-                                melaporkan
-                                dugaan adanya pelanggaran dan/atau ketidakpuasan terhadap pelayanan yang
-                                dilakukan/diberikan oleh pejabat/pegawai Pemerintah Kabupaten Banjarnegara.</p>
+                            <p class="pt-4">Aplikasi Whistleblowing System (WBS) Inspektorat Banjarnegara adalah aplikasi yang disediakan oleh 
+                                Pemerintah Kabupaten Banjarnegara untuk mengelola dan menindaklanjuti laporan atau pengaduan. 
+                                Aplikasi ini menjadi wadah bagi pegawai pemerintah (sebagai pihak internal) 
+                                maupun masyarakat umum (sebagai pihak eksternal) untuk melaporkan dugaan pelanggaran atau ketidakpuasan 
+                                terhadap pelayanan yang diberikan oleh pejabat atau pegawai di lingkungan Pemerintah Kabupaten Banjarnegara.</p>
                         </div>
                     </div>
 
@@ -590,9 +584,8 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 2" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Kode pengaduan adalah kode yang digunakan sebagai identitas pelapor
-                                dalam
-                                melakukan pembuatan user untuk melihat track record pengaduan.</p>
+                            <p class="pt-4">Kode pengaduan berfungsi sebagai identitas pelapor yang digunakan untuk membuat akun (user) 
+                                guna memantau riwayat atau perkembangan pengaduan yang telah dikirimkan.</p>
                         </div>
                     </div>
 
@@ -611,12 +604,10 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 3" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Respon yang diberikan kepada pelapor berupa status/tindak lanjut
-                                pengaduan
-                                yang ada dalam halaman user sesuai dengan respon yang telah diberikan oleh pihak
-                                penerima pengaduan. Respon terkait dengan status/tindak lanjut pengaduan dapat
-                                dilihat
-                                dalam halaman user pengaduan aplikasi WBS.</p>
+                            <p class="pt-4">Tanggapan kepada pelapor disampaikan dalam bentuk status atau tindak lanjut pengaduan 
+                                yang ditampilkan pada halaman pengguna, sesuai dengan respon dari pihak yang menerima pengaduan. 
+                                Informasi mengenai status atau tindak lanjut tersebut dapat diakses oleh pelapor melalui halaman 
+                                pengaduan di aplikasi WBS.</p>
                         </div>
                     </div>
 
@@ -634,14 +625,11 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 4" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Sesuai dengan KMK 149 tahun 2011 jawaban/respon atas pengaduan yang
-                                disampaikan wajib diberikan dalam kurun waktu paling lambat 30 (tiga puluh) hari
-                                terhitung sejak pengaduan diterima. Untuk respon yang disampaikan tertulis melalui
-                                surat
-                                dapat diberikan apabila pelapor mencantumkan identitas secara jelas (nama dan alamat
-                                koresponden). Untuk respon dari media pengaduan lainnya akan disampaikan dan
-                                diberikan
-                                sesuai identitas pelapor yang dicantumkan dalam media pengaduan tersebut.</p>
+                            <p class="pt-4">Berdasarkan KMK 149 Tahun 2011, setiap pengaduan yang masuk wajib mendapatkan tanggapan atau jawaban 
+                                paling lambat dalam waktu 30 (tiga puluh) hari sejak pengaduan diterima. Jika pengaduan diajukan secara tertulis melalui surat, 
+                                maka jawaban akan diberikan apabila pelapor mencantumkan identitas yang jelas, seperti nama dan alamat. Sementara itu, 
+                                untuk pengaduan yang disampaikan melalui media lainnya, tanggapan akan diberikan sesuai dengan identitas pelapor yang 
+                                tercantum pada media pengaduan tersebut.</p>
                         </div>
                     </div>
 
@@ -660,18 +648,11 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 5" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Pengaduan yang anda berikan akan direspon dan tercantum dalam aplikasi
-                                WBS
-                                ini dan akan terupdate secara otomatis sesuai dengan respon yang telah diberikan
-                                oleh
-                                pihak penerima pengaduan. Untuk dapat melihat respon yang diberikan, anda harus
-                                login
-                                terlebih dahulu dengan username yang telah anda registrasikan di aplikasi ini dan
-                                anda
-                                dapat melihat status pengaduan dalam halaman user pengaduan sesuai dengan kode
-                                pengaduan
-                                yang didapatkan. Sebagai catatan, pengaduan anda akan lebih mudah ditindaklanjuti
-                                apabila memenuhi unsur pengaduan.</p>
+                            <p class="pt-4">Pengaduan yang Anda sampaikan akan ditanggapi dan ditampilkan dalam aplikasi WBS ini. 
+                                Informasi pada aplikasi akan diperbarui secara otomatis sesuai dengan tanggapan dari pihak yang menerima pengaduan. 
+                                Untuk melihat tanggapan tersebut, Anda perlu login menggunakan username yang sudah Anda daftarkan. Setelah login, 
+                                Anda dapat memantau status pengaduan melalui halaman pengguna, berdasarkan kode pengaduan yang telah Anda terima. 
+                                Perlu diketahui, pengaduan akan lebih mudah ditindaklanjuti jika telah memenuhi unsur-unsur pengaduan yang lengkap.</p>
                         </div>
                     </div>
 
@@ -690,11 +671,9 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 6" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Kerahasiaan identitas anda sebagai pelapor akan terjaga seperti yang
-                                telah
-                                disebutkan dalam KMK 149 tahun 2011. Namun agar kerahasiaan identitas anda dapat
-                                lebih
-                                terjaga sebaiknya anda memperhatikan hal-hal sebagaimana disebutkan disini.</p>
+                            <p class="pt-4">Identitas Anda sebagai pelapor akan dijaga kerahasiaannya sesuai dengan ketentuan dalam KMK 149 Tahun 2011. 
+                                Namun, untuk memastikan perlindungan identitas Anda lebih optimal, 
+                                disarankan agar Anda memperhatikan beberapa hal yang dijelaskan di sini.</p>
                         </div>
                     </div>
 
@@ -713,14 +692,10 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 7" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Hal tersebut tidak perlu dilakukan. Satu username dapat melakukan
-                                pengaduan
-                                lebih dari satu. Ketika setelah selesai membuat satu pengaduan, anda dapat membuat
-                                pengaduan terkait dengan dugaan pelanggaran dan/atau ketidakpuasan terhadap
-                                pelayanan
-                                yang diberikan lainnya dengan memilih “tambah pengaduan”. Masing-masing pengaduan
-                                akan
-                                mendapatkan kode pengaduan yang berbeda.</p>
+                            <p class="pt-4">Anda tidak perlu membuat akun baru untuk setiap pengaduan. Satu username dapat digunakan untuk membuat beberapa pengaduan. 
+                                Setelah menyelesaikan satu laporan, Anda bisa membuat laporan baru terkait dugaan pelanggaran atau ketidakpuasan terhadap pelayanan 
+                                lainnya dengan memilih opsi "tambah pengaduan". Setiap laporan yang dibuat akan memiliki kode pengaduan yang berbeda sebagai identitas 
+                                masing-masing pengaduan.</p>
                         </div>
                     </div>
 
@@ -741,11 +716,10 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 8" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Data yang sudah dilaporkan sebelumnya tidak dapat dilakukan perubahan
-                                namun
-                                anda bisa membuat pengaduan baru dilakukan dengan login username yang telah
-                                diregistrasikan sebelumnya di aplikasi ini lalu masuk ke halaman pengaduan. Dalam
-                                halaman pengaduan, lalu pilih menu buat pengaduan baru.</p>
+                            <p class="pt-4">Data pengaduan yang sudah dikirim sebelumnya tidak bisa diubah. 
+                                Namun, Anda tetap dapat membuat pengaduan baru dengan login menggunakan username 
+                                yang sudah Anda daftarkan di aplikasi ini. Setelah login, masuk ke halaman pengaduan dan 
+                                pilih menu "Buat Pengaduan Baru" untuk mengirim laporan baru.</p>
                         </div>
                     </div>
 
