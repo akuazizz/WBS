@@ -83,7 +83,7 @@
                         alt="Logo Inspektorat" class="h-10">
                 </a>
                 <a href="#">
-                    <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo berAKHLAK" class="h-10">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Logo_BerAKHLAK.svg" alt="Logo berAKHLAK" class="h-10">
                 </a>
             </div>
             <nav class="flex items-center space-x-6 text-bappenas-title font-semibold">
@@ -229,7 +229,7 @@
                 <div class="flex items-center">
                     <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
                         alt="Logo Inspektorat" class="h-8 mr-4">
-                    <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo berAKHLAK" class="h-10">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Logo_BerAKHLAK.svg" alt="Logo berAKHLAK" class="h-10">
                 </div>
                 <button @click="showModal = false" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
             </div>

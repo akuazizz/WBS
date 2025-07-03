@@ -87,7 +87,7 @@
                             alt="Logo Inspektorat" class="h-10">
                     </a>
                     <a href="#">
-                        <img src="https://wbs.bappenas.go.id/img/header_berakhlak.png" alt="Logo berAKHLAK"
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Logo_BerAKHLAK.svg" alt="Logo berAKHLAK"
                             class="h-10">
                     </a>
                 </div>
