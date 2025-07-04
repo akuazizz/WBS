@@ -258,7 +258,7 @@
                         <div x-show="activeTab === 'detail'" x-transition:enter="transition ease-out duration-300"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                             style="display: none;">
-                            <img src="https://wbs.bappenas.go.id/img/alur_WBS_fix.png"
+                          <img src="{{ asset('images/alur-detail.png') }}" alt="Diagram Alur Pengaduan Detail"
                                 alt="Diagram Alur Pengaduan Detail" class="rounded-lg shadow-xl mx-auto">
                         </div>
                     </div>
