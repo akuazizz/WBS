@@ -31,6 +31,18 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/dashboard', function () {
     return view('dashboard.home');
   })->name('dashboard');
+
+  // Route untuk menampilkan halaman profil
+  Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+
+  // Route untuk memproses update data
+  Route::post('/profile/update-akun', [ProfileController::class, 'updateAkun'])->name('profile.update.akun');
+  Route::post('/profile/update-pribadi', [ProfileController::class, 'updatePribadi'])->name('profile.update.pribadi');
+  // Route untuk update foto profil bisa ditambahkan di sini nanti
+
+  Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+  Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+  Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
 // Memuat rute-rute untuk autentikasi (login, register, logout, dll.)
