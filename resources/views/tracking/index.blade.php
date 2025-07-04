@@ -10,7 +10,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-        /* ---------- Global ---------- */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #004b85;
@@ -28,7 +27,6 @@
             background-color: #004b85;
         }
 
-        /* ---------- Form Controls ---------- */
         .form-input-custom,
         input[type="text"],
         input[type="email"],
@@ -55,7 +53,6 @@
             border-color: #005a9e;
         }
 
-        /* ---------- KHUSUS input[type=file] ---------- */
         input[type="file"] {
             background-color: transparent;
             border: none;
