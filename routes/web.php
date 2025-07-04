@@ -7,37 +7,31 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 use App\Http\Controllers\PengaduanController;
 use App\Http\Controllers\TrackingController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Di sini Anda bisa mendaftarkan rute web untuk aplikasi Anda. Rute-rute
-| ini dimuat oleh RouteServiceProvider dan semuanya akan
-| ditugaskan ke grup middleware "web".
-|
-*/
-
 // --- Rute Publik (Bisa diakses tanpa login) ---
 // Mengarahkan URL utama '/' ke method 'index' di dalam HomeController
 Route::get('/', [DashboardController::class, 'index'])->name('home');
 
-
-// Rute untuk halaman dashboard
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-// Rute untuk manajemen profil
+// Profile
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-// Rute untuk Pengaduan
+// Pengaduan
 Route::get('/pengaduan/create', [PengaduanController::class, 'create'])->name('pengaduan.create');
 Route::post('/pengaduan', [PengaduanController::class, 'store'])->name('pengaduan.store');
 
-// RUTE BARU UNTUK HALAMAN TRACKING
+// Tracking
 Route::get('/tracking', [TrackingController::class, 'index'])->name('tracking.index');
 Route::post('/tracking', [TrackingController::class, 'search'])->name('tracking.search');
+
+// Rute-rute yang hanya bisa diakses setelah login
+Route::middleware(['auth'])->group(function () {
+
+  // Dashboard setelah login
+  Route::get('/dashboard', function () {
+    return view('dashboard.home');
+  })->name('dashboard');
+});
 
 // Memuat rute-rute untuk autentikasi (login, register, logout, dll.)
 require __DIR__ . '/auth.php';
