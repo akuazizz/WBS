@@ -106,31 +106,13 @@
     <div x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.pageYOffset > 300) ? true : false"
         class="flex flex-col min-h-screen">
 
-  <!-- [BAGIAN 1] TOP LOGO BAR -->
-<div class="bg-white py-2 border-b border-gray-200">
-  <div class="w-full px-2 flex items-center space-x-4">
-    
-    <!-- Logo ASN Inspektorat -->
-    <a href="#">
-      <img
-        src="{{ asset('images/asn-inspektorat.jpeg') }}"
-        alt="ASN Inspektorat"
-        class="h-10 md:h-12"
-      >
-    </a>
-
-    <!-- Logo BerAKHLAK + #Bangga Melayani Bangsa -->
-    <a href="#">
-      <img
-        src="{{ asset('images/berakhlak-bangga.jpg') }}"
-        alt="BerAKHLAK | Bangga Melayani Bangsa"
-        class="h-10 md:h-12"
-      >
-    </a>
-
-  </div>
-</div>
-
+    <!-- [BAGIAN 1] TOP LOGO BAR -->
+    <div class="bg-white py-2 border-b border-gray-200">
+    <div class="w-full px-2 flex items-center space-x-4">
+        <a href="#"><img src="{{ asset('images/asn-inspektorat.jpeg') }}" alt="ASN Inspektorat" class="h-10 md:h-12"></a>
+        <a href="#"><img src="{{ asset('images/berakhlak-bangga.jpg') }}" alt="BerAKHLAK | Bangga Melayani Bangsa" class="h-10 md:h-12"></a>
+    </div>
+    </div>
 
         <!-- [BAGIAN 2] NAVBAR -->
         <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
