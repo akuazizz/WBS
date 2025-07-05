@@ -77,16 +77,10 @@
         <header class="py-4 bg-white shadow-sm">
             <div class="container mx-auto px-6 flex justify-between items-center">
 
-                <!-- Logo Inspektorat & BerAKHLAK jadi satu grup -->
-                <div class="flex items-center space-x-4">
-                    <a href="#">
-                        <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
-                            alt="Logo Inspektorat" class="h-10">
-                    </a>
-                    <a href="#">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Logo_BerAKHLAK.svg" alt="Logo berAKHLAK"
-                            class="h-10">
-                    </a>
+                <div class="flex items-center">
+                    <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
+                        alt="Logo Inspektorat" class="h-8 mr-4">
+                    <img src="{{ asset('images/berakhlak-bangga.png') }}" alt="Logo berAKHLAK" class="h-10">
                 </div>
 
                 <!-- Navigasi -->
