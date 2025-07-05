@@ -110,7 +110,7 @@
     <div class="bg-white py-2 border-b border-gray-200">
     <div class="w-full px-2 flex items-center space-x-4">
         <a href="#"><img src="{{ asset('images/asn-inspektorat.jpeg') }}" alt="ASN Inspektorat" class="h-10 md:h-12"></a>
-        <a href="#"><img src="{{ asset('images/berakhlak-bangga.jpg') }}" alt="BerAKHLAK | Bangga Melayani Bangsa" class="h-10 md:h-12"></a>
+        <a href="#"><img src="{{ asset('images/berakhlak-bangga.png') }}" alt="BerAKHLAK | Bangga Melayani Bangsa" class="h-10 md:h-12"></a>
     </div>
     </div>
 
