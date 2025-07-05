@@ -106,19 +106,25 @@
     <div x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.pageYOffset > 300) ? true : false"
         class="flex flex-col min-h-screen">
 
-        <!-- [BAGIAN 1] TOP LOGO BAR -->
-        <div class="bg-white py-2 border-b border-gray-200">
-            <div class="w-full px-2 flex justify-start items-center space-x-4">
-                <a href="#">
-                    <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
-                        alt="Logo Inspektorat" class="h-10">
-                </a>
-                <a href="#">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Logo_BerAKHLAK.svg"
-                        alt="Logo berAKHLAK" class="h-10">
-                </a>
-            </div>
-        </div>
+    <!-- [BAGIAN 1] TOP LOGO BAR -->
+    <div class="bg-white py-2 border-b border-gray-200">
+    <div class="w-full px-2 flex items-center space-x-4">
+    <!-- Logo ASN Inspektorat -->
+    <a href="#">
+        <img
+        src="{{ asset('images/asn-inspektorat.jpeg') }}"
+        alt="ASN Inspektorat"
+        class="h-10 md:h-12"></a>
+
+    <!-- Logo BerAKHLAK + #Bangga Melayani Bangsa -->
+    <a href="#">
+      <img
+        src="{{ asset('images/berakhlak-bangga.jpg') }}"
+        alt="BerAKHLAK | Bangga Melayani Bangsa"
+        class="h-10 md:h-12">
+    </a>
+     </div>
+    </div>
 
         <!-- [BAGIAN 2] NAVBAR -->
         <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
@@ -387,7 +393,7 @@
         </section>
 
      <!-- [BAGIAN 6] KERAHASIAAN PELAPOR SECTION -->
-<section id="kerahasiaan" class="py-20 bg-white">
+    <section id="kerahasiaan" class="py-20 bg-white">
     <div class="container mx-auto px-6">
         <!-- Judul Section -->
         <div class="text-center mb-10">
