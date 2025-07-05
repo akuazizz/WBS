@@ -386,153 +386,174 @@
             </div>
         </section>
 
-        <!-- [BAGIAN 6] KERAHASIAAN PELAPOR SECTION -->
-        <section id="kerahasiaan" class="py-20 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <!-- Judul Section -->
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Kerahasiaan
-                        Pelapor</h2>
-                </div>
+     <!-- [BAGIAN 6] KERAHASIAAN PELAPOR SECTION -->
+<section id="kerahasiaan" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <!-- Judul Section -->
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Kerahasiaan Pelapor</h2>
+        </div>
 
-                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-                    <!-- Kolom Kiri: Gambar Ilustrasi -->
-                    <div class="w-full md:w-5/12">
-                        <img src="{{ asset('images/kerahasiaan.png') }}" alt="Ilustrasi Kerahasiaan Data"
-                            class="w-full h-auto">
-                    </div>
+        <!-- Penjelasan Utama di Tengah -->
+        <div class="max-w-4xl mx-auto text-left mt-6 mb-6">
+            <h3 class="text-lg font-semibold text-bappenas-darkblue leading-relaxed">
+                Pemerintah Kabupaten Banjarnegara akan merahasiakan identitas pribadi Anda sebagai whistleblower karena Pemerintah Kabupaten Banjarnegara hanya fokus pada informasi yang Anda laporkan. Untuk memastikan kerahasiaan tetap terlindungi, harap perhatikan hal-hal berikut ini:
+            </h3>
+        </div>
 
-                    <!-- Kolom Kanan: Teks Penjelasan -->
-                    <div class="w-full md:w-6/12">
-                        <h3 class="text-xl font-bold text-bappenas-darkblue mb-4 leading-relaxed">
-                            Pemerintahan Kabupaten Banjarnegara akan merahasiakan identitas pribadi Anda sebagai
-                            whistleblower
-                            karena Pemerintahan Kabupaten Banjarnegara hanya fokus pada informasi yang Anda laporkan.
-                            Agar
-                            Kerahasiaan lebih terjaga, perhatikan hal-hal berikut ini:
-                        </h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span class="text-gray-800">Jika ingin identitas Anda tetap rahasia, jangan
-                                    memberitahukan/mengisikan data-data pribadi, seperti nama Anda, atau hubungan
-                                    Anda dengan pelaku-pelaku.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span class="text-gray-800">Jangan memberitahukan/mengisikan data-data/informasi
-                                    yang
-                                    memungkinkan bagi orang lain untuk melakukan pelacakan siapa Anda.</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
-                                    stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span class="text-gray-800">Hindari orang lain mengetahui nama samaran (username),
-                                    kata
-                                    sandi (password) serta nomor registrasi Anda.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <!-- Layout Gambar & Poin -->
+        <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+            <!-- Kolom Kiri: Poin -->
+            <div class="w-full md:w-6/12">
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                             stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+                        </svg>
+                        <span class="text-gray-800">Untuk menjaga kerahasiaan identitas Anda, mohon untuk tidak mencantumkan data pribadi seperti nama atau hubungan Anda dengan pihak yang dilaporkan.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                             stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+                        </svg>
+                        <span class="text-gray-800">Hindari menyampaikan informasi apa pun yang dapat mengarahkan pihak lain untuk mengidentifikasi Anda.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                             stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+                        </svg>
+                        <span class="text-gray-800">Pastikan nama pengguna (username), kata sandi (password), serta nomor registrasi Anda tetap bersifat rahasia dan tidak diketahui oleh pihak lain.</span>
+                    </li>
+                </ul>
             </div>
-        </section>
 
-        <!-- [BAGIAN 7] CARA MELAPOR SECTION -->
-        <section id="cara-melapor" class="py-20 bg-white">
-            <div class="container mx-auto px-6">
-                <!-- Judul Section dengan garis bawah -->
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Cara Melapor
-                    </h2>
-                    <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
-                </div>
-
-                <div class="max-w-4xl mx-auto">
-                    <!-- Daftar Langkah-langkah dengan gaya custom -->
-                    <div class="space-y-4 text-gray-700 text-lg leading-relaxed">
-                        <div class="flex">
-                            <span class="mr-3">1.</span>
-                            <p>Klik Tombol “BUAT PENGADUAN" untuk merekam pengaduan baru.</p>
-                        </div>
-                        <div class="flex">
-                            <span class="mr-3">2.</span>
-                            <p>Isi form pengaduan sesuai informasi yang anda ketahui.</p>
-                        </div>
-                        <div class="flex">
-                            <span class="mr-3">3.</span>
-                            <div>
-                                <p>Perhatikan baik-baik beberapa hal di bawah ini:</p>
-                                <div class="mt-2 ml-6 text-gray-600 space-y-2">
-                                    <div class="flex">
-                                        <span class="mr-2">a.</span>
-                                        <p>Semua kotak yang diberi tanda (*) wajib diisi.</p>
-                                    </div>
-                                    <div class="flex">
-                                        <span class="mr-2">b.</span>
-                                        <p>Pastikan informasi yang diberikan sedapat mungkin memenuhi unsur 4W + 1H.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex">
-                            <span class="mr-3">4.</span>
-                            <p>Jika anda memiliki bukti dalam bentuk file seperti foto atau dokumen lain dalam
-                                jumlah
-                                banyak, silahkan diinputkan satu persatu.</p>
-                        </div>
-                        <div class="flex">
-                            <span class="mr-3">5.</span>
-                            <p>Setelah selesai mengisi, silahkan klik tombol "Kirim" untuk melanjutkan atau klik
-                                tombol
-                                “Cancel" untuk membatalkan proses pelaporan anda.</p>
-                        </div>
-                        <div class="flex">
-                            <span class="mr-3">6.</span>
-                            <div>
-                                <p>Simpan dan ingat baik-baik Kode pengaduan anda</p>
-                                <div class="mt-2 ml-6 text-gray-600 space-y-2">
-                                    <div class="flex">
-                                        <span class="mr-2">a.</span>
-                                        <p>Kode pengaduan dibutuhkan untuk membuat akun yang berfungsi untuk
-                                            mengecek
-                                            perkembangan status aduan Anda atau membuat pengaduan baru.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Video Tutorial dengan layout 2 kolom -->
-                    <div class="mt-16 flex flex-col md:flex-row items-center gap-8">
-                        <div class="w-full md:w-1/2 text-center md:text-left">
-                            <h3 class="text-4xl font-extrabold text-gray-800 leading-tight">
-                                Tutorial Lengkap<br>WBS Pemkab Banjarnegara
-                            </h3>
-                        </div>
-                        <div class="w-full md:w-1/2">
-                            <div class="aspect-w-16 aspect-h-9">
-                                <iframe class="rounded-lg shadow-xl" src="https://www.youtube.com/embed/3QyQrLMMbMw"
-                                    title="YouTube video player" frameborder="0"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                    allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Kolom Kanan: Gambar -->
+            <div class="w-full md:w-5/12">
+                <img src="{{ asset('images/kerahasiaan.png') }}" alt="Ilustrasi Kerahasiaan Data"
+                     class="w-full h-auto">
             </div>
-        </section>
+        </div>
+    </div>
+</section>
+
+
+       <!-- [BAGIAN 7] CARA MELAPOR SECTION -->
+<section id="cara-melapor" class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+   <!-- Judul Section -->
+    <div class="text-center mb-16">
+    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">CARA MELAPOR</h2>
+    <p class="mt-2 text-gray-600">Ikuti panduan berikut untuk menyampaikan laporan Anda dengan mudah dan aman</p>
+    </div>
+
+    <!-- Konten 2 Kolom -->
+    <div class="flex flex-col md:flex-row gap-10 mt-10 items-start justify-center">
+      
+      <!-- Kolom Kiri: Langkah-langkah -->
+      <div class="w-full md:w-auto max-w-md space-y-6 mx-auto">
+        
+        <!-- Card 1 -->
+<div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
+  <div class="flex items-start gap-3">
+    <div class="mt-1">
+      <!-- Icon Kalender -->
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+           xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 7V3m8 4V3m-9 8h10m-11 8h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+      </svg>
+    </div>
+    <div>
+      <p class="font-semibold text-white">Mulai Pengaduan</p>
+      <p class="text-white">Klik tombol “Buat Pengaduan” untuk memulai laporan baru</p>
+    </div>
+  </div>
+</div>
+
+<!-- Card 2 -->
+<div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
+  <div class="flex items-start gap-3">
+    <div class="mt-1">
+      <!-- Icon Dokumen -->
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+           xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M8 16h8M8 12h8m-6 8h6a2 2 0 002-2V7.414a1 1 0 00-.293-.707l-4.414-4.414A1 1 0 0013.586 2H8a2 2 0 00-2 2v16a2 2 0 002 2z" />
+      </svg>
+    </div>
+    <div>
+      <p class="font-semibold text-white">Isi Formulir</p>
+      <ul class="list-disc list-inside text-white">
+        <li>Semua kotak yang diberi tanda (*) wajib diisi.</li>
+        <li>Pastikan informasi mencangkup unsur 4W + 1 H.</li>
+        <li>Jika anda memiliki bukti dalam bentuk file seperti foto atau dokumen lain dalam jumlah banyak, silahkan diinputkan satu per satu.</li>
+        <li>Setelah selesai mengisi, silahkan klik tombol "Kirim" untuk melanjutkan atau klik tombol “Cancel" untuk membatalkan proses pelaporan anda.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+      <!-- Card 3 -->
+<div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
+  <div class="flex items-start gap-3">
+    <div class="mt-1">
+      <!-- Icon Kunci -->
+      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+           xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 17a2 2 0 100-4 2 2 0 000 4zm6-8V7a4 4 0 10-8 0v2a4 4 0 008 0zM5 12h14a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2z" />
+      </svg>
+    </div>
+    <div>
+      <p class="font-semibold text-white">Simpan Kode Pengaduan</p>
+      <p class="text-white">
+        Catat dan simpan kode pengaduan karena dibutuhkan untuk membuat akun yang berfungsi untuk mengecek perkembangan status aduan Anda atau membuat pengaduan baru.
+      </p>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+    <!-- Kolom Kanan: Video -->
+<div class="w-full md:w-1/2">
+  <div class="bg-[#4682B4] p-4 rounded-lg shadow text-white">
+    <h3 class="text-lg font-semibold text-center mb-2">
+      Tutorial Lengkap WBS Kabupaten Banjarnegara
+    </h3>
+
+    <!-- Logo di atas video -->
+    <img src="{{ asset('images/logo-wbs.png') }}"
+     alt="Logo WBS"
+     class="mx-auto mb-4 w-24 h-auto">
+
+    <!-- Video -->
+    <div class="aspect-w-16 aspect-h-9">
+      <iframe
+        class="rounded-lg w-full h-64"
+        src="https://www.youtube.com/embed/3QyQrLMMbMw"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
 
         <!-- [BAGIAN 8] FAQ SECTION -->
         <section id="faq" class="py-20 bg-gray-50">
