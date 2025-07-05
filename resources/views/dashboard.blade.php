@@ -532,9 +532,7 @@
     </h3>
 
     <!-- Logo di atas video -->
-    <img src="{{ asset('images/logo-wbs.png') }}"
-     alt="Logo WBS"
-     class="mx-auto mb-4 w-24 h-auto">
+   <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS" class="mx-auto mb-4 w-32 h-auto" />
 
     <!-- Video -->
     <div class="aspect-w-16 aspect-h-9">
