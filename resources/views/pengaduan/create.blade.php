@@ -9,9 +9,18 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Alpine.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
 
     <style>
+        /* CSS Kustom untuk tema dan input */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #004b85;
@@ -43,6 +52,13 @@
             border-radius: 0.375rem;
             width: 100%;
             box-sizing: border-box;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .form-input-custom:focus {
+            border-color: #005a9e;
+            box-shadow: 0 0 0 2px rgba(0, 90, 158, 0.3);
+            outline: none;
         }
 
         textarea {
@@ -64,29 +80,27 @@
             box-shadow: none;
         }
     </style>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
 </head>
 
 <body class="antialiased" x-data="{ showModal: true }" x-init="$nextTick(() => showModal = true)">
 
     <!-- Header -->
     <header class="py-4 bg-white shadow-sm">
-        <div class="container mx-auto px-6 flex justify-between items-center"><!-- Logo Horizontal -->
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <!-- Logo Horizontal -->
             <div class="flex items-center space-x-4">
                 <a href="#">
                     <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
                         alt="Logo Inspektorat" class="h-10">
                 </a>
+                <!-- Sintaks asset() ini akan berfungsi di Laravel -->
                 <a href="#">
                     <img src="{{ asset('images/berakhlak-bangga.png') }}" alt="Logo berAKHLAK" class="h-10">
                 </a>
             </div>
+            <!-- Navigasi -->
             <nav class="flex items-center space-x-6 text-bappenas-title font-semibold">
+                <!-- Sintaks route() dan url() ini akan berfungsi di Laravel -->
                 <a href="{{ url('/') }}" class="hover:underline">Menu Utama</a>
                 <a href="{{ route('tracking.index') }}" class="hover:underline">Cek Tracking</a>
                 <a href="{{ route('login') }}"
@@ -98,7 +112,6 @@
                     <span>Masuk</span>
                 </a>
             </nav>
-
         </div>
     </header>
 
@@ -114,20 +127,18 @@
                 </p>
             </div>
 
-            <form action="#" method="POST" enctype="multipart/form-data"
-                class="bg-white p-8 rounded-lg shadow-lg space-y-6">
+            <!-- 
+                ============================================================
+                PERBAIKAN PENTING PADA FORM:
+                1. id="form-pengaduan" ditambahkan agar bisa ditarget oleh JavaScript.
+                2. action="{{ route('pengaduan.store') }}" mengarah ke route named di Laravel.
+                3. @csrf ditambahkan untuk keamanan (CSRF Protection).
+                ============================================================
+             -->
+            <form id="form-pengaduan" action="{{ route('pengaduan.store') }}" method="POST"
+                enctype="multipart/form-data" class="bg-white p-8 rounded-lg shadow-lg space-y-6">
+                @csrf
                 <h3 class="text-xl font-bold text-gray-800 border-b pb-4">Form Pengaduan</h3>
-
-                <!-- KODE PENGADUAN -->
-                <div>
-                    <label for="kode_pengaduan" class="block text-sm font-medium text-gray-700 mb-1">Kode
-                        Pengaduan</label>
-                    <input type="text" id="kode_pengaduan" value="PNG0166193" readonly
-                        class="block w-full bg-gray-100 border-gray-300 rounded-md shadow-sm sm:text-sm">
-                    <p class="mt-1 text-xs text-gray-500">
-                        Kode pengaduan dibuat secara otomatis oleh sistem dan tidak bisa diubah.
-                    </p>
-                </div>
 
                 <!-- NAMA TERDUGA -->
                 <div>
@@ -146,14 +157,14 @@
                     <input type="text" name="jabatan_terduga" id="jabatan_terduga"
                         class="form-input-custom block w-full rounded-md shadow-sm sm:text-sm">
                     <p class="mt-1 text-xs text-gray-500">
-                        Jika anda tidak tahu jabatannya maka isi lain-lain.
+                        Jika Anda tidak tahu jabatannya, maka kosongkan saja.
                     </p>
                 </div>
 
                 <!-- UNIT KERJA -->
                 <div>
-                    <label for="jabatan_terduga" class="block text-sm font-medium text-gray-700 mb-1">Unit Kerja</label>
-                    <input type="text" name="jabatan_terduga" id="jabatan_terduga"
+                    <label for="unit_kerja" class="block text-sm font-medium text-gray-700 mb-1">Unit Kerja</label>
+                    <input type="text" name="unit_kerja" id="unit_kerja"
                         class="form-input-custom block w-full rounded-md shadow-sm sm:text-sm">
                 </div>
 
@@ -163,13 +174,13 @@
                         Pengaduan</label>
                     <textarea name="uraian_pengaduan" id="uraian_pengaduan" rows="4" required
                         class="form-input-custom block w-full rounded-md shadow-sm sm:text-sm"></textarea>
-                    <p class="mt-1 text-xs text-gray-500">Uraian pengaduan harus memenuhi unsur 4W 1H.</p>
+                    <p class="mt-1 text-xs text-gray-500">Uraian pengaduan harus memenuhi unsur 4W 1H (What, Where,
+                        When, Who, How).</p>
                 </div>
 
                 <!-- DOKUMEN PENDUKUNG -->
                 <div>
                     <label for="dokumen" class="block text-sm font-medium text-gray-700 mb-1">Dokumen Pendukung</label>
-                    <!-- Hapus class form-input-custom agar tidak ada kotak -->
                     <input type="file" name="dokumen" id="dokumen" class="text-gray-700
                                   file:mr-4 file:py-2 file:px-4
                                   file:rounded-md file:border-0
@@ -178,35 +189,41 @@
                                   hover:file:bg-sky-200">
                 </div>
 
-                <!-- INFORMASI PELAPOR -->
-                <div>
-                    <label class="block text-sm font-medium text-gray-700">Informasi Pelapor</label>
-                    <div class="mt-2 flex items-center gap-6">
-                        <label class="inline-flex items-center">
-                            <input type="radio" name="info_pelapor" value="bappenas" checked class="form-radio h-4 w-4">
-                            <span class="ml-2 text-gray-700">ASN</span>
-                        </label>
-                        <label class="inline-flex items-center">
-                            <input type="radio" name="info_pelapor" value="non-bappenas" class="form-radio h-4 w-4">
-                            <span class="ml-2 text-gray-700">Umum</span>
-                        </label>
+                @guest {{-- Tampilkan blok ini HANYA JIKA user adalah tamu --}}
+                    {{-- Informasi Pelapor --}}
+                    <div class="mt-6">
+                        <label class="block text-sm font-medium text-gray-700">Informasi Pelapor</label>
+                        <div class="mt-2 flex items-center space-x-6">
+                            <div class="flex items-center">
+                                <input id="asn" name="jenis_pelapor" type="radio" value="asn"
+                                    class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500">
+                                <label for="asn" class="ml-3 block text-sm font-medium text-gray-700">ASN</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input id="umum" name="jenis_pelapor" type="radio" value="umum"
+                                    class="h-4 w-4 text-indigo-600 border-gray-300 focus:ring-indigo-500" checked>
+                                <label for="umum" class="ml-3 block text-sm font-medium text-gray-700">Umum</label>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <!-- EMAIL -->
-                <div>
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                    <input type="email" name="email" id="email" required
-                        class="form-input-custom block w-full rounded-md shadow-sm sm:text-sm">
-                    <p class="mt-1 text-xs text-gray-500">
-                        Masukkan alamat email yang valid untuk komunikasi lebih lanjut.
-                    </p>
-                </div>
+                    {{-- Email --}}
+                    <div class="mt-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <div class="mt-1">
+                            <input type="email" name="email" id="email"
+                                class="block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                                placeholder="anda@contoh.com" required>
+                        </div>
+                        <p class="mt-2 text-sm text-gray-500">Masukkan alamat email yang valid untuk menerima kode tracking
+                            pengaduan Anda.</p>
+                    </div>
+                @endguest
 
                 <!-- SUBMIT -->
                 <div class="pt-5 border-t">
                     <button type="submit"
-                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-bappenas-button hover:bg-bappenas-button-hover">
+                        class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-bappenas-button hover:bg-bappenas-button-hover transition-colors disabled:opacity-50">
                         Buat Pengaduan
                     </button>
                 </div>
@@ -215,9 +232,11 @@
     </main>
 
     <!-- Modal Jaminan Kerahasiaan -->
-    <div x-show="showModal" x-transition
+    <div x-show="showModal" x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100" x-transition:leave="transition ease-in duration-200"
+        x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0"
         class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
-        @click.self="showModal = false">
+        @click.self="showModal = false" style="display: none;">
         <div class="bg-white rounded-lg shadow-2xl max-w-2xl w-full" @click.away="showModal = false">
             <!-- Modal Header -->
             <div class="p-4 flex justify-between items-center border-b">
@@ -226,7 +245,7 @@
                         alt="Logo Inspektorat" class="h-8 mr-4">
                     <img src="{{ asset('images/berakhlak-bangga.png') }}" alt="Logo berAKHLAK" class="h-10">
                 </div>
-                <button @click="showModal = false" class="text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+                <button @click="showModal = false" class="text-gray-400 hover:text-gray-600 text-2xl">×</button>
             </div>
 
             <!-- Modal Body -->
@@ -243,8 +262,7 @@
                     </h2>
                     <p class="text-sm text-gray-500 mt-1">
                         Data pelapor pada Whistleblowing System dilindungi oleh UU No. 27 Tahun 2022 tentang
-                        Perlindungan
-                        Data Pribadi.
+                        Perlindungan Data Pribadi.
                     </p>
                 </div>
                 <div class="bg-red-50 p-4 rounded-lg text-sm text-red-800">
@@ -253,15 +271,85 @@
                         berikut:
                     </p>
                     <ul class="list-disc list-inside mt-2 space-y-1">
-                        <li>Jika ingin identitas Anda tetap rahasia, jangan mengisikan data pribadi.</li>
-                        <li>Hindari mengisikan data/informasi yang bisa melacak siapa Anda.</li>
-                        <li>Jangan sampai orang lain mengetahui nama samaran atau password Anda.</li>
+                        <li>Jika ingin identitas Anda tetap rahasia, jangan mengisikan data pribadi atau data/informasi
+                            yang dapat melacak siapa Anda.</li>
+                        <li>Gunakan email anonim jika perlu, namun pastikan email tersebut aktif untuk menerima kode
+                            tracking.</li>
+                        <li>Jangan sampai orang lain mengetahui nama samaran atau password Anda (jika ada).</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- JavaScript untuk Submit Form via Fetch API -->
+    <script>
+        document.getElementById('form-pengaduan').addEventListener('submit', function (e) {
+            e.preventDefault(); // Mencegah form submit cara biasa
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // Nonaktifkan tombol dan tampilkan loading
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Mengirim...';
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    // Ambil token CSRF dari input yang dibuat oleh @csrf
+                    'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
+                    'Accept': 'application/json',
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        // Jika response bukan 2xx, ubah jadi error agar ditangkap .catch()
+                        // Ini penting untuk menangani error validasi (status 422)
+                        return response.json().then(err => { throw err; });
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    // Jika sukses (response 2xx)
+                    form.reset(); // Kosongkan form
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Pengaduan Berhasil Terkirim!',
+                        html: `Kode tracking Anda adalah: <br><strong style="font-size: 1.2em; color: #005a9e;">${data.kode_pengaduan}</strong><br><br>Kode ini juga telah dikirimkan ke email Anda. Harap simpan baik-baik.`,
+                        confirmButtonText: 'Luar Biasa!'
+                    });
+                })
+                .catch(errorData => {
+                    console.error('Error:', errorData);
+                    let errorMessages = 'Terjadi kesalahan pada server. Silakan coba lagi.';
+
+                    // Menangani error validasi dari Laravel (status 422)
+                    if (errorData.errors) {
+                        errorMessages = '<ul class="text-left list-disc list-inside">';
+                        for (const key in errorData.errors) {
+                            errorMessages += `<li>${errorData.errors[key][0]}</li>`;
+                        }
+                        errorMessages += '</ul>';
+                    } else if (errorData.message) {
+                        errorMessages = errorData.message;
+                    }
+
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops... Gagal Mengirim',
+                        html: errorMessages,
+                    });
+                })
+                .finally(() => {
+                    // Apapun hasilnya, aktifkan kembali tombol submit
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Buat Pengaduan';
+                });
+        });
+    </script>
 </body>
 
 </html>

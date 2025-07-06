@@ -43,6 +43,14 @@ Route::middleware(['auth'])->group(function () {
   Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
   Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
   Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+  Route::get('/pengaduan-saya', [PengaduanController::class, 'index'])->name('pengaduan.saya');
+
+  // Route untuk menampilkan halaman detail pengaduan
+  Route::get('/pengaduan/{pengaduan}', [PengaduanController::class, 'show'])->name('pengaduan.show');
+
+  // Route untuk menyimpan data dari form tindak lanjut
+  Route::post('/pengaduan/{pengaduan}/tindak-lanjut', [PengaduanController::class, 'storeTindakLanjut'])->name('pengaduan.tindaklanjut.store');
 });
 
 // Memuat rute-rute untuk autentikasi (login, register, logout, dll.)

@@ -32,7 +32,7 @@
     <a href="#"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
     {{-- Ganti dengan path ikon Anda --}}
-    <img src="{{ asset('images/alur.png') }}" class="w-16 h-16 mb-4" alt="Alur Icon">
+    <img src="{{ asset('images/icon-alur.png') }}" class="w-16 h-16 mb-4" alt="Alur Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">Alur</span>
     </a>
 
@@ -40,7 +40,7 @@
     <a href="#"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
     {{-- Ganti dengan path ikon Anda --}}
-    <img src="{{ asset('images/unsur.png') }}" class="w-16 h-16 mb-4" alt="Unsur Icon">
+    <img src="{{ asset('images/icon-unsur.png') }}" class="w-16 h-16 mb-4" alt="Unsur Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">Unsur</span>
     </a>
 
@@ -48,7 +48,7 @@
     <a href="#"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
     {{-- Ganti dengan path ikon Anda --}}
-    <img src="{{ asset('images/faq.png') }}" class="w-16 h-16 mb-4" alt="FAQ Icon">
+    <img src="{{ asset('images/icon-FAQ.png') }}" class="w-16 h-16 mb-4" alt="FAQ Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">FAQ</span>
     </a>
 
@@ -56,7 +56,7 @@
     <a href="#"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
     {{-- Ganti dengan path ikon Anda --}}
-    <img src="{{ asset('images/kerahasiaan.png') }}" class="w-16 h-16 mb-4" alt="Kerahasiaan Icon">
+    <img src="{{ asset('images/icon-kerahasiaan.png') }}" class="w-16 h-16 mb-4" alt="Kerahasiaan Icon">
     <span class="font-semibold text-lg text-center text-gray-700 group-hover:text-[#005a9e]">Kerahasiaan Pelapor</span>
     </a>
 
@@ -64,7 +64,7 @@
     <a href="#"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
     {{-- Ganti dengan path ikon Anda --}}
-    <img src="{{ asset('images/cara-melapor.png') }}" class="w-16 h-16 mb-4" alt="Cara Melapor Icon">
+    <img src="{{ asset('images/icon-melapor.png') }}" class="w-16 h-16 mb-4" alt="Cara Melapor Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">Cara Melapor</span>
     </a>
 
@@ -72,7 +72,7 @@
     <a href="#"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
     {{-- Ganti dengan path ikon Anda --}}
-    <img src="{{ asset('images/kontak.png') }}" class="w-16 h-16 mb-4" alt="Kontak Icon">
+    <img src="{{ asset('images/icon-kami.png') }}" class="w-16 h-16 mb-4" alt="Kontak Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">Kontak Kami</span>
     </a>
 
