@@ -145,7 +145,7 @@
                 <div class="text-center text-sm mt-6">
                     @if (Route::has('password.request'))
                         <a class="text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                            Lupa Password? <span class="font-semibold link-custom hover:underline">Silahkan Reset
+                            Lupa Password? <span class="font-bold link-custom hover:underline">Silahkan Reset
                                 Password</span>
                         </a>
                     @endif

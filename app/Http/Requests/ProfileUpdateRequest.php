@@ -8,23 +8,18 @@ use Illuminate\Validation\Rule;
 
 class ProfileUpdateRequest extends FormRequest
 {
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
         return [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => [
-                'required',
-                'string',
-                'lowercase',
-                'email',
-                'max:255',
-                Rule::unique(User::class)->ignore($this->user()->id),
-            ],
+            // Buat data teks menjadi 'sometimes' agar tidak selalu wajib ada di request
+            'name' => ['sometimes', 'required', 'string', 'max:255'],
+            'email' => ['sometimes', 'required', 'string', 'email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+            'kontak' => ['nullable', 'string', 'max:20'],
+            'username' => ['sometimes', 'required', 'string', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
+            'jenis_kelamin' => ['nullable', 'string', 'in:Laki-laki,Perempuan'],
+
+            // Validasi untuk foto tetap sama
+            'photo' => ['nullable', 'image', 'max:1024'], // maks 1MB
         ];
     }
 }

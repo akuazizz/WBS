@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -27,33 +28,23 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        // 1. Dapatkan data yang sudah divalidasi dari ProfileUpdateRequest bawaan Breeze.
-        // Ini sudah mencakup validasi 'name' dan 'email'.
-        $validatedDataBreeze = $request->validated();
+        // Ini akan mengisi field apa pun yang ada di request dan lolos validasi
+        $request->user()->fill($request->validated());
 
-        // 2. Validasi field tambahan Anda sendiri.
-        $validatedDataCustom = $request->validate([
-            'username' => ['required', 'string', 'max:255', Rule::unique('users')->ignore($request->user()->id)],
-            'jenis_kelamin' => ['nullable', 'string', 'in:Laki-laki,Perempuan'],
-            'kontak' => ['nullable', 'string', 'max:255'],
-        ]);
-
-        // 3. Gabungkan kedua data yang sudah tervalidasi menjadi satu array.
-        $allValidatedData = array_merge($validatedDataBreeze, $validatedDataCustom);
-
-        // 4. Isi semua data ke user object menggunakan fill().
-        // Ini lebih aman dan efisien karena hanya mengisi field yang ada di $fillable.
-        $request->user()->fill($allValidatedData);
-
-        // 5. Periksa jika email diubah, reset verifikasi.
         if ($request->user()->isDirty('email')) {
             $request->user()->email_verified_at = null;
         }
 
-        // 6. Simpan semua perubahan ke database.
+        if ($request->hasFile('photo')) {
+            if ($request->user()->profile_photo_path) {
+                Storage::disk('public')->delete($request->user()->profile_photo_path);
+            }
+            $path = $request->file('photo')->store('profile-photos', 'public');
+            $request->user()->profile_photo_path = $path;
+        }
+
         $request->user()->save();
 
-        // 7. Redirect kembali dengan pesan sukses.
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
 
