@@ -29,7 +29,6 @@
         .btn-primary {
             background-color: #005a9e;
             border-radius: 9999px;
-            /* Membuat tombol sangat bulat */
         }
 
         .btn-primary:hover {
@@ -39,7 +38,6 @@
         .btn-secondary {
             background-color: #3e8ab8;
             border-radius: 9999px;
-            /* Membuat tombol sangat bulat */
         }
 
         .btn-secondary:hover {
@@ -52,10 +50,8 @@
 
         .input-field {
             border-radius: 9999px;
-            /* Membuat input sangat bulat */
             border: 1px solid #d1d5db;
             padding: 0.75rem 1rem 0.75rem 2.5rem;
-            /* py-3 pl-10 pr-4 */
         }
 
         .input-field:focus {
@@ -73,10 +69,23 @@
 
             <div class="flex flex-col items-center">
                 <a href="/">
-                    <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS Kabupaten Banjarnegara" class="w-24 h-24">
+                    <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS Kabupaten Banjarnegara"
+                        class="w-24 h-24">
                 </a>
                 <h2 class="mt-2 text-2xl font-bold text-gray-700 tracking-wider">LOGIN</h2>
             </div>
+
+            {{-- Pesan Error --}}
+            @if ($errors->any())
+                <div class="mb-4 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg" role="alert">
+                    <strong class="font-bold">Oops! Terjadi kesalahan:</strong>
+                    <ul class="mt-2 list-disc list-inside text-sm">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <form method="POST" action="{{ route('login') }}" class="mt-8 space-y-6">
                 @csrf
@@ -90,8 +99,9 @@
                                 clip-rule="evenodd" />
                         </svg>
                     </div>
-                    <input id="email" type="email" name="email" required autofocus placeholder="Username"
-                        class="input-field block w-full">
+                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
+                        placeholder="Username"
+                        class="input-field block w-full @error('email') border-red-500 @enderror">
                 </div>
 
                 <!-- Password -->
@@ -105,7 +115,8 @@
                         </svg>
                     </div>
                     <input id="password" :type="show ? 'text' : 'password'" name="password" required
-                        placeholder="Password" class="input-field block w-full pr-10">
+                        placeholder="Password"
+                        class="input-field block w-full pr-10 @error('password') border-red-500 @enderror">
                     <div class="absolute inset-y-0 right-0 pr-4 flex items-center">
                         <button type="button" @click="show = !show" class="focus:outline-none">
                             <svg x-show="!show" class="w-5 h-5 text-gray-400 hover:text-gray-600"

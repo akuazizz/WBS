@@ -2,22 +2,21 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Notifications\CustomResetPasswordNotification;
 use Illuminate\Database\Eloquent\Casts\Attribute;
+use App\Notifications\CustomResetPasswordNotification;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, HasRoles;
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var list<string>
+     * @var array<int, string>
      */
     protected $fillable = [
         'name',
@@ -27,12 +26,13 @@ class User extends Authenticatable
         'kontak',
         'jenis_kelamin',
         'profile_photo_path',
+        'role', // Optional: jika kamu tidak lagi gunakan column ini (karena pakai Spatie), bisa dihapus
     ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var list<string>
+     * @var array<int, string>
      */
     protected $hidden = [
         'password',
@@ -40,7 +40,7 @@ class User extends Authenticatable
     ];
 
     /**
-     * Get the attributes that should be cast.
+     * The attributes that should be cast.
      *
      * @return array<string, string>
      */
@@ -52,16 +52,25 @@ class User extends Authenticatable
         ];
     }
 
+    /**
+     * Relasi ke pengaduan.
+     */
     public function pengaduans()
     {
         return $this->hasMany(Pengaduan::class);
     }
 
+    /**
+     * Override default password reset notification.
+     */
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new CustomResetPasswordNotification($token));
     }
 
+    /**
+     * Get the full URL to the user's profile photo.
+     */
     protected function profilePhotoUrl(): Attribute
     {
         return Attribute::make(
