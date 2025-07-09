@@ -37,32 +37,38 @@ class PengaduanVerifikatorController extends Controller
     public function verifikasi(Request $request, Pengaduan $pengaduan)
     {
         $request->validate([
-            'action' => 'required|in:terima,tolak',
-            // Catatan wajib diisi jika menolak
+            'action' => 'required|in:terima,tolak,selesai', // Tambahkan 'selesai' di sini
             'catatan' => 'required_if:action,tolak|nullable|string|max:1000',
         ]);
 
         $action = $request->input('action');
         $catatan = $request->input('catatan');
-        $namaVerifikator = Auth::user()->name; // Ambil nama verifikator
+        $namaVerifikator = Auth::user()->name;
 
-        if ($action === 'terima') {
-            $pengaduan->status = 'Diproses';
-            $deskripsiTindakLanjut = "Pengaduan telah diverifikasi dan diterima oleh {$namaVerifikator}. Saat ini sedang dalam tahap proses.";
-        } else { // action === 'tolak'
-            $pengaduan->status = 'Ditolak';
-            $deskripsiTindakLanjut = "Pengaduan ditolak oleh {$namaVerifikator}.";
+        switch ($action) {
+            case 'terima':
+                $pengaduan->status = 'Diproses';
+                $deskripsi = "Pengaduan diterima & diproses oleh Verifikator ({$namaVerifikator}).";
+                break;
+            case 'tolak':
+                $pengaduan->status = 'Ditolak';
+                $deskripsi = "Pengaduan ditolak oleh Verifikator ({$namaVerifikator}).";
+                break;
+            case 'selesai': // Tambahkan case ini
+                $pengaduan->status = 'Selesai';
+                $deskripsi = "Pengaduan dinyatakan selesai oleh Verifikator ({$namaVerifikator}).";
+                break;
         }
 
         $pengaduan->save();
 
-        // Buat catatan tindak lanjut dari administrator/verifikator
         $pengaduan->tindak_lanjuts()->create([
-            'deskripsi' => $deskripsiTindakLanjut,
-            'catatan_administrator' => $catatan, // Simpan catatan verifikator
-            'dibuat_oleh' => 'administrator',
+            'deskripsi' => $deskripsi,
+            'catatan_administrator' => $catatan,
+            'dibuat_oleh' => 'administrator', // Anda bisa ganti ini jadi 'verifikator' jika ingin membedakan
         ]);
 
-        return redirect()->route('verifikator.dashboard')->with('success', 'Pengaduan berhasil diverifikasi!');
+        // Redirect kembali ke halaman detail verifikator agar bisa lihat perubahannya
+        return redirect()->route('verifikator.pengaduan.show', $pengaduan)->with('success', 'Status pengaduan berhasil diperbarui!');
     }
 }

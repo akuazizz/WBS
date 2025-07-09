@@ -14,6 +14,11 @@ return Application::configure(basePath: dirname(__DIR__))
                 ->prefix('verifikator')
                 ->as('verifikator.') // 'as' adalah pengganti 'name'
                 ->group(base_path('routes/verifikator.php'));
+
+            Route::middleware(['web', 'auth', 'admin'])
+                ->prefix('admin')
+                ->as('admin.')
+                ->group(base_path('routes/admin.php'));
         },
         commands: __DIR__ . '/../routes/console.php',
         health: '/up',
@@ -22,8 +27,8 @@ return Application::configure(basePath: dirname(__DIR__))
         // --- INI PERBAIKANNYA ---
         $middleware->alias([
             'verifikator' => \App\Http\Middleware\IsVerifikator::class,
+            'admin' => \App\Http\Middleware\IsAdmin::class,
         ]);
-        // ------------------------
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

@@ -1,17 +1,16 @@
-@extends('layouts.verifikator')
+@extends('layouts.admin')
 
 @section('content')
   <div class="space-y-6">
-    <!-- Panel Aksi Verifikasi -->
-    {{-- Panel ini hanya muncul jika statusnya belum Selesai atau Ditolak --}}
+    <!-- Panel Aksi Admin -->
     @if(!in_array($pengaduan->status, ['Selesai', 'Ditolak']))
     <div class="bg-white rounded-lg shadow-md">
     <div class="p-4 border-b bg-gray-50">
-      <h2 class="text-lg font-bold text-gray-800">Tindakan Tindak Lanjut</h2>
-      <p class="text-sm text-gray-600">Perbarui status pengaduan ini.</p>
+      <h2 class="text-lg font-bold text-gray-800">Tindakan Administrator</h2>
+      <p class="text-sm text-gray-600">Perbarui status pengaduan sebagai Administrator.</p>
     </div>
     <div class="p-6">
-      <form action="{{ route('verifikator.pengaduan.verifikasi', $pengaduan) }}" method="POST">
+      <form action="{{ route('admin.pengaduan.verifikasi', $pengaduan) }}" method="POST">
       @csrf
       <div>
       <label for="catatan" class="block text-sm font-medium text-gray-700">
@@ -24,29 +23,25 @@
       </div>
 
       <div class="mt-4 flex flex-wrap items-center justify-end gap-3">
-      {{-- Tombol Tolak hanya muncul jika status masih 'Baru' --}}
-      @if ($pengaduan->status == 'Baru')
+      {{-- Admin bisa menolak kapan saja selama belum final --}}
       <button type="submit" name="action" value="tolak"
       class="px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-colors">
       Tolak Pengaduan
       </button>
-      @endif
 
-      {{-- Tombol Terima/Proses hanya muncul jika status masih 'Baru' --}}
-      @if ($pengaduan->status == 'Baru')
+      {{-- Admin bisa memproses kapan saja selama masih 'Baru' --}}
+      @if($pengaduan->status == 'Baru')
       <button type="submit" name="action" value="terima"
       class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors">
       Terima & Proses
       </button>
       @endif
 
-      {{-- Tombol Selesai hanya muncul jika status sudah 'Diproses' --}}
-      @if ($pengaduan->status == 'Diproses')
+      {{-- Admin bisa menyelesaikan kapan saja selama belum final --}}
       <button type="submit" name="action" value="selesai"
       class="px-4 py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors">
       Tandai Selesai
       </button>
-      @endif
       </div>
       </form>
     </div>
@@ -59,7 +54,7 @@
     </div>
     @endif
 
-    <!-- Detail Pengaduan -->
+    <!-- Detail Pengaduan (Sama persis dengan verifikator) -->
     <div class="bg-white rounded-lg shadow-md">
     <div class="p-4 border-b font-semibold text-gray-700 flex justify-between items-center">
       <span>Detail Pengaduan #{{ $pengaduan->kode_pengaduan }}</span>
@@ -103,7 +98,7 @@
     </div>
     </div>
 
-    <!-- Riwayat / Tracking -->
+    <!-- Riwayat / Tracking (Sama persis dengan verifikator) -->
     <div class="bg-white rounded-lg shadow-md">
     <div class="p-4 border-b font-semibold text-gray-700">
       Riwayat Tindak Lanjut

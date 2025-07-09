@@ -29,6 +29,10 @@ class AuthenticatedSessionController extends Controller
 
         $user = $request->user();
 
+        if ($user->hasRole('admin')) {
+            return redirect()->route('admin.dashboard');
+        }
+
         if ($user->hasRole('verifikator')) {
             return redirect()->route('verifikator.dashboard');
         }
