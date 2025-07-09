@@ -76,6 +76,29 @@
           <span>Manajemen User</span>
         </a>
 
+        <!-- Kelola Pengaduan -->
+        <a href="{{ route('admin.pengaduan.index') }}"
+          class="flex items-center px-4 py-2.5 rounded-md nav-link {{ request()->routeIs('admin.pengaduan.*') ? 'active' : '' }}">
+          {{-- IKON KELOLA PENGADUAN --}}
+          <svg class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 002.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 00-1.123-.08H4.125A2.25 2.25 0 001.875 6.108v11.785c0 1.135.845 2.098 1.976 2.192l.112.008h12.148a2.25 2.25 0 002.25-2.25v-2.121" />
+          </svg>
+          <span>Kelola Pengaduan</span>
+        </a>
+
+        <a href="{{ route('admin.activity.log') }}"
+          class="flex items-center px-4 py-2.5 rounded-md nav-link {{ request()->routeIs('admin.activity.log') ? 'active' : '' }}">
+          {{-- IKON LOG AKTIVITAS --}}
+          <svg class="w-6 h-6 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+            stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+          </svg>
+          <span>Log Aktivitas</span>
+        </a>
+
         <!-- Logout Form -->
         <form method="POST" action="{{ route('logout') }}" class="mt-8 pt-4 border-t border-white/10">
           @csrf

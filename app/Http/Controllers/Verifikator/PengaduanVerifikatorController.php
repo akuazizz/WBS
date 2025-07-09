@@ -9,41 +9,25 @@ use Illuminate\Support\Facades\Auth;
 
 class PengaduanVerifikatorController extends Controller
 {
-    /**
-     * Menampilkan daftar semua pengaduan untuk verifikator.
-     */
+    // ... (method index dan show tetap sama) ...
     public function index()
     {
-        // Ambil semua pengaduan, urutkan dari yang terbaru.
-        // Gunakan eager loading 'user' untuk menampilkan nama pelapor jika ada.
         $pengaduans = Pengaduan::with('user')->latest()->paginate(10);
-
         return view('verifikator.dashboard', compact('pengaduans'));
     }
-
-    /**
-     * Menampilkan detail satu pengaduan.
-     */
     public function show(Pengaduan $pengaduan)
     {
-        // Load relasi tindak lanjut untuk menampilkan riwayat
         $pengaduan->load('tindak_lanjuts');
         return view('verifikator.show', compact('pengaduan'));
     }
 
-    /**
-     * Memproses tindakan verifikasi (Terima atau Tolak).
-     */
     public function verifikasi(Request $request, Pengaduan $pengaduan)
     {
-        $request->validate([
-            'action' => 'required|in:terima,tolak,selesai', // Tambahkan 'selesai' di sini
-            'catatan' => 'required_if:action,tolak|nullable|string|max:1000',
-        ]);
-
+        $request->validate(['action' => 'required|in:terima,tolak,selesai', 'catatan' => 'required_if:action,tolak|nullable|string|max:1000',]);
         $action = $request->input('action');
         $catatan = $request->input('catatan');
         $namaVerifikator = Auth::user()->name;
+        $deskripsi = '';
 
         switch ($action) {
             case 'terima':
@@ -54,21 +38,26 @@ class PengaduanVerifikatorController extends Controller
                 $pengaduan->status = 'Ditolak';
                 $deskripsi = "Pengaduan ditolak oleh Verifikator ({$namaVerifikator}).";
                 break;
-            case 'selesai': // Tambahkan case ini
+            case 'selesai':
                 $pengaduan->status = 'Selesai';
                 $deskripsi = "Pengaduan dinyatakan selesai oleh Verifikator ({$namaVerifikator}).";
                 break;
         }
 
         $pengaduan->save();
+        $pengaduan->tindak_lanjuts()->create(['deskripsi' => $deskripsi, 'catatan_administrator' => $catatan, 'dibuat_oleh' => 'administrator',]);
 
-        $pengaduan->tindak_lanjuts()->create([
-            'deskripsi' => $deskripsi,
-            'catatan_administrator' => $catatan,
-            'dibuat_oleh' => 'administrator', // Anda bisa ganti ini jadi 'verifikator' jika ingin membedakan
-        ]);
+        // === TAMBAHKAN LOG MANUAL INI ===
+        $logMessage = "mengubah status pengaduan {$pengaduan->kode_pengaduan} menjadi '{$pengaduan->status}'";
+        if ($request->filled('catatan')) {
+            $logMessage .= " dengan catatan: " . $request->catatan;
+        }
+        activity()
+            ->performedOn($pengaduan)
+            ->causedBy(Auth::user())
+            ->log($logMessage);
+        // ================================
 
-        // Redirect kembali ke halaman detail verifikator agar bisa lihat perubahannya
         return redirect()->route('verifikator.pengaduan.show', $pengaduan)->with('success', 'Status pengaduan berhasil diperbarui!');
     }
 }

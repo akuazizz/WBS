@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Pengaduan;
-use Illuminate\Http\Request; // <-- Jangan lupa import Request
+use Illuminate\Http\Request;
+use Spatie\Activitylog\Models\Activity;
 
 class DashboardController extends Controller
 {
@@ -43,5 +44,12 @@ class DashboardController extends Controller
             'judulTabel', // <-- Kirim judul baru
             'statusFilter' // <-- Kirim status filter untuk menandai kartu yang aktif
         ));
+    }
+    public function activityLog()
+    {
+        $activities = Activity::with('causer', 'subject') // Eager load pelaku dan subjek
+            ->latest()
+            ->paginate(20);
+        return view('admin.activity_log', compact('activities'));
     }
 }

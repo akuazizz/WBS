@@ -8,10 +8,12 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Casts\Attribute;
 use App\Notifications\CustomResetPasswordNotification;
 use Spatie\Permission\Traits\HasRoles;
+use Spatie\Activitylog\Traits\LogsActivity;
+use Spatie\Activitylog\LogOptions;
 
 class User extends Authenticatable
 {
-    use HasFactory, Notifiable, HasRoles;
+    use HasFactory, Notifiable, HasRoles, LogsActivity;
 
     /**
      * The attributes that are mass assignable.
@@ -66,6 +68,15 @@ class User extends Authenticatable
     public function sendPasswordResetNotification($token)
     {
         $this->notify(new CustomResetPasswordNotification($token));
+    }
+
+    public function getActivitylogOptions(): LogOptions
+    {
+        return LogOptions::defaults()
+            ->logOnly(['name', 'email']) // Hanya log perubahan pada kolom ini
+            ->setDescriptionForEvent(fn(string $eventName) => "User {$this->name} telah di-{$eventName}")
+            ->logOnlyDirty() // Hanya log jika ada perubahan
+            ->dontSubmitEmptyLogs();
     }
 
     /**
