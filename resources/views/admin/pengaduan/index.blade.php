@@ -67,7 +67,10 @@
         </td>
         <td class="px-4 py-3 whitespace-nowrap text-sm">
         <a href="{{ route('admin.pengaduan.show', $pengaduan) }}"
-        class="text-indigo-600 hover:text-indigo-900">Lihat Detail</a>
+   class="inline-block px-3 py-1.5 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">
+   Lihat Detail
+</a>
+
         </td>
       </tr>
     @empty
