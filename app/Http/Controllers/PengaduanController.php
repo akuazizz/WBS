@@ -129,7 +129,7 @@ class PengaduanController extends Controller
         // Load relasi tindak_lanjuts agar tidak terjadi N+1 query problem
         $pengaduan->load('tindak_lanjuts');
 
-        return view('pengaduan.show', ['pengaduan' => $pengaduan]);
+        return view('pengaduan.show', compact('pengaduan'));
     }
 
     public function storeTindakLanjut(Request $request, Pengaduan $pengaduan)
