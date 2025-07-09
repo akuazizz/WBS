@@ -54,17 +54,22 @@
       @endif
         </td>
         <td class="px-4 py-2 whitespace-nowrap text-sm">
-        <div class="flex items-center space-x-2">
-        <a href="{{ route('admin.users.edit', $user->id) }}"
-        class="text-indigo-600 hover:text-indigo-900">Edit</a>
-        <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST"
-        onsubmit="return confirm('Apakah Anda yakin ingin menghapus user ini? Ini tidak bisa dibatalkan.');">
-        @csrf
-        @method('DELETE')
-        <button type="submit" class="text-red-600 hover:text-red-900">Hapus</button>
-        </form>
-        </div>
-        </td>
+  <div class="flex items-center space-x-2">
+    <a href="{{ route('admin.users.edit', $user->id) }}"
+       class="bg-blue-100 text-blue-800 px-3 py-1 rounded-md text-xs font-semibold hover:bg-blue-200 transition">
+       Edit
+    </a>
+    <form action="{{ route('admin.users.destroy', $user->id) }}" method="POST"
+          onsubmit="return confirm('Apakah Anda yakin ingin menghapus user ini? Ini tidak bisa dibatalkan.');">
+      @csrf
+      @method('DELETE')
+      <button type="submit"
+              class="bg-red-100 text-red-800 px-3 py-1 rounded-md text-xs font-semibold hover:bg-red-200 transition">
+        Hapus
+      </button>
+    </form>
+  </div>
+</td>
       </tr>
     @empty
       <tr>
