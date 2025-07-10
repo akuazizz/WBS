@@ -318,7 +318,7 @@
                     Swal.fire({
                         icon: 'success',
                         title: 'Pengaduan Berhasil Terkirim!',
-                        html: `Kode tracking Anda adalah: <br><strong style="font-size: 1.2em; color: #005a9e;">${data.kode_pengaduan}</strong><br><br>Kode ini juga telah dikirimkan ke email Anda. Harap simpan baik-baik.`,
+                        html: `Kode tracking Anda adalah: <br><strong style="font-size: 1.2em; color: #005a9e;">${data.kode_pengaduan}</strong><br><br>Kode ini telah dikirim ke email Anda. Simpan dengan baik dan gunakan untuk mengecek status pengaduan serta mendaftar akun di WBS.`,
                         confirmButtonText: 'Luar Biasa!'
                     });
                 })
