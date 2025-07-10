@@ -6,14 +6,41 @@ use App\Http\Controllers\Controller;
 use App\Models\Pengaduan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\View\View;
 
 class PengaduanVerifikatorController extends Controller
 {
     // ... (method index dan show tetap sama) ...
-    public function index()
+    public function index(Request $request): View
     {
-        $pengaduans = Pengaduan::with('user')->latest()->paginate(10);
-        return view('verifikator.dashboard', compact('pengaduans'));
+        $query = Pengaduan::query();
+
+        // Logika untuk mencari berdasarkan keyword
+        if ($request->filled('search')) {
+            $searchTerm = $request->search;
+            $query->where(function ($q) use ($searchTerm) {
+                $q->where('kode_pengaduan', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('nama_terduga', 'like', '%' . $searchTerm . '%')
+                    ->orWhere('uraian_pengaduan', 'like', '%' . $searchTerm . '%');
+            });
+        }
+
+        // Logika untuk filter berdasarkan status
+        if ($request->filled('status')) {
+            $query->where('status', $request->status);
+        }
+
+        // Ambil data, urutkan dari yang terbaru, lalu paginasi
+        $pengaduans = $query->with('user')->latest()->paginate(10);
+
+        // Siapkan daftar status untuk dropdown filter di view
+        $statuses = ['Baru', 'Diproses', 'Selesai', 'Ditolak'];
+
+        // Kirim semua data yang diperlukan ke view
+        return view('verifikator.dashboard', [
+            'pengaduans' => $pengaduans,
+            'statuses' => $statuses
+        ]);
     }
     public function show(Pengaduan $pengaduan)
     {
