@@ -44,7 +44,7 @@ class RegisteredUserController extends Controller
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'kontak' => ['required', 'string', 'max:20'],
             'username' => ['required', 'string', 'max:255', 'unique:' . User::class],
-            // Aturan password yang lebih ketat sesuai petunjuk di form
+            'jenis_kelamin' => ['required', 'string', 'in:Laki-laki,Perempuan'],
             'password' => [
                 'required',
                 'confirmed',
@@ -65,6 +65,7 @@ class RegisteredUserController extends Controller
             'kontak' => $request->kontak,
             'username' => $request->username,
             'info_pelapor' => 'umum', // Tetap set default value
+            'jenis_kelamin' => $request->jenis_kelamin,
             'password' => Hash::make($request->password),
         ]);
 
