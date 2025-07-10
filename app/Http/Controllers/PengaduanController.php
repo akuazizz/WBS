@@ -7,7 +7,8 @@ use App\Mail\PengaduanDiterimaMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
-use Illuminate\Support\Facades\Auth; // Pastikan ini ada
+use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class PengaduanController extends Controller
 {
@@ -48,16 +49,27 @@ class PengaduanController extends Controller
         }
         $validatedData = $request->validate($rules);
 
-        // Upload file
         $path_dokumen = null;
         if ($request->hasFile('dokumen')) {
             $path_dokumen = $request->file('dokumen')->store('dokumen_pengaduan', 'public');
         }
 
+        $path_dokumen = null;
+        if ($request->hasFile('dokumen')) {
+            $path_dokumen = $request->file('dokumen')->store('dokumen_pengaduan', 'public');
+        }
+
+        $tanggalHariIni = Carbon::now()->format('Y-m-d');
+        $prefixKode = 'BNA-' . Carbon::now()->format('Ymd');
+        $jumlahPengaduanHariIni = Pengaduan::whereDate('created_at', $tanggalHariIni)->count();
+        $nomorUrut = $jumlahPengaduanHariIni + 1;
+        $nomorUrutFormatted = str_pad($nomorUrut, 2, '0', STR_PAD_LEFT);
+        $kode_pengaduan_final = $prefixKode . '-' . $nomorUrutFormatted;
+
         try {
             $pengaduan = Pengaduan::create([
                 'user_id' => $userId,
-                'kode_pengaduan' => 'BJR-' . date('Ymd') . '-' . Str::upper(Str::random(5)),
+                'kode_pengaduan' => $kode_pengaduan_final,
                 'nama_terduga' => $validatedData['nama_terduga'],
                 'jabatan_terduga' => $validatedData['jabatan_terduga'],
                 'unit_kerja' => $validatedData['unit_kerja'],
@@ -74,10 +86,9 @@ class PengaduanController extends Controller
                     'dibuat_oleh' => 'pelapor'
                 ]);
 
-                // === PERBAIKAN LOG MANUAL DI SINI ===
                 activity()
                     ->performedOn($pengaduan)
-                    ->causedBy(Auth::user()) // Menggunakan Auth::user() yang aman (akan null jika tamu)
+                    ->causedBy(Auth::user())
                     ->log("membuat pengaduan baru dengan kode {$pengaduan->kode_pengaduan}");
                 // =====================================
             }
@@ -112,7 +123,6 @@ class PengaduanController extends Controller
 
     public function storeTindakLanjut(Request $request, Pengaduan $pengaduan)
     {
-        // Pastikan user yang login adalah pemilik pengaduan ini
         if (Auth::id() !== $pengaduan->user_id) {
             abort(403);
         }
@@ -137,12 +147,10 @@ class PengaduanController extends Controller
             $pengaduan->update(['status' => 'Sedang ditindaklanjuti Pelapor']);
         }
 
-        // === PERBAIKAN LOG MANUAL DI SINI JUGA ===
         activity()
             ->performedOn($pengaduan)
-            ->causedBy(Auth::user()) // Menggunakan Auth::user()
+            ->causedBy(Auth::user())
             ->log("memberikan tindak lanjut pada pengaduan {$pengaduan->kode_pengaduan}");
-        // =========================================
 
         return back()->with('success', 'Tindak lanjut berhasil dikirim!');
     }
