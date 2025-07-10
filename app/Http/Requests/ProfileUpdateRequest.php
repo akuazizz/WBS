@@ -19,7 +19,7 @@ class ProfileUpdateRequest extends FormRequest
             'jenis_kelamin' => ['nullable', 'string', 'in:Laki-laki,Perempuan'],
 
             // Validasi untuk foto tetap sama
-            'photo' => ['nullable', 'image', 'max:1024'], // maks 1MB
+            'photo' => ['nullable', 'image', 'max:10240'],
         ];
     }
 }
