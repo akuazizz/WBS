@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
-  <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-6">Log Aktivitas Sistem</h1>
+  <h1 class="text-2xl md:text-3xl font-bold mb-6" style="color: #004F98;">Log Aktivitas Sistem</h1>
 
   <div class="bg-white rounded-lg shadow-md">
     <div class="overflow-x-auto">

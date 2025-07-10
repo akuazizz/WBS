@@ -2,7 +2,7 @@
 
 @section('content')
   <div class="flex justify-between items-center mb-6">
-    <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Kelola Pengaduan</h1>
+    <h1 class="text-2xl md:text-3xl font-bold" style="color: #004F98;">Kelola Pengaduan</h1>
   </div>
 
   <!-- Form Filter dan Pencarian -->
@@ -58,7 +58,7 @@
         </td>
         <td class="px-4 py-3 whitespace-nowrap text-sm">
         <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full
-        @if ($pengaduan->status == 'Baru') bg-yellow-100 text-yellow-800
+      @if ($pengaduan->status == 'Baru') bg-yellow-100 text-yellow-800
       @elseif ($pengaduan->status == 'Diproses') bg-blue-100 text-blue-800
       @elseif ($pengaduan->status == 'Selesai') bg-green-100 text-green-800
       @else bg-red-100 text-red-800 @endif">
@@ -67,9 +67,9 @@
         </td>
         <td class="px-4 py-3 whitespace-nowrap text-sm">
         <a href="{{ route('admin.pengaduan.show', $pengaduan) }}"
-   class="inline-block px-3 py-1.5 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">
-   Lihat Detail
-</a>
+        class="inline-block px-3 py-1.5 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 transition">
+        Lihat Detail
+        </a>
 
         </td>
       </tr>
