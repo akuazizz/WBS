@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - WBS inspektorat</title>
+    <title>WBS Pemkab Banjarnegara</title>
 
     <!-- Menggunakan CDN Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
