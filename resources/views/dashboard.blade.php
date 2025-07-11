@@ -28,16 +28,16 @@
         }
 
         /* GANTI DARI BIRU MUDA KE BIRU TUA */
-        .bg-bappenas-blue {
+        .bg-inspektorat-blue {
             background-color: #004F98;
             /* Biru Tua */
         }
 
-        .text-bappenas-darkblue {
+        .text-inspektorat-darkblue {
             color: #004F98;
         }
 
-        .hover\:bg-bappenas-darkerblue:hover {
+        .hover\:bg-inspektorat-darkerblue:hover {
             background-color: #004F98;
         }
 
@@ -115,7 +115,7 @@
     </div>
 
         <!-- [BAGIAN 2] NAVBAR -->
-        <header class="bg-bappenas-blue shadow-md sticky top-0 z-50">
+        <header class="bg-inspektorat-blue shadow-md sticky top-0 z-50">
             <div class="container mx-auto px-6">
                 <div class="py-4 flex justify-between items-center">
                     <a href="#beranda" class="flex items-center space-x-3">
@@ -144,7 +144,7 @@
                         <!-- Tombol Masuk -->
                         <div>
                             <a href="{{ route('login') }}"
-                                class="px-5 py-2 text-sm bg-white text-bappenas-darkblue font-semibold rounded shadow hover:bg-gray-100 flex items-center space-x-2 transition-colors">
+                                class="px-5 py-2 text-sm bg-white text-inspektorat-darkblue font-semibold rounded shadow hover:bg-gray-100 flex items-center space-x-2 transition-colors">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                         d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1">
@@ -159,7 +159,7 @@
         </header>
 
         <!-- [BAGIAN 3] HERO SECTION -->
-        <section id="beranda" class="min-h-screen bg-bappenas-blue flex items-center">
+        <section id="beranda" class="min-h-screen bg-inspektorat-blue flex items-center">
             <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:space-x-16 lg:space-x-20">
 
                 <div class="w-full md:w-1/2 flex justify-center md:justify-center mb-10 md:mb-0">
@@ -196,7 +196,7 @@
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Alur Pengaduan
+                    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">Alur Pengaduan
                     </h2>
                     <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                         Rangkaian tahapan sistematis yang dilalui dalam menangani dan menyelesaikan Pengaduan yang
@@ -207,7 +207,7 @@
                 <!-- Tombol Panduan -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
                     <a href="https://youtu.be/3QyQrLMMbMw?feature=shared" target="_blank"
-                        class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 rounded-lg shadow-sm bg-bappenas-blue text-white font-semibold hover:bg-[#C0C0C0] transition-colors">
+                        class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 rounded-lg shadow-sm bg-inspektorat-blue text-white font-semibold hover:bg-[#C0C0C0] transition-colors">
                         <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
@@ -215,7 +215,7 @@
                         Video Tutorial Panduan WBS
                     </a>
                     <a href="/img/Buku_Panduan_WBS_2024_Pelapor.pdf" target="_blank"
-                        class="inline-flex items-center justify-center px-6 py-3 bg-bappenas-blue border border-gray-300 rounded-lg shadow-sm text-white font-semibold hover:bg-[#C0C0C0] transition-colors">
+                        class="inline-flex items-center justify-center px-6 py-3 bg-inspektorat-blue border border-gray-300 rounded-lg shadow-sm text-white font-semibold hover:bg-[#C0C0C0] transition-colors">
                         <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -228,12 +228,12 @@
                 <div x-data="{ activeTab: 'singkat' }" class="max-w-5xl mx-auto">
                     <div class="flex justify-center p-1 rounded-xl bg-white shadow max-w-sm mx-auto">
                         <button @click="activeTab = 'singkat'"
-                            :class="activeTab === 'singkat' ? 'bg-[#C0C0C0] text-white' : 'bg-bappenas-blue text-white'"
+                            :class="activeTab === 'singkat' ? 'bg-[#C0C0C0] text-white' : 'bg-inspektorat-blue text-white'"
                             class="w-1/2 py-2 px-4 rounded-lg font-semibold hover:bg-[#C0C0C0] transition-colors">
                             Alur Singkat
                         </button>
                         <button @click="activeTab = 'detail'"
-                            :class="activeTab === 'detail' ? 'bg-[#C0C0C0] text-white' : 'bg-bappenas-blue text-white'"
+                            :class="activeTab === 'detail' ? 'bg-[#C0C0C0] text-white' : 'bg-inspektorat-blue text-white'"
                             class="w-1/2 py-2 px-4 rounded-lg font-semibold hover:bg-[#C0C0C0] transition-colors">
                             Alur Detail
                         </button>
@@ -264,7 +264,7 @@
         <section id="unsur" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">
+                    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">
                         Unsur Pengaduan
                     </h2>
                 </div>
@@ -385,12 +385,12 @@
     <div class="container mx-auto px-6">
         <!-- Judul Section -->
         <div class="text-center mb-10">
-            <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Kerahasiaan Pelapor</h2>
+            <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">Kerahasiaan Pelapor</h2>
         </div>
 
         <!-- Penjelasan Utama di Tengah -->
         <div class="max-w-4xl mx-auto text-left mt-6 mb-6">
-            <h3 class="text-lg font-semibold text-bappenas-darkblue leading-relaxed">
+            <h3 class="text-lg font-semibold text-inspektorat-darkblue leading-relaxed">
                 Pemerintah Kabupaten Banjarnegara akan merahasiakan identitas pribadi Anda sebagai whistleblower karena Pemerintah Kabupaten Banjarnegara hanya fokus pada informasi yang Anda laporkan. Untuk memastikan kerahasiaan tetap terlindungi, harap perhatikan hal-hal berikut ini:
             </h3>
         </div>
@@ -445,7 +445,7 @@
   <div class="container mx-auto px-6">
    <!-- Judul Section -->
     <div class="text-center mb-16">
-    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">CARA MELAPOR</h2>
+    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">CARA MELAPOR</h2>
     <p class="mt-2 text-gray-600">Ikuti panduan berikut untuk menyampaikan laporan Anda dengan mudah dan aman</p>
     </div>
 
@@ -552,10 +552,10 @@
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">Frequently
+                    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">Frequently
                         Asked
                         Questions</h2>
-                    <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
+                    <div class="mt-2 w-24 h-1 bg-inspektorat-darkblue mx-auto"></div>
                 </div>
 
                 <!-- Accordion Container -->
@@ -745,10 +745,10 @@
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-bappenas-darkblue uppercase tracking-wider">
+                    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">
                         Alamat dan Kontak Kami
                     </h2>
-                    <div class="mt-2 w-24 h-1 bg-bappenas-darkblue mx-auto"></div>
+                    <div class="mt-2 w-24 h-1 bg-inspektorat-darkblue mx-auto"></div>
                     <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                         Hubungi kami untuk informasi lebih lanjut terkait layanan dan pengaduan di Inspektorat Kabupaten
                         Banjarnegara
@@ -769,7 +769,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                     <!-- Alamat -->
                     <div class="flex items-start gap-2 text-sm md:text-base text-center md:text-left">
-                        <svg class="w-6 h-6 text-bappenas-darkblue mt-1" fill="none" stroke="currentColor"
+                        <svg class="w-6 h-6 text-inspektorat-darkblue mt-1" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
@@ -783,7 +783,7 @@
 
                     <!-- Email -->
                     <div class="flex items-start gap-2 text-sm md:text-base text-center md:text-left">
-                        <svg class="w-6 h-6 text-bappenas-darkblue mt-1" fill="none" stroke="currentColor"
+                        <svg class="w-6 h-6 text-inspektorat-darkblue mt-1" fill="none" stroke="currentColor"
                             stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -796,7 +796,7 @@
 
                     <!-- Telepon -->
                     <div class="flex items-center gap-2 text-sm md:text-base">
-                        <svg class="w-6 h-6 text-bappenas-darkblue" fill="none" stroke="currentColor" stroke-width="2"
+                        <svg class="w-6 h-6 text-inspektorat-darkblue" fill="none" stroke="currentColor" stroke-width="2"
                             viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

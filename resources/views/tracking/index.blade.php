@@ -13,15 +13,15 @@
             background-color: #004b85;
         }
 
-        .text-bappenas-title {
+        .text-inspektorat-title {
             color: #005a9e;
         }
 
-        .bg-bappenas-button {
+        .bg-inspektorat-button {
             background-color: #005a9e;
         }
 
-        .hover\:bg-bappenas-button-hover:hover {
+        .hover\:bg-inspektorat-button-hover:hover {
             background-color: #004b85;
         }
 
@@ -52,11 +52,11 @@
                         alt="Logo Inspektorat" class="h-8 mr-4">
                     <img src="{{ asset('images/berakhlak-bangga.png') }}" alt="Logo berAKHLAK" class="h-10">
                 </div>
-                <nav class="flex items-center space-x-6 text-bappenas-title font-semibold">
+                <nav class="flex items-center space-x-6 text-inspektorat-title font-semibold">
                     <a href="{{ url('/') }}" class="hover:underline">Menu Utama</a>
                     <a href="{{ route('pengaduan.create') }}" class="hover:underline">Buat Pengaduan</a>
                     <a href="{{ route('login') }}"
-                        class="px-5 py-2 text-sm bg-bappenas-button text-white rounded hover:bg-bappenas-button-hover flex items-center space-x-2 transition-colors">
+                        class="px-5 py-2 text-sm bg-inspektorat-button text-white rounded hover:bg-inspektorat-button-hover flex items-center space-x-2 transition-colors">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
@@ -88,7 +88,7 @@
                                 <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                             @enderror
                             <button type="submit"
-                                class="mt-4 w-full sm:w-auto flex justify-center py-3 px-8 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-bappenas-button hover:bg-bappenas-button-hover">
+                                class="mt-4 w-full sm:w-auto flex justify-center py-3 px-8 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-inspektorat-button hover:bg-inspektorat-button-hover">
                                 Cari
                             </button>
                         </form>
