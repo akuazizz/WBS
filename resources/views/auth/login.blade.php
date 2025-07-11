@@ -11,6 +11,8 @@
     <!-- Menggunakan CDN Alpine.js untuk interaktivitas -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-wbs.png') }}">
+    
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

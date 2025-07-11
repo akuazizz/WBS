@@ -12,6 +12,7 @@
     <!-- Alpine.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
+    <link rel="icon" type="image/png" href="{{ asset('images/logo-wbs.png') }}">
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,13 +107,15 @@
     <div x-data="{ showScrollTop: false }" @scroll.window="showScrollTop = (window.pageYOffset > 300) ? true : false"
         class="flex flex-col min-h-screen">
 
-    <!-- [BAGIAN 1] TOP LOGO BAR -->
-    <div class="bg-white py-2 border-b border-gray-200">
-    <div class="w-full px-2 flex items-center space-x-4">
-        <a href="#"><img src="{{ asset('images/asn-inspektorat.jpeg') }}" alt="ASN Inspektorat" class="h-10 md:h-12"></a>
-        <a href="#"><img src="{{ asset('images/berakhlak-bangga.png') }}" alt="BerAKHLAK | Bangga Melayani Bangsa" class="h-10 md:h-12"></a>
-    </div>
-    </div>
+        <!-- [BAGIAN 1] TOP LOGO BAR -->
+        <div class="bg-white py-2 border-b border-gray-200">
+            <div class="w-full px-2 flex items-center space-x-4">
+                <a href="#"><img src="{{ asset('images/asn-inspektorat.jpeg') }}" alt="ASN Inspektorat"
+                        class="h-10 md:h-12"></a>
+                <a href="#"><img src="{{ asset('images/berakhlak-bangga.png') }}"
+                        alt="BerAKHLAK | Bangga Melayani Bangsa" class="h-10 md:h-12"></a>
+            </div>
+        </div>
 
         <!-- [BAGIAN 2] NAVBAR -->
         <header class="bg-inspektorat-blue shadow-md sticky top-0 z-50">
@@ -160,7 +163,8 @@
 
         <!-- [BAGIAN 3] HERO SECTION -->
         <section id="beranda" class="min-h-screen bg-inspektorat-blue flex items-center">
-            <div class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:space-x-16 lg:space-x-20">
+            <div
+                class="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:space-x-16 lg:space-x-20">
 
                 <div class="w-full md:w-1/2 flex justify-center md:justify-center mb-10 md:mb-0">
                     <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS Kabupaten Banjarnegara"
@@ -196,7 +200,8 @@
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">Alur Pengaduan
+                    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">Alur
+                        Pengaduan
                     </h2>
                     <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
                         Rangkaian tahapan sistematis yang dilalui dalam menangani dan menyelesaikan Pengaduan yang
@@ -252,7 +257,7 @@
                         <div x-show="activeTab === 'detail'" x-transition:enter="transition ease-out duration-300"
                             x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100"
                             style="display: none;">
-                          <img src="{{ asset('images/alur-detail.png') }}" alt="Diagram Alur Pengaduan Detail"
+                            <img src="{{ asset('images/alur-detail.png') }}" alt="Diagram Alur Pengaduan Detail"
                                 alt="Diagram Alur Pengaduan Detail" class="rounded-lg shadow-xl mx-auto">
                         </div>
                     </div>
@@ -380,172 +385,184 @@
             </div>
         </section>
 
-     <!-- [BAGIAN 6] KERAHASIAAN PELAPOR SECTION -->
-    <section id="kerahasiaan" class="py-20 bg-white">
-    <div class="container mx-auto px-6">
-        <!-- Judul Section -->
-        <div class="text-center mb-10">
-            <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">Kerahasiaan Pelapor</h2>
-        </div>
+        <!-- [BAGIAN 6] KERAHASIAAN PELAPOR SECTION -->
+        <section id="kerahasiaan" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Judul Section -->
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">Kerahasiaan
+                        Pelapor</h2>
+                </div>
 
-        <!-- Penjelasan Utama di Tengah -->
-        <div class="max-w-4xl mx-auto text-left mt-6 mb-6">
-            <h3 class="text-lg font-semibold text-inspektorat-darkblue leading-relaxed">
-                Pemerintah Kabupaten Banjarnegara akan merahasiakan identitas pribadi Anda sebagai whistleblower karena Pemerintah Kabupaten Banjarnegara hanya fokus pada informasi yang Anda laporkan. Untuk memastikan kerahasiaan tetap terlindungi, harap perhatikan hal-hal berikut ini:
-            </h3>
-        </div>
+                <!-- Penjelasan Utama di Tengah -->
+                <div class="max-w-4xl mx-auto text-left mt-6 mb-6">
+                    <h3 class="text-lg font-semibold text-inspektorat-darkblue leading-relaxed">
+                        Pemerintah Kabupaten Banjarnegara akan merahasiakan identitas pribadi Anda sebagai whistleblower
+                        karena Pemerintah Kabupaten Banjarnegara hanya fokus pada informasi yang Anda laporkan. Untuk
+                        memastikan kerahasiaan tetap terlindungi, harap perhatikan hal-hal berikut ini:
+                    </h3>
+                </div>
 
-        <!-- Layout Gambar & Poin -->
-        <div class="flex flex-col md:flex-row items-center justify-center gap-12">
-            <!-- Kolom Kiri: Poin -->
-            <div class="w-full md:w-6/12">
-                <ul class="space-y-4">
-                    <li class="flex items-start">
-                        <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
-                             stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
-                        </svg>
-                        <span class="text-gray-800">Untuk menjaga kerahasiaan identitas Anda, mohon untuk tidak mencantumkan data pribadi seperti nama atau hubungan Anda dengan pihak yang dilaporkan.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
-                             stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
-                        </svg>
-                        <span class="text-gray-800">Hindari menyampaikan informasi apa pun yang dapat mengarahkan pihak lain untuk mengidentifikasi Anda.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
-                             stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
-                        </svg>
-                        <span class="text-gray-800">Pastikan nama pengguna (username), kata sandi (password), serta nomor registrasi Anda tetap bersifat rahasia dan tidak diketahui oleh pihak lain.</span>
-                    </li>
-                </ul>
+                <!-- Layout Gambar & Poin -->
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                    <!-- Kolom Kiri: Poin -->
+                    <div class="w-full md:w-6/12">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                                </svg>
+                                <span class="text-gray-800">Untuk menjaga kerahasiaan identitas Anda, mohon untuk tidak
+                                    mencantumkan data pribadi seperti nama atau hubungan Anda dengan pihak yang
+                                    dilaporkan.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                                </svg>
+                                <span class="text-gray-800">Hindari menyampaikan informasi apa pun yang dapat
+                                    mengarahkan pihak lain untuk mengidentifikasi Anda.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-gray-800 mr-3 mt-1 flex-shrink-0" fill="none"
+                                    stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4" />
+                                </svg>
+                                <span class="text-gray-800">Pastikan nama pengguna (username), kata sandi (password),
+                                    serta nomor registrasi Anda tetap bersifat rahasia dan tidak diketahui oleh pihak
+                                    lain.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Kolom Kanan: Gambar -->
+                    <div class="w-full md:w-5/12">
+                        <img src="{{ asset('images/kerahasiaan.png') }}" alt="Ilustrasi Kerahasiaan Data"
+                            class="w-full h-auto">
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <!-- Kolom Kanan: Gambar -->
-            <div class="w-full md:w-5/12">
-                <img src="{{ asset('images/kerahasiaan.png') }}" alt="Ilustrasi Kerahasiaan Data"
-                     class="w-full h-auto">
+
+        <!-- [BAGIAN 7] CARA MELAPOR SECTION -->
+        <section id="cara-melapor" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <!-- Judul Section -->
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">CARA MELAPOR
+                    </h2>
+                    <p class="mt-2 text-gray-600">Ikuti panduan berikut untuk menyampaikan laporan Anda dengan mudah dan
+                        aman</p>
+                </div>
+
+                <!-- Konten 2 Kolom -->
+                <div class="flex flex-col md:flex-row gap-10 mt-10 items-start justify-center">
+
+                    <!-- Kolom Kiri: Langkah-langkah -->
+                    <div class="w-full md:w-auto max-w-md space-y-6 mx-auto">
+
+                        <!-- Card 1 -->
+                        <div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1">
+                                    <!-- Icon Kalender -->
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 7V3m8 4V3m-9 8h10m-11 8h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white">Mulai Pengaduan</p>
+                                    <p class="text-white">Klik tombol “Buat Pengaduan” untuk memulai laporan baru</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1">
+                                    <!-- Icon Dokumen -->
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M8 16h8M8 12h8m-6 8h6a2 2 0 002-2V7.414a1 1 0 00-.293-.707l-4.414-4.414A1 1 0 0013.586 2H8a2 2 0 00-2 2v16a2 2 0 002 2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white">Isi Formulir</p>
+                                    <ul class="list-disc list-inside text-white">
+                                        <li>Semua kotak yang diberi tanda (*) wajib diisi.</li>
+                                        <li>Pastikan informasi mencangkup unsur 4W + 1 H.</li>
+                                        <li>Jika anda memiliki bukti dalam bentuk file seperti foto atau dokumen lain
+                                            dalam jumlah banyak, silahkan diinputkan satu per satu.</li>
+                                        <li>Setelah selesai mengisi, silahkan klik tombol "Kirim" untuk melanjutkan atau
+                                            klik tombol “Cancel" untuk membatalkan proses pelaporan anda.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1">
+                                    <!-- Icon Kunci -->
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 17a2 2 0 100-4 2 2 0 000 4zm6-8V7a4 4 0 10-8 0v2a4 4 0 008 0zM5 12h14a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white">Simpan Kode Pengaduan</p>
+                                    <p class="text-white">
+                                        Catat dan simpan kode pengaduan karena dibutuhkan untuk membuat akun yang
+                                        berfungsi untuk mengecek perkembangan status aduan Anda atau membuat pengaduan
+                                        baru.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Kolom Kanan: Video -->
+                    <div class="w-full md:w-1/2">
+                        <div class="bg-[#4682B4] p-4 rounded-lg shadow text-white">
+                            <h3 class="text-lg font-semibold text-center mb-2">
+                                Tutorial Lengkap WBS Kabupaten Banjarnegara
+                            </h3>
+
+                            <!-- Logo di atas video -->
+                            <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS"
+                                class="mx-auto mb-4 w-32 h-auto" />
+
+                            <!-- Video -->
+                            <div class="aspect-w-16 aspect-h-9">
+                                <iframe class="rounded-lg w-full h-64" src="https://www.youtube.com/embed/3QyQrLMMbMw"
+                                    title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
-        </div>
-    </div>
-</section>
-
-
-       <!-- [BAGIAN 7] CARA MELAPOR SECTION -->
-<section id="cara-melapor" class="py-20 bg-white">
-  <div class="container mx-auto px-6">
-   <!-- Judul Section -->
-    <div class="text-center mb-16">
-    <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">CARA MELAPOR</h2>
-    <p class="mt-2 text-gray-600">Ikuti panduan berikut untuk menyampaikan laporan Anda dengan mudah dan aman</p>
-    </div>
-
-    <!-- Konten 2 Kolom -->
-    <div class="flex flex-col md:flex-row gap-10 mt-10 items-start justify-center">
-      
-      <!-- Kolom Kiri: Langkah-langkah -->
-      <div class="w-full md:w-auto max-w-md space-y-6 mx-auto">
-        
-        <!-- Card 1 -->
-<div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
-  <div class="flex items-start gap-3">
-    <div class="mt-1">
-      <!-- Icon Kalender -->
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 7V3m8 4V3m-9 8h10m-11 8h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-      </svg>
-    </div>
-    <div>
-      <p class="font-semibold text-white">Mulai Pengaduan</p>
-      <p class="text-white">Klik tombol “Buat Pengaduan” untuk memulai laporan baru</p>
-    </div>
-  </div>
-</div>
-
-<!-- Card 2 -->
-<div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
-  <div class="flex items-start gap-3">
-    <div class="mt-1">
-      <!-- Icon Dokumen -->
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M8 16h8M8 12h8m-6 8h6a2 2 0 002-2V7.414a1 1 0 00-.293-.707l-4.414-4.414A1 1 0 0013.586 2H8a2 2 0 00-2 2v16a2 2 0 002 2z" />
-      </svg>
-    </div>
-    <div>
-      <p class="font-semibold text-white">Isi Formulir</p>
-      <ul class="list-disc list-inside text-white">
-        <li>Semua kotak yang diberi tanda (*) wajib diisi.</li>
-        <li>Pastikan informasi mencangkup unsur 4W + 1 H.</li>
-        <li>Jika anda memiliki bukti dalam bentuk file seperti foto atau dokumen lain dalam jumlah banyak, silahkan diinputkan satu per satu.</li>
-        <li>Setelah selesai mengisi, silahkan klik tombol "Kirim" untuk melanjutkan atau klik tombol “Cancel" untuk membatalkan proses pelaporan anda.</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-      <!-- Card 3 -->
-<div class="bg-[#4682B4] p-4 rounded-lg shadow text-sm text-white">
-  <div class="flex items-start gap-3">
-    <div class="mt-1">
-      <!-- Icon Kunci -->
-      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-           xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M12 17a2 2 0 100-4 2 2 0 000 4zm6-8V7a4 4 0 10-8 0v2a4 4 0 008 0zM5 12h14a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2z" />
-      </svg>
-    </div>
-    <div>
-      <p class="font-semibold text-white">Simpan Kode Pengaduan</p>
-      <p class="text-white">
-        Catat dan simpan kode pengaduan karena dibutuhkan untuk membuat akun yang berfungsi untuk mengecek perkembangan status aduan Anda atau membuat pengaduan baru.
-      </p>
-    </div>
-  </div>
-</div>
-
-      </div>
-
-    <!-- Kolom Kanan: Video -->
-<div class="w-full md:w-1/2">
-  <div class="bg-[#4682B4] p-4 rounded-lg shadow text-white">
-    <h3 class="text-lg font-semibold text-center mb-2">
-      Tutorial Lengkap WBS Kabupaten Banjarnegara
-    </h3>
-
-    <!-- Logo di atas video -->
-   <img src="{{ asset('images/logo-wbs.png') }}" alt="Logo WBS" class="mx-auto mb-4 w-32 h-auto" />
-
-    <!-- Video -->
-    <div class="aspect-w-16 aspect-h-9">
-      <iframe
-        class="rounded-lg w-full h-64"
-        src="https://www.youtube.com/embed/3QyQrLMMbMw"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</div>
-
-
-    </div>
-  </div>
-</section>
+        </section>
 
         <!-- [BAGIAN 8] FAQ SECTION -->
         <section id="faq" class="py-20 bg-gray-50">
@@ -575,11 +592,15 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 1" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Aplikasi Whistleblowing System (WBS) Inspektorat Banjarnegara adalah aplikasi yang disediakan oleh 
-                                Pemerintah Kabupaten Banjarnegara untuk mengelola dan menindaklanjuti laporan atau pengaduan. 
-                                Aplikasi ini menjadi wadah bagi pegawai pemerintah (sebagai pihak internal) 
-                                maupun masyarakat umum (sebagai pihak eksternal) untuk melaporkan dugaan pelanggaran atau ketidakpuasan 
-                                terhadap pelayanan yang diberikan oleh pejabat atau pegawai di lingkungan Pemerintah Kabupaten Banjarnegara.</p>
+                            <p class="pt-4">Aplikasi Whistleblowing System (WBS) Inspektorat Banjarnegara adalah
+                                aplikasi yang disediakan oleh
+                                Pemerintah Kabupaten Banjarnegara untuk mengelola dan menindaklanjuti laporan atau
+                                pengaduan.
+                                Aplikasi ini menjadi wadah bagi pegawai pemerintah (sebagai pihak internal)
+                                maupun masyarakat umum (sebagai pihak eksternal) untuk melaporkan dugaan pelanggaran
+                                atau ketidakpuasan
+                                terhadap pelayanan yang diberikan oleh pejabat atau pegawai di lingkungan Pemerintah
+                                Kabupaten Banjarnegara.</p>
                         </div>
                     </div>
 
@@ -597,7 +618,8 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 2" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Kode pengaduan berfungsi sebagai identitas pelapor yang digunakan untuk membuat akun (user) 
+                            <p class="pt-4">Kode pengaduan berfungsi sebagai identitas pelapor yang digunakan untuk
+                                membuat akun (user)
                                 guna memantau riwayat atau perkembangan pengaduan yang telah dikirimkan.</p>
                         </div>
                     </div>
@@ -617,9 +639,12 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 3" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Tanggapan kepada pelapor disampaikan dalam bentuk status atau tindak lanjut pengaduan 
-                                yang ditampilkan pada halaman pengguna, sesuai dengan respon dari pihak yang menerima pengaduan. 
-                                Informasi mengenai status atau tindak lanjut tersebut dapat diakses oleh pelapor melalui halaman 
+                            <p class="pt-4">Tanggapan kepada pelapor disampaikan dalam bentuk status atau tindak lanjut
+                                pengaduan
+                                yang ditampilkan pada halaman pengguna, sesuai dengan respon dari pihak yang menerima
+                                pengaduan.
+                                Informasi mengenai status atau tindak lanjut tersebut dapat diakses oleh pelapor melalui
+                                halaman
                                 pengaduan di aplikasi WBS.</p>
                         </div>
                     </div>
@@ -638,10 +663,14 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 4" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Berdasarkan KMK 149 Tahun 2011, setiap pengaduan yang masuk wajib mendapatkan tanggapan atau jawaban 
-                                paling lambat dalam waktu 30 (tiga puluh) hari sejak pengaduan diterima. Jika pengaduan diajukan secara tertulis melalui surat, 
-                                maka jawaban akan diberikan apabila pelapor mencantumkan identitas yang jelas, seperti nama dan alamat. Sementara itu, 
-                                untuk pengaduan yang disampaikan melalui media lainnya, tanggapan akan diberikan sesuai dengan identitas pelapor yang 
+                            <p class="pt-4">Berdasarkan KMK 149 Tahun 2011, setiap pengaduan yang masuk wajib
+                                mendapatkan tanggapan atau jawaban
+                                paling lambat dalam waktu 30 (tiga puluh) hari sejak pengaduan diterima. Jika pengaduan
+                                diajukan secara tertulis melalui surat,
+                                maka jawaban akan diberikan apabila pelapor mencantumkan identitas yang jelas, seperti
+                                nama dan alamat. Sementara itu,
+                                untuk pengaduan yang disampaikan melalui media lainnya, tanggapan akan diberikan sesuai
+                                dengan identitas pelapor yang
                                 tercantum pada media pengaduan tersebut.</p>
                         </div>
                     </div>
@@ -661,11 +690,16 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 5" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Pengaduan yang Anda sampaikan akan ditanggapi dan ditampilkan dalam aplikasi WBS ini. 
-                                Informasi pada aplikasi akan diperbarui secara otomatis sesuai dengan tanggapan dari pihak yang menerima pengaduan. 
-                                Untuk melihat tanggapan tersebut, Anda perlu login menggunakan username yang sudah Anda daftarkan. Setelah login, 
-                                Anda dapat memantau status pengaduan melalui halaman pengguna, berdasarkan kode pengaduan yang telah Anda terima. 
-                                Perlu diketahui, pengaduan akan lebih mudah ditindaklanjuti jika telah memenuhi unsur-unsur pengaduan yang lengkap.</p>
+                            <p class="pt-4">Pengaduan yang Anda sampaikan akan ditanggapi dan ditampilkan dalam aplikasi
+                                WBS ini.
+                                Informasi pada aplikasi akan diperbarui secara otomatis sesuai dengan tanggapan dari
+                                pihak yang menerima pengaduan.
+                                Untuk melihat tanggapan tersebut, Anda perlu login menggunakan username yang sudah Anda
+                                daftarkan. Setelah login,
+                                Anda dapat memantau status pengaduan melalui halaman pengguna, berdasarkan kode
+                                pengaduan yang telah Anda terima.
+                                Perlu diketahui, pengaduan akan lebih mudah ditindaklanjuti jika telah memenuhi
+                                unsur-unsur pengaduan yang lengkap.</p>
                         </div>
                     </div>
 
@@ -684,8 +718,9 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 6" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Identitas Anda sebagai pelapor akan dijaga kerahasiaannya sesuai dengan ketentuan dalam KMK 149 Tahun 2011. 
-                                Namun, untuk memastikan perlindungan identitas Anda lebih optimal, 
+                            <p class="pt-4">Identitas Anda sebagai pelapor akan dijaga kerahasiaannya sesuai dengan
+                                ketentuan dalam KMK 149 Tahun 2011.
+                                Namun, untuk memastikan perlindungan identitas Anda lebih optimal,
                                 disarankan agar Anda memperhatikan beberapa hal yang dijelaskan di sini.</p>
                         </div>
                     </div>
@@ -705,9 +740,12 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 7" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Anda tidak perlu membuat akun baru untuk setiap pengaduan. Satu username dapat digunakan untuk membuat beberapa pengaduan. 
-                                Setelah menyelesaikan satu laporan, Anda bisa membuat laporan baru terkait dugaan pelanggaran atau ketidakpuasan terhadap pelayanan 
-                                lainnya dengan memilih opsi "tambah pengaduan". Setiap laporan yang dibuat akan memiliki kode pengaduan yang berbeda sebagai identitas 
+                            <p class="pt-4">Anda tidak perlu membuat akun baru untuk setiap pengaduan. Satu username
+                                dapat digunakan untuk membuat beberapa pengaduan.
+                                Setelah menyelesaikan satu laporan, Anda bisa membuat laporan baru terkait dugaan
+                                pelanggaran atau ketidakpuasan terhadap pelayanan
+                                lainnya dengan memilih opsi "tambah pengaduan". Setiap laporan yang dibuat akan memiliki
+                                kode pengaduan yang berbeda sebagai identitas
                                 masing-masing pengaduan.</p>
                         </div>
                     </div>
@@ -729,9 +767,9 @@
                             </svg>
                         </button>
                         <div x-show="openFaq === 8" x-collapse class="px-5 pb-5 text-gray-600 leading-relaxed border-t">
-                            <p class="pt-4">Data pengaduan yang sudah dikirim sebelumnya tidak bisa diubah. 
-                                Namun, Anda tetap dapat membuat pengaduan baru dengan login menggunakan username 
-                                yang sudah Anda daftarkan di aplikasi ini. Setelah login, masuk ke halaman pengaduan dan 
+                            <p class="pt-4">Data pengaduan yang sudah dikirim sebelumnya tidak bisa diubah.
+                                Namun, Anda tetap dapat membuat pengaduan baru dengan login menggunakan username
+                                yang sudah Anda daftarkan di aplikasi ini. Setelah login, masuk ke halaman pengaduan dan
                                 pilih menu "Buat Pengaduan Baru" untuk mengirim laporan baru.</p>
                         </div>
                     </div>
@@ -796,8 +834,8 @@
 
                     <!-- Telepon -->
                     <div class="flex items-center gap-2 text-sm md:text-base">
-                        <svg class="w-6 h-6 text-inspektorat-darkblue" fill="none" stroke="currentColor" stroke-width="2"
-                            viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-inspektorat-darkblue" fill="none" stroke="currentColor"
+                            stroke-width="2" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round"
                                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
@@ -816,20 +854,20 @@
 
         <!-- Tombol Scroll to Top -->
         <button x-show="showScrollTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    x-transition:enter="transition ease-out duration-300"
-    x-transition:enter-start="opacity-0 transform translate-y-2"
-    x-transition:enter-end="opacity-100 transform translate-y-0"
-    x-transition:leave="transition ease-in duration-200"
-    x-transition:leave-start="opacity-100 transform translate-y-0"
-    x-transition:leave-end="opacity-0 transform translate-y-2"
-    class="fixed bottom-8 right-8 bg-[#004F98] text-white p-4 rounded-full shadow-lg hover:bg-[#003b75] focus:outline-none"
-    style="display: none;">
-    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7">
-        </path>
-    </svg>
-</button>
+            x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform translate-y-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-200"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform translate-y-2"
+            class="fixed bottom-8 right-8 bg-[#004F98] text-white p-4 rounded-full shadow-lg hover:bg-[#003b75] focus:outline-none"
+            style="display: none;">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7">
+                </path>
+            </svg>
+        </button>
 
     </div>
 
