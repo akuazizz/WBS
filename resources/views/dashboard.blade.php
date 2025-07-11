@@ -816,20 +816,21 @@
 
         <!-- Tombol Scroll to Top -->
         <button x-show="showScrollTop" @click="window.scrollTo({ top: 0, behavior: 'smooth' })"
-            x-transition:enter="transition ease-out duration-300"
-            x-transition:enter-start="opacity-0 transform translate-y-2"
-            x-transition:enter-end="opacity-100 transform translate-y-0"
-            x-transition:leave="transition ease-in duration-200"
-            x-transition:leave-start="opacity-100 transform translate-y-0"
-            x-transition:leave-end="opacity-0 transform translate-y-2"
-            class="fixed bottom-8 right-8 bg-blue-800 text-white p-4 rounded-full shadow-lg hover:bg-blue-900 focus:outline-none"
-            style="display: none;">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7">
-                </path>
-            </svg>
-        </button>
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 transform translate-y-2"
+    x-transition:enter-end="opacity-100 transform translate-y-0"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100 transform translate-y-0"
+    x-transition:leave-end="opacity-0 transform translate-y-2"
+    class="fixed bottom-8 right-8 bg-[#004F98] text-white p-4 rounded-full shadow-lg hover:bg-[#003b75] focus:outline-none"
+    style="display: none;">
+    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7">
+        </path>
+    </svg>
+</button>
+
     </div>
 
     <!-- SCROLL SPY SCRIPT -->
