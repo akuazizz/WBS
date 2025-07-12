@@ -178,8 +178,8 @@
                         Kabupaten Banjarnegara
                     </h1>
                     <p class="text-lg opacity-90 mb-8">
-                        Ayo turut berperan dalam mewujudkan pemerintahan yang bersih dan berintegritas dengan
-                        melaporkan setiap bentuk pelanggaran yang terjadi di lingkungan kerja Anda.
+                        Mari berkontribusi dalam menciptakan pemerintahan yang bersih dan berintegritas dengan 
+                        melaporkan segala bentuk pelanggaran di lingkungan kerja Anda.
                     </p>
                     <div
                         class="flex flex-col sm:flex-row justify-center md:justify-start items-center space-y-4 sm:space-y-0 sm:space-x-4">
