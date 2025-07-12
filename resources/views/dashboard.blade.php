@@ -389,19 +389,20 @@
         <section id="kerahasiaan" class="py-20 bg-white">
             <div class="container mx-auto px-6">
                 <!-- Judul Section -->
-                <div class="text-center mb-10">
+                <div class="text-center mb-6">
                     <h2 class="text-3xl font-extrabold text-inspektorat-darkblue uppercase tracking-wider">Kerahasiaan
                         Pelapor</h2>
                 </div>
 
                 <!-- Penjelasan Utama di Tengah -->
                 <div class="max-w-4xl mx-auto text-left mt-6 mb-6">
-                    <h3 class="text-lg font-semibold text-inspektorat-darkblue leading-relaxed">
-                        Pemerintah Kabupaten Banjarnegara akan merahasiakan identitas pribadi Anda sebagai whistleblower
-                        karena Pemerintah Kabupaten Banjarnegara hanya fokus pada informasi yang Anda laporkan. Untuk
-                        memastikan kerahasiaan tetap terlindungi, harap perhatikan hal-hal berikut ini:
+                    <h3 class="text-lg font-semibold text-black leading-relaxed">
+                     Pemerintah Kabupaten Banjarnegara akan merahasiakan identitas pribadi Anda sebagai whistleblower
+                     karena Pemerintah Kabupaten Banjarnegara hanya fokus pada informasi yang Anda laporkan.
+                     Untuk memastikan kerahasiaan tetap terlindungi, harap perhatikan hal-hal berikut ini:
                     </h3>
                 </div>
+
 
                 <!-- Layout Gambar & Poin -->
                 <div class="flex flex-col md:flex-row items-center justify-center gap-12">
@@ -445,7 +446,7 @@
 
                     <!-- Kolom Kanan: Gambar -->
                     <div class="w-full md:w-5/12">
-                        <img src="{{ asset('images/kerahasiaan.png') }}" alt="Ilustrasi Kerahasiaan Data"
+                        <img src="{{ asset('images/kerahasiaan.jpg') }}" alt="Ilustrasi Kerahasiaan Data"
                             class="w-full h-auto">
                     </div>
                 </div>
