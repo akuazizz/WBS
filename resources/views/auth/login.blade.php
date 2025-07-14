@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <link rel="icon" type="image/png" href="{{ asset('images/logo-wbs.png') }}">
-    
+
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -92,7 +92,7 @@
             <form method="POST" action="{{ route('login') }}" class="mt-8 space-y-6">
                 @csrf
 
-                <!-- Username -->
+                <!-- Email -->
                 <div class="relative">
                     <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                         <svg class="w-5 h-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
@@ -102,8 +102,7 @@
                         </svg>
                     </div>
                     <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus
-                        placeholder="Username"
-                        class="input-field block w-full @error('email') border-red-500 @enderror">
+                        placeholder="Email" class="input-field block w-full @error('email') border-red-500 @enderror">
                 </div>
 
                 <!-- Password -->
