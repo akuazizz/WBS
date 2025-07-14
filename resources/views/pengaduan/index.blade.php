@@ -45,7 +45,6 @@
       @endif
         </td>
         <td class="px-6 py-4 whitespace-nowrap">
-        {{-- Ganti '#' dengan link detail jika sudah ada --}}
         <a href="{{ route('pengaduan.show', $pengaduan) }}"
         class="text-white bg-[#005a9e] hover:bg-[#004b85] font-semibold rounded-md px-4 py-2 text-sm transition-colors duration-300">
         Detail

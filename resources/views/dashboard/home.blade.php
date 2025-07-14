@@ -31,7 +31,6 @@
     {{-- Item Menu 1: Alur --}}
     <a href="{{ route('home') }}#alur" target="_blank"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
-    {{-- Ganti dengan path ikon Anda --}}
     <img src="{{ asset('images/icon-alur.png') }}" class="w-16 h-16 mb-4" alt="Alur Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">Alur</span>
     </a>
@@ -39,7 +38,6 @@
     {{-- Item Menu 2: Unsur --}}
     <a href="{{ route('home') }}#unsur" target="_blank"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
-    {{-- Ganti dengan path ikon Anda --}}
     <img src="{{ asset('images/icon-unsur.png') }}" class="w-16 h-16 mb-4" alt="Unsur Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">Unsur</span>
     </a>
@@ -47,7 +45,6 @@
     {{-- Item Menu 3: FAQ --}}
     <a href="{{ route('home') }}#faq" target="_blank"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
-    {{-- Ganti dengan path ikon Anda --}}
     <img src="{{ asset('images/icon-FAQ.png') }}" class="w-16 h-16 mb-4" alt="FAQ Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">FAQ</span>
     </a>
@@ -55,7 +52,6 @@
     {{-- Item Menu 4: Kerahasiaan Pelapor --}}
     <a href="{{ route('home') }}#kerahasiaan" target="_blank"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
-    {{-- Ganti dengan path ikon Anda --}}
     <img src="{{ asset('images/icon-kerahasiaan.png') }}" class="w-16 h-16 mb-4" alt="Kerahasiaan Icon">
     <span class="font-semibold text-lg text-center text-gray-700 group-hover:text-[#005a9e]">Kerahasiaan Pelapor</span>
     </a>
@@ -63,7 +59,6 @@
     {{-- Item Menu 5: Cara Melapor --}}
     <a href="{{ route('home') }}#cara-melapor" target="_blank"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
-    {{-- Ganti dengan path ikon Anda --}}
     <img src="{{ asset('images/icon-melapor.png') }}" class="w-16 h-16 mb-4" alt="Cara Melapor Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">Cara Melapor</span>
     </a>
@@ -71,7 +66,6 @@
     {{-- Item Menu 6: Kontak Kami --}}
     <a href="{{ route('home') }}#kontak" target="_blank"
     class="group flex flex-col items-center justify-center p-6 bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-gray-200">
-    {{-- Ganti dengan path ikon Anda --}}
     <img src="{{ asset('images/icon-kami.png') }}" class="w-16 h-16 mb-4" alt="Kontak Icon">
     <span class="font-semibold text-lg text-gray-700 group-hover:text-[#005a9e]">Kontak Kami</span>
     </a>

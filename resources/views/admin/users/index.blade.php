@@ -36,7 +36,6 @@
         </td>
         <td class="px-4 py-2 whitespace-nowrap text-sm">{{ $user->email }}</td>
         <td class="px-4 py-2 whitespace-nowrap text-sm">
-        {{-- Jika user tidak punya role sama sekali, tampilkan 'User' --}}
         @forelse($user->getRoleNames() as $role)
       <span
         class="bg-blue-200 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">{{ Str::ucfirst($role) }}</span>
@@ -45,7 +44,6 @@
       @endforelse
         </td>
         <td class="px-4 py-2 whitespace-nowrap text-sm font-mono">
-        {{-- Tampilkan kode pengaduan, jika ada --}}
         @foreach ($user->pengaduans as $pengaduan)
       <div>{{ $pengaduan->kode_pengaduan }}</div>
       @endforeach

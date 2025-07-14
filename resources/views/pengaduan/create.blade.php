@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link rel="icon" type="image/png" href="{{ asset('images/logo-wbs.png') }}">
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +22,6 @@
         rel="stylesheet" />
 
     <style>
-        /* CSS Kustom untuk tema dan input */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #004b85;
@@ -95,14 +94,12 @@
                     <img src="https://inspektorat.banjarnegarakab.go.id/wp-content/uploads/2020/03/nama.png"
                         alt="Logo Inspektorat" class="h-10">
                 </a>
-                <!-- Sintaks asset() ini akan berfungsi di Laravel -->
                 <a href="#">
                     <img src="{{ asset('images/berakhlak-bangga.png') }}" alt="Logo berAKHLAK" class="h-10">
                 </a>
             </div>
             <!-- Navigasi -->
             <nav class="flex items-center space-x-6 text-inspektorat-title font-semibold">
-                <!-- Sintaks route() dan url() ini akan berfungsi di Laravel -->
                 <a href="{{ url('/') }}" class="hover:underline">Menu Utama</a>
                 <a href="{{ route('tracking.index') }}" class="hover:underline">Cek Tracking</a>
                 <a href="{{ route('login') }}"
@@ -191,7 +188,7 @@
                                   hover:file:bg-sky-200">
                 </div>
 
-                @guest {{-- Tampilkan blok ini HANYA JIKA user adalah tamu --}}
+                @guest
                     {{-- Informasi Pelapor --}}
                     <div class="mt-6">
                         <label class="block text-sm font-medium text-gray-700">Informasi Pelapor</label>
@@ -287,13 +284,12 @@
     <!-- JavaScript untuk Submit Form via Fetch API -->
     <script>
         document.getElementById('form-pengaduan').addEventListener('submit', function (e) {
-            e.preventDefault(); // Mencegah form submit cara biasa
+            e.preventDefault();
 
             const form = e.target;
             const formData = new FormData(form);
             const submitButton = form.querySelector('button[type="submit"]');
 
-            // Nonaktifkan tombol dan tampilkan loading
             submitButton.disabled = true;
             submitButton.innerHTML = 'Mengirim...';
 
@@ -301,22 +297,18 @@
                 method: 'POST',
                 body: formData,
                 headers: {
-                    // Ambil token CSRF dari input yang dibuat oleh @csrf
                     'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value,
                     'Accept': 'application/json',
                 }
             })
                 .then(response => {
                     if (!response.ok) {
-                        // Jika response bukan 2xx, ubah jadi error agar ditangkap .catch()
-                        // Ini penting untuk menangani error validasi (status 422)
                         return response.json().then(err => { throw err; });
                     }
                     return response.json();
                 })
                 .then(data => {
-                    // Jika sukses (response 2xx)
-                    form.reset(); // Kosongkan form
+                    form.reset();
                     Swal.fire({
                         icon: 'success',
                         title: 'Pengaduan Berhasil Terkirim!',
@@ -328,7 +320,6 @@
                     console.error('Error:', errorData);
                     let errorMessages = 'Terjadi kesalahan pada server. Silakan coba lagi.';
 
-                    // Menangani error validasi dari Laravel (status 422)
                     if (errorData.errors) {
                         errorMessages = '<ul class="text-left list-disc list-inside">';
                         for (const key in errorData.errors) {
@@ -346,7 +337,6 @@
                     });
                 })
                 .finally(() => {
-                    // Apapun hasilnya, aktifkan kembali tombol submit
                     submitButton.disabled = false;
                     submitButton.innerHTML = 'Buat Pengaduan';
                 });

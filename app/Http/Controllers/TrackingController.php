@@ -9,7 +9,6 @@ class TrackingController extends Controller
 {
     public function index()
     {
-        // Method ini menampilkan form KOSONG saat pertama kali halaman diakses.
         return view('tracking.index');
     }
 
@@ -27,11 +26,8 @@ class TrackingController extends Controller
             ->with('tindak_lanjuts')
             ->first();
 
-        // ==========================================================
-        // PERUBAHAN UTAMA: KEMBALI KE VIEW YANG SAMA (index)
-        // ==========================================================
         return view('tracking.index', [
-            'pengaduan' => $pengaduan // Kirim data hasil pencarian ke view
+            'pengaduan' => $pengaduan
         ]);
     }
 }

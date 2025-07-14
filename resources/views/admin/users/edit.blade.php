@@ -40,13 +40,9 @@
       <label for="roles" class="block text-sm font-medium text-gray-700">Role</label>
       <select name="roles[]" id="roles" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm">
 
-        <!-- === TAMBAHKAN OPSI INI === -->
-        {{-- Opsi ini mewakili "tidak ada role" atau user biasa. --}}
-        {{-- value="" akan mengirimkan array kosong jika ini yang dipilih. --}}
         <option value="" {{ $user->getRoleNames()->isEmpty() ? 'selected' : '' }}>
         User Biasa (Pelapor)
         </option>
-        <!-- ========================== -->
 
         @foreach ($roles as $role)
       <option value="{{ $role->name }}" {{ $user->hasRole($role->name) ? 'selected' : '' }}>
