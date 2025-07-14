@@ -2,7 +2,6 @@
 <html lang="id">
 
 <head>
-    {{-- Head Anda sudah benar, tidak perlu diubah --}}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WBS Pemkab Banjarnegara</title>
@@ -46,7 +45,7 @@
 
 <body class="antialiased">
     <div>
-        <!-- Header Navigasi (Sudah Benar) -->
+        <!-- Header Navigasi -->
         <header class="py-4 bg-white shadow-sm">
             <div class="container mx-auto px-6 flex justify-between items-center">
                 <div class="flex items-center">
@@ -72,7 +71,6 @@
         <!-- Konten Utama -->
         <main class="py-10">
             <div class="container mx-auto px-6 max-w-4xl space-y-8">
-                {{-- Bagian Form Pencarian --}}
                 <div>
                     <div class="text-center text-white mb-8">
                         <h1 class="text-4xl font-extrabold">CEK TRACKING PENGADUAN</h1>
@@ -97,9 +95,6 @@
                     </div>
                 </div>
 
-                {{-- =============================================== --}}
-                {{-- BLOK HASIL PENCARIAN (KONDISIONAL) --}}
-                {{-- =============================================== --}}
                 @if (isset($pengaduan))
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <h2 class="text-2xl font-bold text-gray-800 mb-4">
@@ -135,9 +130,6 @@
                         </div>
                     </div>
                 @endif
-                {{-- =============================================== --}}
-                {{-- AKHIR BLOK HASIL PENCARIAN --}}
-                {{-- =============================================== --}}
             </div>
         </main>
     </div>

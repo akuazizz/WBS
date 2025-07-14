@@ -1,13 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    {{-- Inisialisasi Alpine.js untuk mengontrol semua modal --}}
     <div x-data="{
-                    showAkunModal: false,
-                    showPribadiModal: false,
-                    showFotoModal: false,
-                    photoPreview: null
-                 }" class="space-y-8">
+                        showAkunModal: false,
+                        showPribadiModal: false,
+                        showFotoModal: false,
+                        photoPreview: null
+                     }" class="space-y-8">
 
         {{-- Notifikasi Sukses --}}
         @if (session('status') === 'profile-updated')
@@ -29,9 +28,6 @@
             </div>
         @endif
 
-        {{-- ========================================================== --}}
-        {{-- ▼▼▼ FORM UTAMA DIMULAI DI SINI, MEMBUNGKUS SEMUANYA ▼▼▼ --}}
-        {{-- ========================================================== --}}
         <form id="profile-update-form" method="post" action="{{ route('profile.update') }}" enctype="multipart/form-data">
             @csrf
             @method('patch')
@@ -39,7 +35,6 @@
             {{-- Bagian Foto Profil --}}
             <div class="bg-[#005a9e] rounded-lg shadow-lg p-8 flex flex-col items-center text-white">
                 <div class="w-32 h-32 rounded-full bg-white/30 flex items-center justify-center border-4 border-white">
-                    {{-- Menampilkan foto profil saat ini atau preview foto baru --}}
                     <span x-show="!photoPreview"
                         class="inline-block w-full h-full rounded-full bg-cover bg-no-repeat bg-center"
                         style="background-image: url('{{ Auth::user()->profile_photo_url }}');">
@@ -49,19 +44,17 @@
                         :style="'background-image: url(\'' + photoPreview + '\');'">
                     </span>
                 </div>
-                {{-- Tombol ini sekarang hanya untuk memicu pemilihan file, bukan membuka modal --}}
                 <label for="photo" class="mt-4 font-semibold hover:underline focus:outline-none cursor-pointer">
                     Edit Foto Profil
                 </label>
-                {{-- Input file yang sebenarnya disembunyikan --}}
                 <input type="file" name="photo" id="photo" class="hidden" @change="
-                               const reader = new FileReader();
-                               reader.onload = (e) => { photoPreview = e.target.result; };
-                               reader.readAsDataURL($event.target.files[0]);
-                           " />
+                                   const reader = new FileReader();
+                                   reader.onload = (e) => { photoPreview = e.target.result; };
+                                   reader.readAsDataURL($event.target.files[0]);
+                               " />
             </div>
 
-            {{-- Card Data Akun (Read-Only) --}}
+            {{-- Card Data Akun --}}
             <div class="bg-white rounded-lg shadow-md mt-8">
                 <div class="p-4 border-b flex justify-between items-center bg-gray-50 rounded-t-lg">
                     <h3 class="font-bold text-lg text-gray-700 flex items-center">
@@ -92,7 +85,7 @@
                 </div>
             </div>
 
-            {{-- Card Data Pribadi (Read-Only) --}}
+            {{-- Card Data Pribadi --}}
             <div class="bg-white rounded-lg shadow-md mt-8">
                 <div class="p-4 border-b flex justify-between items-center bg-gray-50 rounded-t-lg">
                     <h3 class="font-bold text-lg text-gray-700 flex items-center">
@@ -134,18 +127,13 @@
                 </div>
             </div>
 
-            {{-- Tombol Simpan Perubahan (satu untuk semua) --}}
+            {{-- Tombol Simpan Perubahan --}}
             <div class="mt-8 flex justify-end">
                 <button type="submit"
                     class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded-md transition">
                     Simpan Semua Perubahan
                 </button>
             </div>
-
-            {{-- ======================= --}}
-            {{-- AREA MODAL --}}
-            {{-- ======================= --}}
-
             <!-- Modal Edit Data Akun -->
             <div x-show="showAkunModal" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50"
                 x-cloak @keydown.escape.window="showAkunModal = false">
@@ -218,9 +206,9 @@
                 </div>
             </div>
 
-        </form> {{-- FORM UTAMA BERAKHIR DI SINI --}}
+        </form>
 
-        {{-- Tombol Logout (di luar form utama) --}}
+        {{-- Tombol Logout --}}
         <div class="text-center pt-4">
             <form method="POST" action="{{ route('logout') }}">
                 @csrf

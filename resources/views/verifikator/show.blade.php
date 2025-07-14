@@ -2,8 +2,6 @@
 
 @section('content')
   <div class="space-y-6">
-    <!-- Panel Aksi Verifikasi -->
-    {{-- Panel ini hanya muncul jika statusnya belum Selesai atau Ditolak --}}
     @if(!in_array($pengaduan->status, ['Selesai', 'Ditolak']))
     <div class="bg-white rounded-lg shadow-md">
     <div class="p-4 border-b bg-gray-50">
@@ -24,7 +22,6 @@
       </div>
 
       <div class="mt-4 flex flex-wrap items-center justify-end gap-3">
-      {{-- Tombol Tolak hanya muncul jika status masih 'Baru' --}}
       @if ($pengaduan->status == 'Baru')
       <button type="submit" name="action" value="tolak"
       class="px-4 py-2 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition-colors">
@@ -32,7 +29,6 @@
       </button>
       @endif
 
-      {{-- Tombol Terima/Proses hanya muncul jika status masih 'Baru' --}}
       @if ($pengaduan->status == 'Baru')
       <button type="submit" name="action" value="terima"
       class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 transition-colors">
@@ -40,7 +36,6 @@
       </button>
       @endif
 
-      {{-- Tombol Selesai hanya muncul jika status sudah 'Diproses' --}}
       @if ($pengaduan->status == 'Diproses')
       <button type="submit" name="action" value="selesai"
       class="px-4 py-2 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition-colors">
@@ -64,10 +59,10 @@
     <div class="p-4 border-b font-semibold text-gray-700 flex justify-between items-center">
       <span>Detail Pengaduan #{{ $pengaduan->kode_pengaduan }}</span>
       <span class="px-3 py-1 text-sm font-bold rounded-full
-        @if ($pengaduan->status == 'Baru') bg-yellow-100 text-yellow-800
-      @elseif ($pengaduan->status == 'Diproses') bg-blue-100 text-blue-800
-      @elseif ($pengaduan->status == 'Selesai') bg-green-100 text-green-800
-      @else bg-red-100 text-red-800 @endif">
+      @if ($pengaduan->status == 'Baru') bg-yellow-100 text-yellow-800
+    @elseif ($pengaduan->status == 'Diproses') bg-blue-100 text-blue-800
+    @elseif ($pengaduan->status == 'Selesai') bg-green-100 text-green-800
+    @else bg-red-100 text-red-800 @endif">
       {{ $pengaduan->status }}
       </span>
     </div>
@@ -124,7 +119,8 @@
         class="block mb-2 text-sm font-normal leading-none text-gray-400">{{ $tindak_lanjut->created_at->translatedFormat('l, d F Y - H:i') }}</time>
         @if($tindak_lanjut->catatan_administrator)
       <p class="p-3 text-sm italic border border-gray-200 rounded-lg bg-gray-50 whitespace-pre-wrap">
-      {{ $tindak_lanjut->catatan_administrator }}</p>
+      {{ $tindak_lanjut->catatan_administrator }}
+      </p>
       @endif
       </li>
     @empty

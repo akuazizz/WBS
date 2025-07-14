@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class PengaduanController extends Controller
 {
-    // ... (method index dan show tetap sama) ...
     public function index(Request $request)
     {
         $query = Pengaduan::with('user')->latest();
@@ -59,7 +58,6 @@ class PengaduanController extends Controller
         $pengaduan->save();
         $pengaduan->tindak_lanjuts()->create(['deskripsi' => $deskripsi, 'catatan_administrator' => $catatan, 'dibuat_oleh' => 'administrator',]);
 
-        // === TAMBAHKAN LOG MANUAL INI ===
         $logMessage = "mengubah status pengaduan {$pengaduan->kode_pengaduan} menjadi '{$pengaduan->status}'";
         if ($request->filled('catatan')) {
             $logMessage .= " dengan catatan: " . $request->catatan;
@@ -68,7 +66,6 @@ class PengaduanController extends Controller
             ->performedOn($pengaduan)
             ->causedBy(Auth::user())
             ->log($logMessage);
-        // ================================
 
         return redirect()->route('admin.dashboard')->with('success', 'Status pengaduan berhasil diperbarui!');
     }

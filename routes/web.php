@@ -53,5 +53,4 @@ Route::middleware(['auth'])->group(function () {
   Route::post('/pengaduan/{pengaduan}/tindak-lanjut', [PengaduanController::class, 'storeTindakLanjut'])->name('pengaduan.tindaklanjut.store');
 });
 
-// Memuat rute-rute untuk autentikasi (login, register, logout, dll.)
 require __DIR__ . '/auth.php';

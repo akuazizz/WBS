@@ -9,20 +9,17 @@ use Spatie\Activitylog\Models\Activity;
 
 class DashboardController extends Controller
 {
-    // Tambahkan Request $request sebagai parameter
     public function index(Request $request)
     {
-        // STATISTIK (Tetap sama, selalu hitung semua)
         $totalBaru = Pengaduan::where('status', 'Baru')->count();
         $totalDiproses = Pengaduan::where('status', 'Diproses')->count();
         $totalSelesai = Pengaduan::where('status', 'Selesai')->count();
         $totalDitolak = Pengaduan::where('status', 'Ditolak')->count();
         $totalSemua = Pengaduan::count();
 
-        // FILTERING UNTUK TABEL
-        $query = Pengaduan::query(); // Mulai query builder
+        $query = Pengaduan::query(); 
 
-        $statusFilter = $request->query('status'); // Ambil 'status' dari URL, misal: ?status=Baru
+        $statusFilter = $request->query('status'); 
 
         if ($statusFilter) {
             $query->where('status', $statusFilter);
@@ -31,9 +28,8 @@ class DashboardController extends Controller
             $judulTabel = 'Daftar Seluruh Pengaduan';
         }
 
-        $semuaPengaduan = $query->latest()->paginate(10)->withQueryString(); // withQueryString() agar filter tetap ada saat ganti halaman
+        $semuaPengaduan = $query->latest()->paginate(10)->withQueryString(); 
 
-        // Kirim semua data, termasuk judul tabel dinamis
         return view('admin.dashboard', compact(
             'totalBaru',
             'totalDiproses',
@@ -41,13 +37,13 @@ class DashboardController extends Controller
             'totalDitolak',
             'totalSemua',
             'semuaPengaduan',
-            'judulTabel', // <-- Kirim judul baru
-            'statusFilter' // <-- Kirim status filter untuk menandai kartu yang aktif
+            'judulTabel', //
+            'statusFilter' //
         ));
     }
     public function activityLog()
     {
-        $activities = Activity::with('causer', 'subject') // Eager load pelaku dan subjek
+        $activities = Activity::with('causer', 'subject')
             ->latest()
             ->paginate(20);
         return view('admin.activity_log', compact('activities'));

@@ -55,7 +55,6 @@
         </div>
         <div class="text-sm">
         <p class="text-gray-900">
-        {{-- Gabungkan Pelaku dan Deskripsi --}}
         <span class="font-bold">{{ $activity->causer->name ?? 'Sistem' }}</span>
         {{ $activity->description }}.
         </p>

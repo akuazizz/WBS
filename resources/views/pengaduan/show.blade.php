@@ -54,7 +54,6 @@
     </div>
     <div class="p-4 md:p-6">
       <ol class="relative border-l border-gray-200 dark:border-gray-700 ml-2">
-      {{-- Gunakan sortBy untuk memastikan urutan riwayat benar --}}
       @foreach($pengaduan->tindak_lanjuts->sortBy('created_at') as $tindak_lanjut)
       <li class="mb-10 ml-6">
         <span
@@ -65,15 +64,12 @@
         </svg>
         </span>
 
-        {{-- === INI PERBAIKAN UTAMANYA === --}}
-        {{-- Ambil tanggal dari '$tindak_lanjut', bukan '$pengaduan' --}}
         <h3 class="flex items-center mb-1 text-md font-semibold text-gray-900">
         {{ $tindak_lanjut->deskripsi }}
         </h3>
         <time class="block mb-2 text-sm font-normal leading-none text-gray-500">
         {{ $tindak_lanjut->created_at->translatedFormat('l, d F Y - H:i') }} WIB
         </time>
-        {{-- ============================== --}}
 
         @if($tindak_lanjut->catatan_administrator)
       <div class="mt-2 p-3 text-sm bg-yellow-50 border-l-4 border-yellow-400 text-yellow-800 rounded-r-lg">
@@ -82,7 +78,6 @@
       </div>
       @endif
 
-        {{-- Tampilkan tombol hanya jika statusnya meminta tindak lanjut dan ini adalah riwayat terakhir --}}
         @if($pengaduan->status == 'Belum ditindaklanjuti Pelapor' && $loop->last)
       <div class="mt-4 p-3 bg-red-50 border border-red-200 text-red-800 rounded-md">
       <p class="font-bold text-red-900">Aksi Diperlukan:</p>

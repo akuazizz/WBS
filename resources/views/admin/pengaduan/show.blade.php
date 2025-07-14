@@ -2,7 +2,6 @@
 
 @section('content')
   <div class="space-y-6">
-    <!-- Panel Aksi Admin -->
     @if(!in_array($pengaduan->status, ['Selesai', 'Ditolak']))
     <div class="bg-white rounded-lg shadow-md">
     <div class="p-4 border-b bg-gray-50">
@@ -54,15 +53,15 @@
     </div>
     @endif
 
-    <!-- Detail Pengaduan (Sama persis dengan verifikator) -->
+    <!-- Detail Pengaduan -->
     <div class="bg-white rounded-lg shadow-md">
     <div class="p-4 border-b font-semibold text-gray-700 flex justify-between items-center">
       <span>Detail Pengaduan #{{ $pengaduan->kode_pengaduan }}</span>
       <span class="px-3 py-1 text-sm font-bold rounded-full
-        @if ($pengaduan->status == 'Baru') bg-yellow-100 text-yellow-800
+      @if ($pengaduan->status == 'Baru') bg-yellow-100 text-yellow-800
       @elseif ($pengaduan->status == 'Diproses') bg-blue-100 text-blue-800
-      @elseif ($pengaduan->status == 'Selesai') bg-green-100 text-green-800
-      @else bg-red-100 text-red-800 @endif">
+    @elseif ($pengaduan->status == 'Selesai') bg-green-100 text-green-800
+    @else bg-red-100 text-red-800 @endif">
       {{ $pengaduan->status }}
       </span>
     </div>
@@ -98,7 +97,7 @@
     </div>
     </div>
 
-    <!-- Riwayat / Tracking (Sama persis dengan verifikator) -->
+    <!-- Riwayat / Tracking -->
     <div class="bg-white rounded-lg shadow-md">
     <div class="p-4 border-b font-semibold text-gray-700">
       Riwayat Tindak Lanjut
@@ -119,7 +118,8 @@
         class="block mb-2 text-sm font-normal leading-none text-gray-400">{{ $tindak_lanjut->created_at->translatedFormat('l, d F Y - H:i') }}</time>
         @if($tindak_lanjut->catatan_administrator)
       <p class="p-3 text-sm italic border border-gray-200 rounded-lg bg-gray-50 whitespace-pre-wrap">
-      {{ $tindak_lanjut->catatan_administrator }}</p>
+      {{ $tindak_lanjut->catatan_administrator }}
+      </p>
       @endif
       </li>
     @empty

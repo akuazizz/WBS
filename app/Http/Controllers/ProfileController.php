@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
-    /**
-     * Menampilkan form profil pengguna.
-     */
     public function edit(Request $request): View
     {
         return view('profile.edit', [
@@ -23,12 +20,8 @@ class ProfileController extends Controller
         ]);
     }
 
-    /**
-     * Memperbarui informasi profil pengguna.
-     */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        // Ini akan mengisi field apa pun yang ada di request dan lolos validasi
         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {
@@ -48,13 +41,8 @@ class ProfileController extends Controller
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
 
-    /**
-     * Menghapus akun pengguna.
-     */
     public function destroy(Request $request): RedirectResponse
     {
-        // Kode ini adalah implementasi standar dari Laravel Breeze.
-        // Ini penting untuk fungsionalitas hapus akun.
         $request->validateWithBag('userDeletion', [
             'password' => ['required', 'current-password'],
         ]);

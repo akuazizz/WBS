@@ -31,7 +31,6 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        // Validasi data, TANPA jenis_kelamin
         $request->validate([
             'kode_pengaduan' => [
                 'required',
@@ -58,18 +57,16 @@ class RegisteredUserController extends Controller
             'kode_pengaduan.exists' => 'Kode pengaduan tidak ditemukan atau sudah pernah diklaim oleh akun lain.'
         ]);
 
-        // Buat user baru, TANPA jenis_kelamin
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'kontak' => $request->kontak,
             'username' => $request->username,
-            'info_pelapor' => 'umum', // Tetap set default value
+            'info_pelapor' => 'umum',
             'jenis_kelamin' => $request->jenis_kelamin,
             'password' => Hash::make($request->password),
         ]);
 
-        // Hubungkan pengaduan dengan user baru
         if ($user) {
             Pengaduan::where('kode_pengaduan', $request->kode_pengaduan)
                 ->whereNull('user_id')

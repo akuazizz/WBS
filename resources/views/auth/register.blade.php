@@ -210,9 +210,6 @@
                     <input id="password_confirmation" :type="show ? 'text' : 'password'" name="password_confirmation"
                         required placeholder="Konfirmasi Password" class="input-field block w-full pr-10">
 
-                    {{-- ========================================================== --}}
-                    {{-- ▼▼▼ INI BAGIAN YANG DIPERBAIKI ▼▼▼ --}}
-                    {{-- ========================================================== --}}
                     <div class="absolute inset-y-0 right-0 pr-4 flex items-center">
                         <button type="button" @click="show = !show" class="text-gray-500 focus:outline-none">
                             <!-- Ikon mata terbuka (saat password disembunyikan) -->
@@ -234,7 +231,6 @@
                             </svg>
                         </button>
                     </div>
-                    {{-- ========================================================== --}}
                 </div>
 
                 <div class="pt-4">

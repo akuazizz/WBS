@@ -3,7 +3,7 @@
 @section('content')
   <h1 class="text-2xl md:text-3xl font-bold mb-6" style="color: #004F98;">Dashboard Administrator</h1>
 
-  <!-- Bagian Statistik (sekarang menjadi link) -->
+  <!-- Bagian Statistik -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
     <!-- Total Semua -->
     <a href="{{ route('admin.dashboard') }}"
@@ -42,13 +42,10 @@
     <h2 class="text-xl font-bold text-[#004b85] mb-4">{{ $judulTabel }}</h2>
     <div class="overflow-x-auto">
     <table class="min-w-full bg-white border">
-      {{-- Header Tabel (tetap sama) --}}
       <tbody class="divide-y divide-gray-200">
       @forelse ($semuaPengaduan as $pengaduan)
       <tr>
-        {{-- Kolom Data (tetap sama) --}}
         <td class="px-4 py-2 whitespace-nowrap text-sm">
-        {{-- Ini kode untuk status badge, salin dari view verifikator atau buat ulang --}}
         @if ($pengaduan->status == 'Baru')
       <span
         class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Baru</span>
