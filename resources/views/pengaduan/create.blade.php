@@ -312,9 +312,34 @@
                     Swal.fire({
                         icon: 'success',
                         title: 'Pengaduan Berhasil Terkirim!',
-                        html: `Kode tracking Anda adalah: <br><strong style="font-size: 1.2em; color: #005a9e;">${data.kode_pengaduan}</strong><br><br>Kode ini telah dikirim ke email Anda. Simpan dengan baik dan gunakan untuk mengecek status pengaduan serta mendaftar akun di WBS.`,
-                        confirmButtonText: 'Luar Biasa!'
+                        html: `Kode tracking Anda adalah: <br>
+                                <span id="kodeTracking" style="cursor:pointer; font-size: 1.2em; color: #005a9e; background-color: #f0f0f0; padding: 5px 10px; border-radius: 6px; display: inline-block;" title="Klik untuk menyalin">
+                                ${data.kode_pengaduan}
+                                </span>
+                                <br><br>Kode ini telah dikirim ke email Anda. Simpan dengan baik dan gunakan untuk mengecek status pengaduan serta mendaftar akun di WBS.`,
+                                confirmButtonText: 'Luar Biasa!'
+                    }).then(() => {
+
                     });
+                    setTimeout(() => {
+                        const kodeEl = document.getElementById('kodeTracking');
+                        if (kodeEl) {
+                            kodeEl.addEventListener('click', () => {
+                                const text = kodeEl.innerText;
+                                navigator.clipboard.writeText(text).then(() => {
+                                    Swal.fire({
+                                        icon: 'success',
+                                        title: 'Kode Tersalin!',
+                                        text: 'Kode tracking telah disalin ke clipboard.',
+                                        timer: 2000,
+                                        showConfirmButton: false
+                                    });
+                                }).catch(err => {
+                                    console.error('Gagal menyalin:', err);
+                                });
+                            });
+                        }
+                    }, 100);
                 })
                 .catch(errorData => {
                     console.error('Error:', errorData);
