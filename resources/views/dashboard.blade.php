@@ -219,7 +219,7 @@
                         </svg>
                         Video Tutorial Panduan WBS
                 </a>
-                <a href="{{ asset('images/Panduan-WBS.pdf') }}" target="_blank"
+                <a href="{{ asset('images/Panduan-WBS-Pemkab-Banjarnegara.pdf') }}" target="_blank"
                     class="inline-flex items-center justify-center px-6 py-3 bg-inspektorat-blue border border-gray-300 rounded-lg shadow-sm text-white font-semibold hover:bg-[#C0C0C0] transition-colors">
                     <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
