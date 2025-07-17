@@ -89,7 +89,7 @@
                 </div>
             @endif
 
-            <form method="POST" action="{{ route('login') }}" class="mt-8 space-y-6">
+            <form novalidate method="POST" action="{{ route('login') }}" class="mt-8 space-y-6">
                 @csrf
 
                 <!-- Email -->
